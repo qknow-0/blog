@@ -28,9 +28,16 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   "$BLOG_NAME/"
 
 # 上传到坚果云
-curl -T "/tmp/${ARCHIVE_NAME}" \
+HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -T "/tmp/${ARCHIVE_NAME}" \
   -u "${WEBDAV_USER}:${WEBDAV_PASS}" \
-  "${WEBDAV_URL}/${ARCHIVE_NAME}"
+  "${WEBDAV_URL}/${ARCHIVE_NAME}")
+
+if [ "$HTTP_CODE" = "201" ] || [ "$HTTP_CODE" = "204" ]; then
+  echo "上传成功 (HTTP ${HTTP_CODE})"
+else
+  echo "上传失败 (HTTP ${HTTP_CODE})"
+  exit 1
+fi
 
 # 清理
 rm -f "/tmp/${ARCHIVE_NAME}"
