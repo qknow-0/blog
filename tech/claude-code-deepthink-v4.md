@@ -166,27 +166,7 @@ claude
 
 ## 实战场景
 
-### 场景 1：代码审查
-
-```bash
-cd ~/my-backend-project
-claude
-```
-
-```
-> 审查 app/api/users/route.ts 的安全问题，重点关注输入验证和 SQL 注入
-```
-
-Claude Code 会读取文件，逐行分析潜在问题，给出修复建议甚至直接修复。
-
-### 场景 2：跨文件重构
-
-```
-> 把项目中所有 console.log 替换为统一的 logger 调用，
-  包括 async 函数中的。先给计划，等我确认再执行。
-```
-
-### 场景 3：子代理并行探索
+### 场景：子代理并行探索
 
 ```
 > 这个项目有三个 microservice 目录，每个都有自己的数据库 schema。

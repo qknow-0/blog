@@ -108,6 +108,7 @@ rtk gain        # 应显示 token 节省统计
 
 > **注意**：crates.io 上的 `rtk` 还有一个同名但完全不同的项目（Rust Type Kit），安装后请务必用 `rtk gain` 验证是否正确。
 
+
 ## 使用场景与实战演示
 
 ### 场景一：直接使用 RTK
@@ -145,80 +146,6 @@ FAILED: 2/15 tests
 
 $ rtk vitest                 # Vitest 紧凑输出（-99.6%）
 FAIL  src/__tests__/api.test.ts > should handle timeout
-```
-
-### 场景二：为 AI 编程工具安装 Hook
-
-这是 RTK 最强大的使用方式——安装后所有命令**自动重写**，零感知成本：
-
-```bash
-# 为 Claude Code 安装（全局）
-rtk init -g
-
-# 为其他工具安装
-rtk init -g --gemini            # Gemini CLI
-rtk init -g --codex             # Codex (OpenAI)
-rtk init --agent cursor         # Cursor
-rtk init --agent cline          # Cline / Roo Code
-rtk init --agent windsurf       # Windsurf
-
-# 重启 AI 工具后直接使用
-git status      # 自动重写为 rtk git status
-cargo test      # 自动重写为 rtk cargo test
-```
-
-安装后，在 Claude Code 中执行 `git status`，hook 机制在命令执行前将其改写为 `rtk git status`，AI 收到的输出从 ~2,000 tokens 压缩到 ~200 tokens。
-
-### 场景三：Token 节省分析
-
-RTK 内置分析功能，可以查看节省统计：
-
-```bash
-# 查看汇总
-$ rtk gain
-Total tokens saved: 94,100 (79.7%)
-Commands filtered: 134
-Active since: 2026-05-01
-
-# ASCII 图表（最近 30 天）
-$ rtk gain --graph
-May 15  ████████████████████████  4,200
-May 14  ███████████████████      3,100
-May 13  ██████████████████████   3,800
-
-# 命令历史
-$ rtk gain --history
-  git status    (42x)  -81%
-  cargo test    (18x)  -92%
-  ls            (35x)  -79%
-  git diff      (12x)  -76%
-  npm test      (8x)   -91%
-
-# 发现遗漏的节省机会
-$ rtk discover
-Found 3 commands without RTK filters:
-  - terraform plan  (3x, ~12,000 tokens wasted)
-  - ansible-playbook (2x, ~8,000 tokens wasted)
-```
-
-### 场景四：配置文件定制
-
-`~/.config/rtk/config.toml`（macOS 上为 `~/Library/Application Support/rtk/config.toml`）：
-
-```toml
-[hooks]
-exclude_commands = ["curl", "playwright"]  # 跳过这些命令的重写
-
-[tee]
-enabled = true           # 失败时保存原始输出（默认开启）
-mode = "failures"        # "failures"、"always" 或 "never"
-```
-
-当过滤后的命令执行失败时，RTK 会提示完整输出位置，AI 可随时读取原始日志：
-
-```
-FAILED: 2/15 tests
-[完整输出: ~/.local/share/rtk/tee/1707753600_cargo_test.log]
 ```
 
 ## 与其他方案对比
