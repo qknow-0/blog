@@ -4,6 +4,7 @@
 
 ## 文章列表
 
+- [uv：让 Python 包管理快 100 倍的下一代工具](uv-guide.md) — 2026-05-17
 - [agentmemory：为 AI 代理赋予持久记忆的轻量级 MCP 工具](agentmemory-guide.md) — 2026-05-16
 - [ccstatusline：为 Claude Code 打造极致美观的状态栏](ccstatusline-guide.md) — 2026-05-16
 - [Claude Code 安装 + DeepThink V4 接入实战](claude-code-deepthink-v4.md) — 2026-05-16
