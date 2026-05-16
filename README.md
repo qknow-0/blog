@@ -5,6 +5,7 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 语言、框架、工具
+  - [gstack + Spec-Kit：打造 AI 编程的完整工作流](tech/gstack-plus-spec-kit.md) — 2026-05-16
   - [gstack：一个人如何像一支团队一样交付](tech/gstack-guide.md) — 2026-05-16
   - [Spec-Kit：让规范驱动开发的核心理念与实战指南](tech/spec-kit-guide.md) — 2026-05-16
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
