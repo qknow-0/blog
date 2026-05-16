@@ -23,7 +23,7 @@ blog/
 ## 工作约定
 
 - 新文章放到对应分类目录下，文件名使用英文 kebab-case（如 `spec-kit-guide.md`）
-- 写完文章后更新对应 `index.md` 中的文章列表，格式：`- [标题](文件名.md) — YYYY-MM-DD`
+- 写完文章后更新对应 `index.md` 和 `README.md` 中「最近文章」列表，格式：`- [标题](分类/文件名.md) — YYYY-MM-DD`
 - 博文使用中文撰写，Markdown 格式
 - 提交信息格式：`docs: <描述>`
 - **禁止自动推送**：commit 后不要主动 push，等用户确认后再推送

@@ -9,3 +9,7 @@
 - [架构设计](architecture/index.md) — 系统设计、技术方案
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [随想](thoughts/index.md) — 非技术类的日常思考
+
+## 最近文章
+
+- [Spec-Kit：让规范驱动开发的核心理念与实战指南](tech/spec-kit-guide.md) — 2026-05-16
