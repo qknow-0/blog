@@ -175,6 +175,46 @@ claude
 
 Claude Code 会启动 3 个子代理并行分析，结果汇总到主会话。子代理使用 `deepseek-v4-flash`，主代理用 `deepseek-v4-pro[1m]` 做综合分析。
 
+## 常用命令参考
+
+| 命令 | 作用 |
+|------|------|
+| `/help` | 查看所有可用命令 |
+| `/clear` | 清空当前会话上下文 |
+| `/compact` | 压缩上下文（保留关键信息，释放窗口空间） |
+| `/config` | 查看/修改配置（主题、模型、权限等） |
+| `/memory` | 查看已存储的记忆 |
+| `/init` | 为当前项目生成 CLAUDE.md |
+| `/review` | 审查当前分支的代码变更 |
+| `/pr` | 创建 GitHub Pull Request |
+| `/release` | 生成 Release Notes |
+| `/cost` | 查看当前会话 Token 用量和费用 |
+| `/terminal-setup` | 绑定终端的 Ctrl+C/V 等快捷键 |
+| `/login` | 登录/切换账号 |
+| `/logout` | 登出 |
+
+### 会话内快捷操作
+
+- `Shift+Enter` — 输入多行内容
+- `Ctrl+C` — 中断当前 AI 响应
+- `Ctrl+O` — 查看 AI 的详细思考过程（Extended Thinking）
+- `Option+T` — 切换 Extended Thinking 开关
+- `Ctrl+R` — 搜索历史命令
+- `! 命令` — 让用户在终端直接执行命令（而非 AI 执行），如 `! git status`
+
+### 权限控制
+
+Claude Code 有三种权限模式：
+
+```bash
+# 启动时指定权限模式
+claude --permission-mode acceptEdits    # 自动接受文件编辑
+claude --permission-mode bypassPermissions  # 跳过所有权限询问（需谨慎）
+claude --permission-mode default        # 默认：每次操作询问
+```
+
+也可以在会话中使用 `/permissions` 动态切换。
+
 ## 费用对比
 
 DeepSeek API 的定价远低于 Anthropic 官方 API。以 2026 年 5 月的公开定价对比：
