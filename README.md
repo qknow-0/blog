@@ -5,6 +5,7 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 语言、框架、工具
+  - [Claude Code 安装 + DeepThink V4 接入实战](tech/claude-code-deepthink-v4.md) — 2026-05-16
   - [RTK (Rust Token Killer)：将 LLM Token 消耗降低 80% 的 CLI 代理神器](tech/rtk-guide.md) — 2026-05-16
   - [gstack + Spec-Kit：打造 AI 编程的完整工作流](tech/gstack-plus-spec-kit.md) — 2026-05-16
   - [gstack：一个人如何像一支团队一样交付](tech/gstack-guide.md) — 2026-05-16
