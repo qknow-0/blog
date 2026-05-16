@@ -4,4 +4,5 @@
 
 ## 文章列表
 
+- [gstack：一个人如何像一支团队一样交付](gstack-guide.md) — 2026-05-16
 - [Spec-Kit：让规范驱动开发的核心理念与实战指南](spec-kit-guide.md) — 2026-05-16
