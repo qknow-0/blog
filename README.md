@@ -5,6 +5,7 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 语言、框架、工具
+  - [RTK (Rust Token Killer)：将 LLM Token 消耗降低 80% 的 CLI 代理神器](tech/rtk-guide.md) — 2026-05-16
   - [gstack + Spec-Kit：打造 AI 编程的完整工作流](tech/gstack-plus-spec-kit.md) — 2026-05-16
   - [gstack：一个人如何像一支团队一样交付](tech/gstack-guide.md) — 2026-05-16
   - [Spec-Kit：让规范驱动开发的核心理念与实战指南](tech/spec-kit-guide.md) — 2026-05-16
