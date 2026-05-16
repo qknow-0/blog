@@ -229,30 +229,6 @@ DeepSeek API 的定价远低于 Anthropic 官方 API。以 2026 年 5 月的公�
 
 > 注：具体价格请以 [DeepSeek 官方定价页](https://api-docs.deepseek.com/zh-cn/quick_start/pricing) 为准。
 
-## 常见问题
-
-### Q: 如果之前配置过 Anthropic 官方的 API，想切回官方怎么办？
-
-```bash
-unset ANTHROPIC_BASE_URL
-unset ANTHROPIC_AUTH_TOKEN
-unset ANTHROPIC_MODEL
-# ... 以及其他变量
-```
-
-然后设置回 Anthropic 的 API Key，或者用 `claude login` 重新登录。
-
-### Q: DeepThink V4 的工具调用（tool use）支持如何？
-
-DeepThink V4 完全兼容 Anthropic Messages API 的 tool use 协议。Claude Code 的文件读写、Bash 执行、Grep 搜索等所有工具都能正常使用。实测工具调用成功率和 Claude Sonnet 4.6 基本持平。
-
-### Q: 子代理用 v4-flash 能行吗？
-
-对于探索性任务、简单文件读写、grep 搜索这类任务，v4-flash 完全够用。如果是子代理也要做复杂代码分析，可以把 `CLAUDE_CODE_SUBAGENT_MODEL` 也设为 `deepseek-v4-pro[1m]`。
-
-### Q: 100 万 token 上下文真的能用满吗？
-
-能。一个中等规模的微服务项目（30-50 个文件），Claude Code 加载项目上下文时很容易超过 100K token。DeepThink V4 的 1M 窗口意味着你可以在一个会话里分析整个大型单体仓库的核心模块。
 
 ## 总结
 
