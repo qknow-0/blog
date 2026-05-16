@@ -4,18 +4,53 @@ Claude Code 是 Anthropic 官方推出的终端 AI 编程助手。而 DeepSeek �
 
 ## 前置条件
 
-- **Node.js 18+**（Claude Code 通过 npm 安装）
-- **Git**（版本控制必需；Windows 用户需安装 [Git for Windows](https://git-scm.com/downloads)）
+- **终端** — macOS/Linux 原生终端，或 Windows 上的 PowerShell/CMD/WSL
+- **Git**（Windows 用户推荐安装 [Git for Windows](https://git-scm.com/downloads)，Claude Code 的 Bash 工具依赖它）
 - **DeepSeek API Key**（在 [DeepSeek Platform](https://platform.deepseek.com) 获取）
-- **macOS / Linux / Windows** 均支持
 
 ## 第 1 步：安装 Claude Code
 
+官方推荐使用原生安装脚本，支持 macOS、Linux、WSL 和 Windows。安装后会自动在后台更新到最新版本。
+
+### macOS / Linux / WSL
+
 ```bash
-npm install -g @anthropic-ai/claude-code
+curl -fsSL https://claude.ai/install.sh | bash
 ```
 
-安装完成后验证：
+### Windows PowerShell
+
+```powershell
+irm https://claude.ai/install.ps1 | iex
+```
+
+### Windows CMD
+
+```
+curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd
+```
+
+### 其他安装方式
+
+**Homebrew（macOS）：**
+
+```bash
+brew install --cask claude-code
+```
+
+Homebrew 有两个 cask：`claude-code` 跟踪稳定版（滞后约一周，跳过有重大回归的版本），`claude-code@latest` 跟踪最新版。注意 Homebrew 安装不会自动更新，需要手动 `brew upgrade`。
+
+**WinGet（Windows）：**
+
+```
+winget install Anthropic.ClaudeCode
+```
+
+WinGet 也不会自动更新，需定期运行 `winget upgrade Anthropic.ClaudeCode`。
+
+**Linux 包管理器：** Debian 系用 `apt`，Fedora/RHEL 用 `dnf`，Alpine 用 `apk`。
+
+### 验证安装
 
 ```bash
 claude --version
@@ -26,10 +61,6 @@ claude --version
 ```
 v1.0.37 (Anthropic Claude Code)
 ```
-
-如果显示版本号，说明安装成功。
-
-> **Windows 注意**：确保 Git for Windows 已安装，且 PowerShell 或 Git Bash 中 `npm` 和 `node` 命令可用。
 
 ## 第 2 步：配置 DeepSeek API 作为后端
 
@@ -207,7 +238,7 @@ DeepThink V4 完全兼容 Anthropic Messages API 的 tool use 协议。Claude Co
 
 三步完成 Claude Code + DeepThink V4 的配置：
 
-1. `npm install -g @anthropic-ai/claude-code` — 安装
+1. `curl -fsSL https://claude.ai/install.sh | bash` — 安装
 2. 设置 7 个环境变量 — 指向 DeepSeek API
 3. `cd my-project && claude` — 开始使用
 
