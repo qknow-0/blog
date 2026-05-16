@@ -12,5 +12,8 @@
 # Claude Code
 .claude/
 
+# Env
+.env
+
 # Thumbnails
 ._*

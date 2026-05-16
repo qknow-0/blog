@@ -1,15 +1,22 @@
 #!/bin/bash
-# 坚果云 WebDAV 配置（首次使用请修改为你的账号信息）
-# 坚果云 → 账户信息 → 安全选项 → 第三方应用管理 → 添加应用密码
-WEBDAV_URL="https://dav.jianguoyun.com/dav/backups/blog"
-WEBDAV_USER="your-email@example.com"
-WEBDAV_PASS="your-app-password"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BLOG_DIR="$(dirname "$SCRIPT_DIR")"
+
+# 从 .env 读取配置
+if [ -f "$BLOG_DIR/.env" ]; then
+  set -a
+  source "$BLOG_DIR/.env"
+  set +a
+else
+  echo "错误: 未找到 $BLOG_DIR/.env 文件"
+  echo "请复制 .env.example 为 .env 并填入你的坚果云凭据"
+  exit 1
+fi
+
+WEBDAV_URL="${WEBDAV_URL:-https://dav.jianguoyun.com/dav/backups/blog}"
 
 TIMESTAMP=$(date +%Y-%m-%d-%H%M)
 ARCHIVE_NAME="blog-backup-${TIMESTAMP}.tar.gz"
-
-SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-BLOG_DIR="$(dirname "$SCRIPT_DIR")"
 BLOG_NAME="$(basename "$BLOG_DIR")"
 
 # 打包
