@@ -4,10 +4,8 @@
 
 ## 目录
 
-- [笔记](notes/index.md) — 技术笔记、学习记录、随想
-- [项目](projects/index.md) — 项目文档、架构记录
-- [每日记录](daily/index.md) — 按日期归档的日常记录
-
-## 最近更新
-
-<!-- 最近的文章会列在这里 -->
+- [技术笔记](tech/index.md) — 语言、框架、工具
+- [项目复盘](project-retro/index.md) — 项目回顾与总结
+- [架构设计](architecture/index.md) — 系统设计、技术方案
+- [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
+- [随想](thoughts/index.md) — 非技术类的日常思考
