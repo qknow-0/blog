@@ -15,6 +15,7 @@ blog/
 ├── project-retro/      # 项目复盘
 ├── architecture/       # 架构设计、技术方案
 ├── reading/            # 阅读笔记（书、文章、视频）
+├── source-read/        # 源码阅读（开源项目的源码分析）
 └── thoughts/           # 随想、非技术思考
 ```
 
