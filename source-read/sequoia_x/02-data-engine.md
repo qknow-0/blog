@@ -4,40 +4,33 @@
 
 读完你会看到：为什么后复权选型是对的、多进程分片怎么做到不丢数据、以及一个可中断续传的回填方案怎么写。
 
-## 数据流全景
+## 数据引擎架构
 
 ```mermaid
-flowchart TD
-    A[main.py] --> B{运行模式}
-    B -->|--backfill| C[backfill 回填模式]
-    B -->|日常| D[sync_today_bulk 增量模式]
-
-    C --> C1[单线程遍历全市场股票]
-    C1 --> C2{本地已有最新?}
-    C2 -->|是| C1
-    C2 -->|否| C3[baostock 拉取历史K线]
-    C3 --> C4{成功?}
-    C4 -->|失败| C5{重试 < 3?}
-    C5 -->|是| C6[指数退避 2s/4s/8s]
-    C6 --> C3
-    C5 -->|否| C7[记录失败, 继续下一只]
-    C7 --> C1
-    C4 -->|成功| C8[写入 SQLite]
-    C8 --> C9{已处理 200 只?}
-    C9 -->|是| C10[重连 baostock]
-    C10 --> C1
-    C9 -->|否| C1
-
-    D --> D1[查询每只股票最新日期]
-    D1 --> D2[构建 task 列表<br/>只拉缺失的]
-    D2 --> D3[跨步分片<br/>8 进程并行]
-    D3 --> D4[各进程独立 login<br/>拉取增量数据]
-    D4 --> D5[合并结果, 清洗数据]
-    D5 --> D6[先删当天旧数据]
-    D6 --> D7[批量写入 SQLite]
-
-    C8 --> E[(SQLite<br/>stock_daily)]
-    D7 --> E
+mindmap
+  root((DataEngine))
+    存储层
+      SQLite 单表 stock_daily
+      UNIQUE(symbol, date)
+      后复权 adjustflag="1"
+      数据清洗 去 null 去零量
+    回填 backfill
+      单线程遍历全市场
+      三层容错
+        单只重试 3 次 指数退避
+        每 200 只重连 baostock
+        先查本地 skip 已入库
+      可中断续传
+    增量 sync_today_bulk
+      8 进程并行
+        跨步分片 tasks[i::n_workers]
+        各进程独立 login
+      先删后写 幂等覆盖
+      只拉缺失日期
+    股票列表
+      baostock 全市场获取
+      本地 SQLite 查询
+      sh/sz 代码转换
 ```
 
 ## 一张表，五个字段
