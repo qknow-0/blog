@@ -4,33 +4,45 @@
 
 读完你会看到：为什么后复权选型是对的、多进程分片怎么做到不丢数据、以及一个可中断续传的回填方案怎么写。
 
-## 数据引擎架构
+## 数据引擎处理流程
 
 ```mermaid
-mindmap
-  root((DataEngine))
-    存储层
-      SQLite 单表 stock_daily
-      UNIQUE(symbol, date)
-      后复权 adjustflag="1"
-      数据清洗 去 null 去零量
-    回填 backfill
-      单线程遍历全市场
-      三层容错
-        单只重试 3 次 指数退避
-        每 200 只重连 baostock
-        先查本地 skip 已入库
-      可中断续传
-    增量 sync_today_bulk
-      8 进程并行
-        跨步分片 tasks[i::n_workers]
-        各进程独立 login
-      先删后写 幂等覆盖
-      只拉缺失日期
-    股票列表
-      baostock 全市场获取
-      本地 SQLite 查询
-      sh/sz 代码转换
+flowchart TD
+    E[DataEngine.__init__] --> F{运行模式}
+    F -->|backfill| G[获取全市场股票列表]
+    G --> H{本地已有最新?}
+    H -->|是| G
+    H -->|否| I[baostock 拉取历史K线]
+    I --> J{查询成功?}
+    J -->|失败| K{重试 < 3?}
+    K -->|是| L[指数退避 2s/4s/8s]
+    L --> I
+    K -->|否| M[记录失败 继续下一只]
+    M --> G
+    J -->|成功| N[清洗数据]
+    N --> O[写入 SQLite]
+    O --> P{已处理 200 只?}
+    P -->|是| Q[重连 baostock]
+    Q --> G
+    P -->|否| G
+
+    F -->|sync_today_bulk| R[查询每只最新日期]
+    R --> S[只构建缺失日期 task]
+    S --> T[跨步分片]
+    T1[Worker 1<br/>独立 login] --> T2[拉取增量数据]
+    T3[Worker 2<br/>独立 login] --> T4[拉取增量数据]
+    T5[Worker N<br/>独立 login] --> T6[拉取增量数据]
+    T --> T1
+    T --> T3
+    T --> T5
+    T2 --> U[合并结果 清洗数据]
+    T4 --> U
+    T6 --> U
+    U --> V[删除当天旧数据]
+    V --> W[批量写入 SQLite]
+
+    O --> X[(SQLite<br/>stock_daily)]
+    W --> X
 ```
 
 ## 一张表，五个字段
