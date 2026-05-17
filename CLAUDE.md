@@ -11,7 +11,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ```
 blog/
 ├── README.md           # 知识库导航首页
-├── tech/               # 技术笔记（语言、框架、工具）
+├── tech/               # 技术笔记（框架、工具）
+├── languages/          # 编程语言（语法、特性）
 ├── project-retro/      # 项目复盘
 ├── architecture/       # 架构设计、技术方案
 ├── reading/            # 阅读笔记（书、文章、视频）

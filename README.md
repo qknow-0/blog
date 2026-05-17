@@ -4,7 +4,7 @@
 
 ## 目录
 
-- [技术笔记](tech/index.md) — 语言、框架、工具
+- [技术笔记](tech/index.md) — 框架、工具
   - [GitLab 自托管安装指南：从零搭建私有代码仓库](tech/gitlab-install-guide.md) — 2026-05-17
   - [uv：让 Python 包管理快 100 倍的下一代工具](tech/uv-guide.md) — 2026-05-17
   - [agentmemory：为 AI 代理赋予持久记忆的轻量级 MCP 工具](tech/agentmemory-guide.md) — 2026-05-16
@@ -14,6 +14,10 @@
   - [gstack + Spec-Kit：打造 AI 编程的完整工作流](tech/gstack-plus-spec-kit.md) — 2026-05-16
   - [gstack：一个人如何像一支团队一样交付](tech/gstack-guide.md) — 2026-05-16
   - [Spec-Kit：让规范驱动开发的核心理念与实战指南](tech/spec-kit-guide.md) — 2026-05-16
+- [编程语言](languages/index.md) — 语法、特性
+  - [Python](languages/python/index.md)
+    - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
+    - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
