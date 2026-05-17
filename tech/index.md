@@ -4,6 +4,7 @@
 
 ## 文章列表
 
+- [GitLab 自托管安装指南：从零搭建私有代码仓库](gitlab-install-guide.md) — 2026-05-17
 - [uv：让 Python 包管理快 100 倍的下一代工具](uv-guide.md) — 2026-05-17
 - [agentmemory：为 AI 代理赋予持久记忆的轻量级 MCP 工具](agentmemory-guide.md) — 2026-05-16
 - [ccstatusline：为 Claude Code 打造极致美观的状态栏](ccstatusline-guide.md) — 2026-05-16
