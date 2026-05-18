@@ -4,6 +4,7 @@
 
 ## 文章列表
 
+- [code-review-graph：AI 代码审查不应该重读整个仓库](code-review-graph-guide.md) — 2026-05-18
 - [Hypothesis：让测试替你找 bug](hypothesis-guide.md) — 2026-05-18
 - [CodeGraph：让 AI 编程助手不再 grep 全仓](codegraph-guide.md) — 2026-05-18
 - [GitLab 自托管安装指南：从零搭建私有代码仓库](gitlab-install-guide.md) — 2026-05-17
