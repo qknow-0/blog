@@ -25,4 +25,5 @@
   - [Sequoia-X（一）项目介绍与使用方式](source-read/sequoia_x/01-intro.md) — 2026-05-17
   - [Sequoia-X（二）数据引擎](source-read/sequoia_x/02-data-engine.md) — 2026-05-17
   - [Sequoia-X（三）策略体系](source-read/sequoia_x/03-strategies.md) — 2026-05-18
+  - [Sequoia-X（四）飞书推送与基础设施](source-read/sequoia_x/04-notify-infra.md) — 2026-05-18
 - [随想](thoughts/index.md) — 非技术类的日常思考
