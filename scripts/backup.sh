@@ -25,6 +25,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='.git' \
   --exclude='.claude' \
   --exclude='.DS_Store' \
+  --exclude='source-read/Sequoia-X' \
   "$BLOG_NAME/"
 
 # 上传到坚果云

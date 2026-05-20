@@ -33,3 +33,4 @@ cp .env.example .env
 - `.git/` — 版本历史（已有 GitHub 备份）
 - `.claude/` — Claude Code 本地配置
 - `.DS_Store` — macOS 系统文件
+- `source-read/Sequoia-X` — 项目源码排除

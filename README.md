@@ -2,18 +2,6 @@
 
 个人的数字花园，记录学习笔记、项目文档和日常思考。
 
-## 开发环境
-
-换电脑时运行 `./scripts/setup.sh` 一键安装，已安装的自动跳过。
-
-| 工具 | 用途 |
-|------|------|
-| Claude Code | AI 编程助手 |
-| Zed | 编辑器 |
-| uv | Python 包管理 |
-| Bun | JavaScript 运行时 |
-| Git | 版本控制 |
-
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
@@ -43,3 +31,7 @@
   - [Sequoia-X（四）飞书推送与基础设施](source-read/sequoia_x/04-notify-infra.md) — 2026-05-18
   - [Sequoia-X（五）测试体系](source-read/sequoia_x/05-testing.md) — 2026-05-18
 - [随想](thoughts/index.md) — 非技术类的日常思考
+
+## 开发环境
+
+`./scripts/setup.sh` 个人当前使用环境，一键安装。

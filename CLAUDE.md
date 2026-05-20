@@ -17,7 +17,8 @@ blog/
 ├── architecture/       # 架构设计、技术方案
 ├── reading/            # 阅读笔记（书、文章、视频）
 ├── source-read/        # 源码阅读（开源项目的源码分析）
-└── thoughts/           # 随想、非技术思考
+├── thoughts/           # 随想、非技术思考
+└── vocabulary/         # 计算机词汇学习（每天 10 个）
 ```
 
 每个目录下有 `index.md` 作为文章索引。
@@ -34,5 +35,6 @@ blog/
 - 提交时按文件名逐个 `git add`，避免使用 `git add -A` 误提交敏感文件
 - 提交信息格式：`docs: <描述>`
 - 尽量每天备份，commit 并 push 当天所有变更后，执行 `./scripts/backup.sh` 将内容备份到坚果云
+- **词汇学习提醒**：每次打开这个项目时，提醒用户学习计算机词汇。检查 `vocabulary/index.md` 确认最新进度，准备下一批 10 个新词（存为 `vocabulary/day-NNN.md`），学完后更新 index.md
 - **禁止自动推送**：commit 后不要主动 push，等用户确认后再推送
 - **禁止读取 .env 文件**：任何时候都不要读取项目的 .env 文件内容
