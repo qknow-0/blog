@@ -62,4 +62,58 @@ else
 fi
 
 echo ""
+echo "===== AI 工具链 ====="
+
+# Spec-Kit
+if uv tool list 2>/dev/null | grep -q specify-cli; then
+    echo "Spec-Kit 已安装"
+else
+    echo "安装 Spec-Kit..."
+    uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+fi
+
+# gstack
+if [ -d ~/.claude/skills/gstack ]; then
+    echo "gstack 已安装"
+else
+    echo "安装 gstack..."
+    git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
+    cd ~/.claude/skills/gstack && ./setup
+fi
+
+# RTK
+if command -v rtk &>/dev/null; then
+    echo "RTK 已安装"
+else
+    echo "安装 RTK..."
+    curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/main/install.sh | bash
+fi
+
+# code-review-graph
+if command -v code-review-graph &>/dev/null; then
+    echo "code-review-graph 已安装"
+else
+    echo "安装 code-review-graph..."
+    pip install code-review-graph
+    code-review-graph install
+fi
+
+# ccstatusline
+if [ -d ~/.claude/skills/ccstatusline ]; then
+    echo "ccstatusline 已安装"
+else
+    echo "安装 ccstatusline..."
+    git clone --single-branch --depth 1 https://github.com/sirmalloc/ccstatusline.git ~/.claude/skills/ccstatusline
+    cd ~/.claude/skills/ccstatusline && ./setup
+fi
+
+# agentmemory
+if [ -d ~/.claude/skills/agentmemory ]; then
+    echo "agentmemory 已安装"
+else
+    echo "安装 agentmemory..."
+    git clone --single-branch --depth 1 https://github.com/rohitg00/agentmemory.git ~/.claude/skills/agentmemory
+fi
+
+echo ""
 echo "初始化完成"
