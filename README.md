@@ -25,6 +25,7 @@
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
+  - [基金溢价数据设计](architecture/data-pipeline.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
   - [Sequoia-X（一）项目介绍与使用方式](source-read/sequoia_x/01-intro.md) — 2026-05-17
