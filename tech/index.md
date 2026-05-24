@@ -4,6 +4,7 @@
 
 ## 文章列表
 
+- [CLI-Anything：让任何软件都能被 AI Agent 操控](cli-anything-guide.md) — 2026-05-20
 - [Understand-Anything：新团队接手的第一个命令](understand-anything-guide.md) — 2026-05-18
 - [code-review-graph：AI 代码审查不应该重读整个仓库](code-review-graph-guide.md) — 2026-05-18
 - [Hypothesis：让测试替你找 bug](hypothesis-guide.md) — 2026-05-18
