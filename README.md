@@ -23,6 +23,8 @@
   - [Python](languages/python/index.md)
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
+  - [Rust](languages/rust/index.md)
+    - [Rust 所有权：三张图看懂最核心的概念](languages/rust/ownership.md) — 2026-05-24
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24

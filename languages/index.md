@@ -5,3 +5,4 @@
 ## 分类
 
 - [Python](python/index.md)
+- [Rust](rust/index.md)
