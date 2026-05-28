@@ -25,6 +25,7 @@
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Rust](languages/rust/index.md)
+    - [Rust 错误处理：Result、Option 和 ? 运算符](languages/rust/error-handling.md) — 2026-05-27
     - [Rust 所有权：三张图看懂最核心的概念](languages/rust/ownership.md) — 2026-05-24
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
