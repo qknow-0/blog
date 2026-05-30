@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "languages/rust/unit-testing.md",
+                "file": "languages/rust/modules.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "unit-testing"
+              "title": "modules"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "languages/rust/unit-testing.md",
+                "file": "languages/rust/modules.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for unit-testing"
+              "title": "Backlinks for modules"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "languages/rust/unit-testing.md",
+                "file": "languages/rust/modules.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from unit-testing"
+              "title": "Outgoing links from modules"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "languages/rust/unit-testing.md",
+                "file": "languages/rust/modules.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of unit-testing"
+              "title": "Outline of modules"
             }
           }
         ]
@@ -185,6 +185,21 @@
   },
   "active": "fd99af2d7ae82a49",
   "lastOpenFiles": [
+    "languages/python/modules.md",
+    "languages/rust/modules.md",
+    "languages/python/async-await.md",
+    "languages/java/unit-testing.md",
+    "languages/java/index.md",
+    "languages/java",
+    "languages/rust/traits-generics.md",
+    "languages/golang/unit-testing.md",
+    "languages/nodejs/event-loop.md",
+    "languages/golang/index.md",
+    "languages/golang",
+    "scripts/setup.md",
+    "README.md",
+    "CLAUDE.md",
+    "vocabulary/day-005.md",
     "languages/nodejs/practical-features.md",
     "languages/rust/unit-testing.md",
     "languages/rust/error-handling.md",
