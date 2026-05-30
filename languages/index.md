@@ -7,4 +7,5 @@
 - [Python](python/index.md)
 - [Rust](rust/index.md)
 - [Go](golang/index.md)
+- [Java](java/index.md)
 - [Node.js](nodejs/index.md)

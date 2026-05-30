@@ -27,6 +27,8 @@
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Go](languages/golang/index.md)
     - [Go 单元测试：标准库就够了](languages/golang/unit-testing.md) — 2026-05-30
+  - [Java](languages/java/index.md)
+    - [Java 单元测试：JUnit 5 不是唯一解](languages/java/unit-testing.md) — 2026-05-30
   - [Node.js](languages/nodejs/index.md)
     - [Node.js 事件循环：理解了它才算真会用](languages/nodejs/event-loop.md) — 2026-05-30
     - [Node.js 最新版本实用特性盘点](languages/nodejs/practical-features.md) — 2026-05-27
