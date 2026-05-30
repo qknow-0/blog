@@ -25,6 +25,7 @@
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Node.js](languages/nodejs/index.md)
+    - [Node.js 事件循环：理解了它才算真会用](languages/nodejs/event-loop.md) — 2026-05-30
     - [Node.js 最新版本实用特性盘点](languages/nodejs/practical-features.md) — 2026-05-27
   - [Rust](languages/rust/index.md)
     - [Rust 单元测试：编译器帮你测](languages/rust/unit-testing.md) — 2026-05-27
