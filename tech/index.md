@@ -2,6 +2,15 @@
 
 框架、工具相关的学习和实践记录。
 
+## 系列
+
+- [容器化系列](containerization/index.md) — 从 Docker 到 Docker Compose 到 Kubernetes，容器化技术的完整演进路线
+  - [Docker 核心：不止是「跑个容器」](containerization/docker-core.md) — 2026-05-30
+  - [Docker Compose：从单容器到多容器协作](containerization/docker-compose.md) — 2026-05-30
+  - [Kubernetes 入门：当「单机」不够用的时候](containerization/kubernetes-intro.md) — 2026-05-30
+  - [从 Compose 到 K8s 的思维切换](containerization/compose-to-k8s.md) — 2026-05-30
+  - [Helm：Kubernetes 的包管理器](containerization/helm.md) — 2026-05-30
+
 ## 文章列表
 
 - [Compound Engineering：让每一次提交都为下一次铺路](compound-engineering-guide.md) — 2026-05-27

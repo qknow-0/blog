@@ -5,6 +5,12 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
+  - [容器化系列](tech/containerization/index.md) — Docker → Compose → K8s 演进路线
+    - [Docker 核心：不止是「跑个容器」](tech/containerization/docker-core.md) — 2026-05-30
+    - [Docker Compose：从单容器到多容器协作](tech/containerization/docker-compose.md) — 2026-05-30
+    - [Kubernetes 入门：当「单机」不够用的时候](tech/containerization/kubernetes-intro.md) — 2026-05-30
+    - [从 Compose 到 K8s 的思维切换](tech/containerization/compose-to-k8s.md) — 2026-05-30
+    - [Helm：Kubernetes 的包管理器](tech/containerization/helm.md) — 2026-05-30
   - [Compound Engineering：让每一次提交都为下一次铺路](tech/compound-engineering-guide.md) — 2026-05-27
   - [CLI-Anything：让任何软件都能被 AI Agent 操控](tech/cli-anything-guide.md) — 2026-05-20
   - [Understand-Anything：新团队接手的第一个命令](tech/understand-anything-guide.md) — 2026-05-18
