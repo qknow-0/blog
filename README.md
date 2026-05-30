@@ -30,6 +30,7 @@
     - [Node.js 事件循环：理解了它才算真会用](languages/nodejs/event-loop.md) — 2026-05-30
     - [Node.js 最新版本实用特性盘点](languages/nodejs/practical-features.md) — 2026-05-27
   - [Rust](languages/rust/index.md)
+    - [Rust Trait 与泛型：多态不只是继承](languages/rust/traits-generics.md) — 2026-05-30
     - [Rust 单元测试：编译器帮你测](languages/rust/unit-testing.md) — 2026-05-27
     - [Rust 错误处理：Result、Option 和 ? 运算符](languages/rust/error-handling.md) — 2026-05-27
     - [Rust 所有权：三张图看懂最核心的概念](languages/rust/ownership.md) — 2026-05-24
