@@ -50,6 +50,10 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [QuantDinger](source-read/quant_dinger/01-intro.md) — AI 量化交易操作系统（6 篇）
+    - [（一）项目概览与架构全景](source-read/quant_dinger/01-intro.md) — 2026-05-30
+    - [（二）数据层](source-read/quant_dinger/02-data-layer.md) · [（三）策略引擎](source-read/quant_dinger/03-strategy-engine.md) · [（四）执行层](source-read/quant_dinger/04-execution.md)
+    - [（五）AI 集成](source-read/quant_dinger/05-ai-agent.md) · [（六）基础设施](source-read/quant_dinger/06-infra.md)
   - [Sequoia-X（一）项目介绍与使用方式](source-read/sequoia_x/01-intro.md) — 2026-05-17
   - [Sequoia-X（二）数据引擎](source-read/sequoia_x/02-data-engine.md) — 2026-05-17
   - [Sequoia-X（三）策略体系](source-read/sequoia_x/03-strategies.md) — 2026-05-18
