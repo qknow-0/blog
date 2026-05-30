@@ -33,4 +33,9 @@ cp .env.example .env
 - `.git/` — 版本历史（已有 GitHub 备份）
 - `.claude/` — Claude Code 本地配置
 - `.DS_Store` — macOS 系统文件
+- `.AppleDouble` / `.LSOverride` — macOS 资源分支
+- `.vscode/` `.idea/` — 编辑器配置
+- `*.swp` `*.swo` — Vim 临时文件
+- `.env` — 环境变量
+- `._*` — macOS 缩略图
 - `source-read/Sequoia-X` — 项目源码排除

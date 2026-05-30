@@ -39,3 +39,4 @@ blog/
 - **词汇学习提醒**：每次打开这个项目时，提醒用户学习计算机词汇。检查 `vocabulary/index.md` 确认最新进度，准备下一批 10 个新词（存为 `vocabulary/day-NNN.md`），每个词需附带音标，学完后更新 index.md
 - **禁止自动推送**：commit 后不要主动 push，等用户确认后再推送
 - **禁止读取 .env 文件**：任何时候都不要读取项目的 .env 文件内容
+- `.gitignore` 中的条目需同步到 `scripts/backup.sh` 的 `--exclude` 列表中

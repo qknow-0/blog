@@ -25,6 +25,14 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='.git' \
   --exclude='.claude' \
   --exclude='.DS_Store' \
+  --exclude='.AppleDouble' \
+  --exclude='.LSOverride' \
+  --exclude='.vscode' \
+  --exclude='.idea' \
+  --exclude='*.swp' \
+  --exclude='*.swo' \
+  --exclude='.env' \
+  --exclude='._*' \
   --exclude='source-read/Sequoia-X' \
   "$BLOG_NAME/"
 
