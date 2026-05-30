@@ -1,4 +1,4 @@
-# QuantDinger 源码阅读（五）：AI 集成——Agent Gateway 与 MCP Server
+# QuantDinger 源码阅读（六）：AI 集成——Agent Gateway 与 MCP Server
 
 > QuantDinger 的差异化定位之一是「Agent-native」——不是事后拼上去的 AI 功能，而是从 API 设计层面就让 AI 客户端可以像人类用户一样操控整个系统。这一篇拆解 Agent Gateway 的 API 设计、MCP Server 的薄封装策略、以及贯穿始终的安全模型。
 
@@ -240,4 +240,4 @@ TIMEOUT_S = float(os.environ.get("QUANTDINGER_TIMEOUT_S", "60"))
 
 AI、策略、执行——三大引擎都讲完了。最后一篇看基础设施：Docker 是怎么编排这些服务的、认证和计费系统是怎么设计的、安全底线在哪里。
 
-→ [（六）基础设施：Docker 部署、认证计费与安全设计](06-infra.md)
+→ [（七）基础设施：Docker 部署、认证计费与安全设计](07-infra.md)

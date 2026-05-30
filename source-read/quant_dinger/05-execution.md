@@ -1,4 +1,4 @@
-# QuantDinger 源码阅读（四）：券商执行层——多交易所统一抽象与订单生命周期
+# QuantDinger 源码阅读（五）：券商执行层——多交易所统一抽象与订单生命周期
 
 > 策略写好，回测通过，参数优化完——接下来是下单。QuantDinger 支持 10+ 个加密货币交易所外加 IBKR、MT5、Alpaca 三家传统券商。这篇拆解它是怎么用一个工厂模式统一所有执行通道的，以及一笔订单从策略信号到成交的全过程。
 
@@ -250,4 +250,4 @@ def start_monitor_service():
 
 人写策略、系统执行订单——这个闭环还缺 AI 的参与。下一篇深入 Agent Gateway 和 MCP Server，看看 AI 是怎么被整合进这个量化操作系统的。
 
-→ [（五）AI 集成：Agent Gateway 与 MCP Server](05-ai-agent.md)
+→ [（六）AI 集成：Agent Gateway 与 MCP Server](06-ai-agent.md)
