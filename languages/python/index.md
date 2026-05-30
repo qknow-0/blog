@@ -4,6 +4,7 @@ Python 语言的语法、特性和实践记录。
 
 ## 文章列表
 
+- [Python 装饰器：从函数到可调用对象的完整理解](decorators.md) — 2026-05-30
 - [Python 模块系统：每一个 import 背后发生了什么](modules.md) — 2026-05-30
 - [Python 异步编程：从回调地狱到 async/await](async-await.md) — 2026-05-30
 - [yield 与生成器：惰性求值的艺术](yield-statement.md) — 2026-05-17

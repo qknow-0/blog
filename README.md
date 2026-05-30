@@ -28,6 +28,7 @@
   - [Spec-Kit：让规范驱动开发的核心理念与实战指南](tech/spec-kit-guide.md) — 2026-05-16
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
+    - [Python 装饰器：从函数到可调用对象的完整理解](languages/python/decorators.md) — 2026-05-30
     - [Python 模块系统：每一个 import 背后发生了什么](languages/python/modules.md) — 2026-05-30
     - [Python 异步编程：从回调地狱到 async/await](languages/python/async-await.md) — 2026-05-30
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
