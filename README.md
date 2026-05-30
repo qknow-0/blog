@@ -22,6 +22,7 @@
   - [Spec-Kit：让规范驱动开发的核心理念与实战指南](tech/spec-kit-guide.md) — 2026-05-16
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
+    - [Python 异步编程：从回调地狱到 async/await](languages/python/async-await.md) — 2026-05-30
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Go](languages/golang/index.md)
