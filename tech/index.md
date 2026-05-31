@@ -2,29 +2,9 @@
 
 框架、工具相关的学习和实践记录。
 
-## 系列
+## 分类
 
-- [容器化系列](containerization/index.md) — 从 Docker 到 Docker Compose 到 Kubernetes，容器化技术的完整演进路线
-  - [Docker 核心：不止是「跑个容器」](containerization/docker-core.md) — 2026-05-30
-  - [Docker Compose：从单容器到多容器协作](containerization/docker-compose.md) — 2026-05-30
-  - [Kubernetes 入门：当「单机」不够用的时候](containerization/kubernetes-intro.md) — 2026-05-30
-  - [从 Compose 到 K8s 的思维切换](containerization/compose-to-k8s.md) — 2026-05-30
-  - [Helm：Kubernetes 的包管理器](containerization/helm.md) — 2026-05-30
-
-## 文章列表
-
-- [Compound Engineering：让每一次提交都为下一次铺路](compound-engineering-guide.md) — 2026-05-27
-- [CLI-Anything：让任何软件都能被 AI Agent 操控](cli-anything-guide.md) — 2026-05-20
-- [Understand-Anything：新团队接手的第一个命令](understand-anything-guide.md) — 2026-05-18
-- [code-review-graph：AI 代码审查不应该重读整个仓库](code-review-graph-guide.md) — 2026-05-18
-- [Hypothesis：让测试替你找 bug](hypothesis-guide.md) — 2026-05-18
-- [CodeGraph：让 AI 编程助手不再 grep 全仓](codegraph-guide.md) — 2026-05-18
-- [GitLab 自托管安装指南：从零搭建私有代码仓库](gitlab-install-guide.md) — 2026-05-17
-- [uv：让 Python 包管理快 100 倍的下一代工具](uv-guide.md) — 2026-05-17
-- [agentmemory：为 AI 代理赋予持久记忆的轻量级 MCP 工具](agentmemory-guide.md) — 2026-05-16
-- [ccstatusline：为 Claude Code 打造极致美观的状态栏](ccstatusline-guide.md) — 2026-05-16
-- [Claude Code 安装 + DeepThink V4 接入实战](claude-code-deepthink-v4.md) — 2026-05-16
-- [RTK (Rust Token Killer)：将 LLM Token 消耗降低 80% 的 CLI 代理神器](rtk-guide.md) — 2026-05-16
-- [gstack + Spec-Kit：打造 AI 编程的完整工作流](gstack-plus-spec-kit.md) — 2026-05-16
-- [gstack：一个人如何像一支团队一样交付](gstack-guide.md) — 2026-05-16
-- [Spec-Kit：让规范驱动开发的核心理念与实战指南](spec-kit-guide.md) — 2026-05-16
+- [AI 编程工具链](ai-tooling/index.md) — 9 篇，AI 辅助编程的工具与框架
+- [Claude Code](claude-code/index.md) — 3 篇，Claude Code 配置、插件与生态
+- [开发工具](dev-tools/index.md) — 3 篇，开发环境与基础设施
+- [容器化系列](containerization/index.md) — 5 篇，Docker → Compose → K8s → Helm

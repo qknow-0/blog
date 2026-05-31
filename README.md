@@ -5,27 +5,10 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [容器化系列](tech/containerization/index.md) — Docker → Compose → K8s 演进路线
-    - [Docker 核心：不止是「跑个容器」](tech/containerization/docker-core.md) — 2026-05-30
-    - [Docker Compose：从单容器到多容器协作](tech/containerization/docker-compose.md) — 2026-05-30
-    - [Kubernetes 入门：当「单机」不够用的时候](tech/containerization/kubernetes-intro.md) — 2026-05-30
-    - [从 Compose 到 K8s 的思维切换](tech/containerization/compose-to-k8s.md) — 2026-05-30
-    - [Helm：Kubernetes 的包管理器](tech/containerization/helm.md) — 2026-05-30
-  - [Compound Engineering：让每一次提交都为下一次铺路](tech/compound-engineering-guide.md) — 2026-05-27
-  - [CLI-Anything：让任何软件都能被 AI Agent 操控](tech/cli-anything-guide.md) — 2026-05-20
-  - [Understand-Anything：新团队接手的第一个命令](tech/understand-anything-guide.md) — 2026-05-18
-  - [code-review-graph：AI 代码审查不应该重读整个仓库](tech/code-review-graph-guide.md) — 2026-05-18
-  - [Hypothesis：让测试替你找 bug](tech/hypothesis-guide.md) — 2026-05-18
-  - [CodeGraph：让 AI 编程助手不再 grep 全仓](tech/codegraph-guide.md) — 2026-05-18
-  - [GitLab 自托管安装指南：从零搭建私有代码仓库](tech/gitlab-install-guide.md) — 2026-05-17
-  - [uv：让 Python 包管理快 100 倍的下一代工具](tech/uv-guide.md) — 2026-05-17
-  - [agentmemory：为 AI 代理赋予持久记忆的轻量级 MCP 工具](tech/agentmemory-guide.md) — 2026-05-16
-  - [ccstatusline：为 Claude Code 打造极致美观的状态栏](tech/ccstatusline-guide.md) — 2026-05-16
-  - [Claude Code 安装 + DeepThink V4 接入实战](tech/claude-code-deepthink-v4.md) — 2026-05-16
-  - [RTK (Rust Token Killer)：将 LLM Token 消耗降低 80% 的 CLI 代理神器](tech/rtk-guide.md) — 2026-05-16
-  - [gstack + Spec-Kit：打造 AI 编程的完整工作流](tech/gstack-plus-spec-kit.md) — 2026-05-16
-  - [gstack：一个人如何像一支团队一样交付](tech/gstack-guide.md) — 2026-05-16
-  - [Spec-Kit：让规范驱动开发的核心理念与实战指南](tech/spec-kit-guide.md) — 2026-05-16
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 9 篇
+  - [Claude Code](tech/claude-code/index.md) — 3 篇
+  - [开发工具](tech/dev-tools/index.md) — 3 篇
+  - [容器化系列](tech/containerization/index.md) — 5 篇，Docker → Compose → K8s → Helm
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
     - [Python 装饰器：从函数到可调用对象的完整理解](languages/python/decorators.md) — 2026-05-30
