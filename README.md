@@ -11,6 +11,8 @@
     - [Kubernetes 入门：当「单机」不够用的时候](tech/containerization/kubernetes-intro.md) — 2026-05-30
     - [从 Compose 到 K8s 的思维切换](tech/containerization/compose-to-k8s.md) — 2026-05-30
     - [Helm：Kubernetes 的包管理器](tech/containerization/helm.md) — 2026-05-30
+  - [Pandas 自己算指标 vs TA-Lib：什么时候该轻一点，什么时候该专业一点](tech/pandas-vs-ta-lib-guide.md) — 2026-05-31
+  - [TA-Lib Python 指南：在 Python 里快速用上经典技术分析库](tech/ta-lib-python-guide.md) — 2026-05-31
   - [HTML-Anything：让 AI 直接产出可发布的单文件 HTML](tech/html-anything-guide.md) — 2026-05-31
   - [Compound Engineering：让每一次提交都为下一次铺路](tech/compound-engineering-guide.md) — 2026-05-27
   - [CLI-Anything：让任何软件都能被 AI Agent 操控](tech/cli-anything-guide.md) — 2026-05-20
