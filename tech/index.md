@@ -13,6 +13,7 @@
 
 ## 文章列表
 
+- [HTML-Anything：让 AI 直接产出可发布的单文件 HTML](html-anything-guide.md) — 2026-05-31
 - [Compound Engineering：让每一次提交都为下一次铺路](compound-engineering-guide.md) — 2026-05-27
 - [CLI-Anything：让任何软件都能被 AI Agent 操控](cli-anything-guide.md) — 2026-05-20
 - [Understand-Anything：新团队接手的第一个命令](understand-anything-guide.md) — 2026-05-18
