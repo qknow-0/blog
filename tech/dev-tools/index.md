@@ -5,6 +5,7 @@
 ## 文章列表
 
 - [Colima：macOS 上最轻量的 Docker 替代方案](colima-guide.md) — 2026-05-31
+- [systemd 与 launchd：Linux 与 macOS 的服务管理对比](systemd-launchd.md) — 2026-05-31
 - [Pandas 自己算指标 vs TA-Lib：什么时候该轻一点，什么时候该专业一点](pandas-vs-ta-lib-guide.md) — 2026-05-31
 - [TA-Lib Python 指南：在 Python 里快速用上经典技术分析库](ta-lib-python-guide.md) — 2026-05-31
 - [uv：让 Python 包管理快 100 倍的下一代工具](uv-guide.md) — 2026-05-17
