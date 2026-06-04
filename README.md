@@ -25,6 +25,7 @@
     - [Node.js 事件循环：理解了它才算真会用](languages/nodejs/event-loop.md) — 2026-05-30
     - [Node.js 最新版本实用特性盘点](languages/nodejs/practical-features.md) — 2026-05-27
   - [Rust](languages/rust/index.md)
+    - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](languages/rust/lifetimes.md) — 2026-06-04
     - [Rust 模块系统：一个文件不是天然模块](languages/rust/modules.md) — 2026-05-30
     - [Rust Trait 与泛型：多态不只是继承](languages/rust/traits-generics.md) — 2026-05-30
     - [Rust 单元测试：编译器帮你测](languages/rust/unit-testing.md) — 2026-05-27
