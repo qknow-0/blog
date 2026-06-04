@@ -21,6 +21,25 @@ else
 fi
 
 echo ""
+echo "===== 容器运行时 ====="
+
+# OrbStack
+if ! command -v orb &>/dev/null; then
+    echo "安装 OrbStack..."
+    brew install orbstack
+else
+    echo "OrbStack 已安装"
+fi
+
+# Docker CLI（OrbStack 需要）
+if ! command -v docker &>/dev/null; then
+    echo "安装 Docker CLI..."
+    brew install docker
+else
+    echo "Docker CLI 已安装"
+fi
+
+echo ""
 echo "===== 编辑器 ====="
 
 # Zed
