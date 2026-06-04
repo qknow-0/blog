@@ -35,6 +35,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='._*' \
   --exclude='source-read/Sequoia-X' \
   --exclude='source-read/FinnewsHunter' \
+  --exclude='source-read/QuantDinger' \
   "$BLOG_NAME/"
 
 # 上传到坚果云
