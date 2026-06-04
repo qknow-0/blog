@@ -176,28 +176,197 @@ def call_api(endpoint, payload):
     return response.json()
 ```
 
-### 场景二：数据库操作——确保幂等性
+### 场景二：数据库操作——哪些错误该重试、怎么保证幂等
+
+数据库操作的重试比 API 调用多一层考量——不是所有错误都该重试，也不是所有 SQL 重试了都安全。
+
+#### 该重试的 vs 不该重试的
 
 ```python
 import psycopg2
-from tenacity import retry, stop_after_attempt, wait_exponential
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
 
+# ✅ 该重试的错误：临时性故障，等待后可能恢复
+RETRYABLE_DB_ERRORS = (
+    psycopg2.OperationalError,       # 连接断开、连接池耗尽
+    psycopg2.errors.DeadlockDetected,    # 死锁——PostgreSQL 自动回滚了一个事务
+    psycopg2.errors.SerializationFailure, # 串行化冲突——可序列化隔离级别下
+)
+
+# ❌ 不该重试的错误：逻辑错误，重试不会变正确
+# psycopg2.errors.NotNullViolation      ——字段不能为 NULL，重试一万次也是 NULL
+# psycopg2.errors.ForeignKeyViolation   ——引用了不存在的记录
+# psycopg2.errors.UniqueViolation       ——违反唯一约束（可能表示重复提交）
+# psycopg2.errors.SyntaxError           ——SQL 写错了
+```
+
+很多人用一个 `Exception` 兜底全部异常然后无差别重试——这是危险的。`UniqueViolation` 可能表示客户端已经成功写入了但响应丢失了，重试只会产生重复数据。`NotNullViolation` 和 `SyntaxError` 重试永远不会成功。
+
+#### 核心问题：重试 != 幂等
+
+```python
+# ❌ 危险——重试两次 = 加了两次钱
+@retry(stop=stop_after_attempt(3))
+def add_balance_dangerous(user_id, amount):
+    """如果第一次 UPDATE 成功但网络断开——重试会扣两次"""
+    with get_db() as conn:
+        conn.execute(
+            "UPDATE users SET balance = balance + %s WHERE id = %s",
+            (amount, user_id)
+        )
+```
+
+问题场景：`UPDATE` 在数据库端执行成功了，但返回结果时网络断开。Python 侧抛了 `OperationalError`，Tenacity 触发重试——数据库里已经被更新过一次了，第二次又更新一次。
+
+解决方案取决于操作类型：
+
+**方案一：INSERT 用 idempotency key + ON CONFLICT**
+
+```python
 @retry(
     stop=stop_after_attempt(3),
     wait=wait_exponential(multiplier=1, max=10),
-    retry=retry_if_exception_type(psycopg2.OperationalError),
+    retry=retry_if_exception_type(RETRYABLE_DB_ERRORS),
 )
-def update_user_balance(user_id, amount):
-    """更新用户余额——只在操作错误（死锁、连接断开）时重试"""
+def create_order(idempotency_key, user_id, product_id, amount):
+    """创建订单——同一个 idempotency_key 只会创建一次"""
     with get_db() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
+        conn.execute(
+            """INSERT INTO orders (idempotency_key, user_id, product_id, amount)
+               VALUES (%s, %s, %s, %s)
+               ON CONFLICT (idempotency_key) DO NOTHING""",
+            (idempotency_key, user_id, product_id, amount)
+        )
+        # 不管第一次是否成功，重试后总有一条记录，且只有一条
+        row = conn.execute(
+            "SELECT id, status FROM orders WHERE idempotency_key = %s",
+            (idempotency_key,)
+        ).fetchone()
+        return dict(row)
+```
+
+`ON CONFLICT DO NOTHING` 保证了——第一次成功写入，第二次被静默忽略。返回的是同一条记录。幂等性由数据库唯一约束保证，不依赖客户端状态。
+
+**方案二：UPDATE 用版本号做乐观锁**
+
+```python
+@retry(
+    stop=stop_after_attempt(5),
+    wait=wait_exponential(multiplier=1, max=10),
+    retry=retry_if_exception_type((*RETRYABLE_DB_ERRORS, OptimisticLockError)),
+)
+def transfer_balance(from_user, to_user, amount):
+    """转账——用版本号防止重复扣款"""
+    with get_db() as conn:
+        with conn.transaction():
+            # 用版本号做乐观锁——并发安全 + 重试安全
+            result = conn.execute(
+                """UPDATE users
+                   SET balance = balance - %s, version = version + 1
+                   WHERE id = %s AND balance >= %s AND version = %s""",
+                (amount, from_user, amount, current_version)
+            )
+            if result.rowcount == 0:
+                raise OptimisticLockError("版本号冲突或余额不足")
+
+            conn.execute(
+                """UPDATE users
+                   SET balance = balance + %s, version = version + 1
+                   WHERE id = %s AND version = %s""",
+                (amount, to_user, to_user_version)
+            )
+
+class OptimisticLockError(Exception):
+    """乐观锁冲突——触发 Tenacity 重试"""
+    pass
+```
+
+`WHERE version = %s` 是关键。如果第一次 UPDATE 已经执行成功了，`version` 已经变了，第二次重试时 `WHERE version = old_version` 不匹配任何行——`rowcount == 0`，函数抛 `OptimisticLockError`，Tenacity 重试整个事务。重试时重新读取 `version`，用新版本号再次尝试。不会重复扣款。
+
+**方案三：完整事务重试——PostgreSQL 死锁场景**
+
+```python
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=1, max=5),
+    retry=retry_if_exception_type((
+        psycopg2.errors.DeadlockDetected,
+        psycopg2.errors.SerializationFailure,
+    )),
+)
+def process_transfer(from_user, to_user, amount):
+    """转账——死锁自动重试整个事务"""
+    with get_db() as conn:
+        with conn.transaction():
+            # 先锁 from_user
+            conn.execute(
+                "SELECT balance FROM users WHERE id = %s FOR UPDATE",
+                (from_user,)
+            )
+            # 再锁 to_user——如果另一个事务反向操作就死锁
+            conn.execute(
+                "SELECT balance FROM users WHERE id = %s FOR UPDATE",
+                (to_user,)
+            )
+
+            conn.execute(
+                "UPDATE users SET balance = balance - %s WHERE id = %s",
+                (amount, from_user)
+            )
+            conn.execute(
                 "UPDATE users SET balance = balance + %s WHERE id = %s",
-                (amount, user_id)
+                (amount, to_user)
             )
 ```
 
-关键：重试的函数本身必须幂等。`UPDATE balance = balance + 100` 如果被重试两次，就加了 200——重试不是原因，函数设计不是幂等才是问题。对于非幂等操作，用唯一键 + `INSERT ... ON CONFLICT DO NOTHING` 或业务层的 idempotency key。
+PostgreSQL 检测到死锁时自动回滚其中一个事务并抛 `DeadlockDetected`。Tenacity 捕获这个异常，等待一小段时间后重新执行整个事务——这时候锁的获取顺序可能已经变化，死锁自然解除。**整个事务被重试，而不是事务内部的某条 SQL**——这是关键。重试的粒度是完整的事务边界，保证原子性。
+
+#### 数据库重试决策树
+
+```
+操作失败 → 是什么错误？
+├── 死锁 / 串行化冲突 / 连接断开
+│   → 重试（指数退避 + 小抖动）
+│   → 重试时函数本身保证幂等（idempotency key / 版本号 / 事务重试）
+│
+├── 违反约束（UniqueViolation）
+│   → 区分是重复提交还是数据冲突
+│   → 重复提交：ON CONFLICT 兜底，不抛异常
+│   → 真正冲突：不重试，直接报错
+│
+└── NotNullViolation / SyntaxError / ForeignKeyViolation
+    → 不重试——这是 bug，不是临时故障
+```
+
+#### 分错误类型的完整示例
+
+```python
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
+def _is_retryable(exception):
+    """只有临时性故障才重试"""
+    if isinstance(exception, psycopg2.errors.DeadlockDetected):
+        return True
+    if isinstance(exception, psycopg2.errors.SerializationFailure):
+        return True
+    if isinstance(exception, psycopg2.OperationalError):
+        # 排除明显的永久性错误
+        msg = str(exception).lower()
+        if "syntax error" in msg or "permission denied" in msg:
+            return False
+        return True
+    return False
+
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=1, max=10),
+    retry=_is_retryable,
+)
+def safe_db_operation(user_id, data):
+    with get_db() as conn:
+        with conn.transaction():
+            conn.execute("...")
+```
 
 ### 场景三：重试前重置状态
 
