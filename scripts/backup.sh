@@ -38,6 +38,15 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='source-read/QuantDinger' \
   "$BLOG_NAME/"
 
+# 检查压缩包大小——超过 20MB 可能打包了不需要的文件
+ARCHIVE_SIZE=$(stat -f%z "/tmp/${ARCHIVE_NAME}" 2>/dev/null || stat -c%s "/tmp/${ARCHIVE_NAME}" 2>/dev/null)
+ARCHIVE_SIZE_MB=$((ARCHIVE_SIZE / 1024 / 1024))
+if [ "$ARCHIVE_SIZE_MB" -gt 20 ]; then
+  echo "⚠️  警告：压缩包大小 ${ARCHIVE_SIZE_MB}MB（超过 20MB），可能打包了不需要的文件"
+  echo "   请检查 .gitignore 和 backup.sh 的 --exclude 列表是否同步"
+  echo "   当前排除：source-read/Sequoia-X, FinnewsHunter, QuantDinger"
+fi
+
 # 上传到坚果云
 HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -T "/tmp/${ARCHIVE_NAME}" \
   -u "${WEBDAV_USER}:${WEBDAV_PASS}" \
@@ -50,6 +59,24 @@ else
   exit 1
 fi
 
-# 清理
+# 清理远程旧备份：只保留最近 5 份
+REMOTE_LIST=$(curl -s -X PROPFIND -u "${WEBDAV_USER}:${WEBDAV_PASS}" \
+  -H "Depth: 1" \
+  "${WEBDAV_URL}/" 2>/dev/null | \
+  grep -o 'blog-backup-[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-[0-9]\{4\}\.tar\.gz' | \
+  sort -u -r | tail -n +6)
+
+if [ -n "$REMOTE_LIST" ]; then
+  echo "清理旧备份..."
+  echo "$REMOTE_LIST" | while read -r OLD_FILE; do
+    echo "  删除远程: $OLD_FILE"
+    curl -s -o /dev/null -X DELETE \
+      -u "${WEBDAV_USER}:${WEBDAV_PASS}" \
+      "${WEBDAV_URL}/${OLD_FILE}"
+  done
+  echo "旧备份清理完成"
+fi
+
+# 清理本地临时文件
 rm -f "/tmp/${ARCHIVE_NAME}"
 echo "备份完成"
