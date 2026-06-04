@@ -4,6 +4,7 @@ Python 语言的语法、特性和实践记录。
 
 ## 文章列表
 
+- [Python 面向对象：从 class 到 metaclass 的系统理解](oop.md) — 2026-06-04
 - [Python 闭包：函数为什么能“记住”外部变量](closures.md) — 2026-05-31
 - [Python 装饰器：从函数到可调用对象的完整理解](decorators.md) — 2026-05-30
 - [Python 模块系统：每一个 import 背后发生了什么](modules.md) — 2026-05-30
