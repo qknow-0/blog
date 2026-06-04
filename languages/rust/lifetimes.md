@@ -112,6 +112,112 @@ println!("{}", excerpt.text);   //    because it is borrowed
 
 `excerpt` 借用了 `novel`，所以 `novel` 在 `excerpt` 用完之后才能释放。这个逻辑和普通借用规则完全一致——生命周期标注只是让这个约束在结构体层面显式化了。
 
+### 逐步拆解一个更复杂的例子
+
+上面的 `Excerpt` 很简单——只有一个字段、一个生命周期参数。来看一个涉及两个结构体和构造函数的场景，分步理解编译器在每一步做什么。
+
+**第一步：定义结构体**
+
+```rust
+#[derive(Debug)]
+struct Document<'a> {
+    title: &'a str,     // Document 持有对 title 字符串的引用
+    body: &'a str,      // Document 持有对 body 字符串的引用
+}
+// 'a 的意思是：Document 实例不能比 title 和 body 中
+// 较短命的那个活得更久
+```
+
+**第二步：写一个构造器**
+
+```rust
+impl<'a> Document<'a> {
+    fn new(title: &'a str, body: &'a str) -> Document<'a> {
+        Document { title, body }
+    }
+}
+// 参数 title 和 body 都标了 'a
+// 返回值 Document<'a> 也标了 'a
+// 编译器验证：返回值引用的数据至少活 'a 那么久
+// → title 和 body 都活至少 'a 那么久 → 成立 ✅
+```
+
+**第三步：正确的使用**
+
+```rust
+fn main() {
+    let title = String::from("深入理解 Rust 生命周期");
+    let body = String::from("生命周期标注不是魔法...");
+
+    let doc = Document::new(&title, &body);
+    // doc 借用了 title 和 body
+    // doc 的生命周期 ≤ title 和 body 中较短的那个
+
+    println!("{:?}", doc);
+    // doc 用完了——借用结束
+
+    drop(body);   // ✅ body 可以被释放——doc 已经不在了
+    drop(title);  // ✅ title 也可以被释放
+}
+```
+
+关键：`doc` 的使用范围被编译器精确追踪。`println!` 之后，`doc` 不再被使用，编译器认为借用在此结束。之后 `drop(body)` 和 `drop(title)` 都是合法操作。
+
+**第四步：错误的使用**
+
+```rust
+fn main() {
+    let doc;  // 声明 doc——稍后赋值
+
+    let title = String::from("深入理解 Rust 生命周期");
+    let body = String::from("生命周期标注不是魔法...");
+
+    doc = Document::new(&title, &body);
+
+    drop(body);   // ❌ error[E0505]: cannot move out of `body`
+    //             因为 `doc` 还在借用它
+
+    println!("{:?}", doc);
+}
+```
+
+编译器的分析逻辑：
+
+```
+1. doc = Document::new(&title, &body)
+   → doc 持有 &title 和 &body
+   → doc 的生命周期 ≤ title 的生命周期
+   → doc 的生命周期 ≤ body 的生命周期
+
+2. drop(body)
+   → body 在此被释放
+   → doc 还在作用域内（后面有 println!）
+   → doc 还持有 &body
+   → body 被释放后 &body 变成悬垂指针
+   → 不通过 ❌
+```
+
+**第五步：修复——缩小 doc 的作用域**
+
+```rust
+fn main() {
+    let title = String::from("深入理解 Rust 生命周期");
+    let body = String::from("生命周期标注不是魔法...");
+
+    {
+        let doc = Document::new(&title, &body);
+        println!("{:?}", doc);
+    }  // ← doc 在这里离开作用域，借用结束
+
+    drop(body);   // ✅ doc 已经不在了，可以释放 body
+    drop(title);  // ✅ 同理
+}
+```
+
+花括号创建了一个子作用域。`doc` 在这个小作用域里出生和死亡。离开花括号后，`doc` 不存在了，它对 `title` 和 `body` 的借用也跟着结束。之后想怎么释放都行。
+
+**核心认知**：`'a` 标注在 struct 上不是「让数据活更久」的魔法——它是让编译器能**追踪借用的有效期**。struct 持有引用 = struct 在借用数据 = 数据在借用期间不能被释放或修改。标注让这个借用关系对编译器可见。
+
 ## 静态生命周期
 
 ```rust
