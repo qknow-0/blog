@@ -4,6 +4,7 @@ AI 辅助编程的工具、框架和实践记录。
 
 ## 文章列表
 
+- [Webnovel Writer：让 AI 写到 200 章还记得第一章的设定](webnovel-writer-guide.md) — 2026-06-04
 - [FinnewsHunter：一个基于 AgenticX 的多智能体金融新闻分析平台](finnewshunter-guide.md) — 2026-06-04
 - [HTML-Anything：让 AI 直接产出可发布的单文件 HTML](html-anything-guide.md) — 2026-05-31
 - [Compound Engineering：让每一次提交都为下一次铺路](compound-engineering-guide.md) — 2026-05-27
