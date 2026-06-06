@@ -4,6 +4,7 @@ AI 辅助编程的工具、框架和实践记录。
 
 ## 文章列表
 
+- [AI Shell：自然语言转 Shell 命令](ai-shell-guide.md) — 2026-06-04
 - [Webnovel Writer 系列](webnovel-writer/index.md) — 2026-06-04（2 篇）
 - [FinnewsHunter：一个基于 AgenticX 的多智能体金融新闻分析平台](finnewshunter-guide.md) — 2026-06-04
 - [HTML-Anything：让 AI 直接产出可发布的单文件 HTML](html-anything-guide.md) — 2026-05-31
