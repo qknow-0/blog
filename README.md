@@ -20,6 +20,7 @@
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Go](languages/golang/index.md)
+    - [Go Channel 系列](languages/golang/channels/index.md) — 2026-06-04（4 篇）
     - [Go 单元测试：标准库就够了](languages/golang/unit-testing.md) — 2026-05-30
   - [Java](languages/java/index.md)
     - [Java 单元测试：JUnit 5 不是唯一解](languages/java/unit-testing.md) — 2026-05-30
