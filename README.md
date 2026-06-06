@@ -11,6 +11,7 @@
   - [容器化系列](tech/containerization/index.md) — 5 篇，Docker → Compose → K8s → Helm
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
+    - [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](languages/python/type-hints.md) — 2026-06-04
     - [Python 面向对象系列](languages/python/oop/index.md) — 2026-06-04（5 篇）
     - [Python 闭包：函数为什么能“记住”外部变量](languages/python/closures.md) — 2026-05-31
     - [Python 装饰器：从函数到可调用对象的完整理解](languages/python/decorators.md) — 2026-05-30

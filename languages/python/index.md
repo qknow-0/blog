@@ -4,6 +4,7 @@ Python 语言的语法、特性和实践记录。
 
 ## 文章列表
 
+- [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](type-hints.md) — 2026-06-04
 - [Python 面向对象系列](oop/index.md) — 2026-06-04（5 篇）
 - [Python 闭包：函数为什么能“记住”外部变量](closures.md) — 2026-05-31
 - [Python 装饰器：从函数到可调用对象的完整理解](decorators.md) — 2026-05-30
