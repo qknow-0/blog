@@ -215,13 +215,8 @@ tunnels:
 
 ## 总结
 
-ngrok 的价值不是技术复杂度——SSH 反向隧道也能实现类似效果。它的价值是**开箱即用的体验**：自动 HTTPS 证书、Inspector 查请求、Replay 重放、固定域名、Basic Auth、配置文件管理。每一样单拿出来都不难实现，但放在一起就是一个完整的「本地服务公网化」方案。
+ngrok 的价值不是技术复杂度——SSH 反向隧道也能实现类似效果。它的价值是**开箱即用的体验**：自动 HTTPS 证书、Inspector 查请求、Replay 重放、固定域名、Basic Auth、配置文件管理。
 
-```bash
-brew install ngrok
-ngrok config add-authtoken <token>
-ngrok http 3000
-# 三行命令，localhost 变成公网
-```
+下一篇看 Cloudflare Tunnel——如果你有自己的域名托管在 Cloudflare，它提供固定域名 + 零成本 + 不需要装额外 agent 的方案。
 
-和本系列其他文章的关系：ngrok 暴露的服务可能是 Celery 任务的结果、Docker Compose 编排的微服务、或者是本地 Colima/OrbStack 里跑的容器——它是连接本地开发环境和外部世界的桥梁。
+→ [（二）Cloudflare Tunnel：零成本的公网隧道方案](02-cloudflare-tunnel.md)
