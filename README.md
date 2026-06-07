@@ -5,10 +5,10 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 11 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 13 篇
   - [Claude Code](tech/claude-code/index.md) — 3 篇
-  - [开发工具](tech/dev-tools/index.md) — 5 篇
-  - [容器化系列](tech/containerization/index.md) — 5 篇，Docker → Compose → K8s → Helm
+  - [开发工具](tech/dev-tools/index.md) — 12 篇
+  - [容器化系列](tech/containerization/index.md) — 5 篇
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
     - [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](languages/python/type-hints.md) — 2026-06-04
@@ -40,15 +40,8 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
-  - [QuantDinger](source-read/quant_dinger/01-intro.md) — AI 量化交易操作系统（7 篇）
-    - [（一）项目概览](source-read/quant_dinger/01-intro.md) · [（二）数据库设计](source-read/quant_dinger/02-database.md) · [（三）数据层](source-read/quant_dinger/03-data-layer.md)
-    - [（四）策略引擎](source-read/quant_dinger/04-strategy-engine.md) · [（五）执行层](source-read/quant_dinger/05-execution.md) · [（六）AI 集成](source-read/quant_dinger/06-ai-agent.md)
-    - [（七）基础设施](source-read/quant_dinger/07-infra.md)
-  - [Sequoia-X（一）项目介绍与使用方式](source-read/sequoia_x/01-intro.md) — 2026-05-17
-  - [Sequoia-X（二）数据引擎](source-read/sequoia_x/02-data-engine.md) — 2026-05-17
-  - [Sequoia-X（三）策略体系](source-read/sequoia_x/03-strategies.md) — 2026-05-18
-  - [Sequoia-X（四）飞书推送与基础设施](source-read/sequoia_x/04-notify-infra.md) — 2026-05-18
-  - [Sequoia-X（五）测试体系](source-read/sequoia_x/05-testing.md) — 2026-05-18
+  - [QuantDinger 源码阅读系列](source-read/quant_dinger/01-intro.md) — 2026-05-30（7 篇）
+  - [Sequoia-X 源码阅读系列](source-read/sequoia_x/index.md) — 2026-05-17（5 篇）
 - [随想](thoughts/index.md) — 非技术类的日常思考
 
 ## 开发环境
