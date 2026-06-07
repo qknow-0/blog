@@ -23,7 +23,8 @@
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Go](languages/golang/index.md)
-    - [Go Channel 系列](languages/golang/channels/index.md) — 2026-06-04（4 篇）
+    - [Go 面向对象系列](languages/golang/oop/index.md) — 2026-06-07（5 篇）
+	    - [Go Channel 系列](languages/golang/channels/index.md) — 2026-06-04（4 篇）
     - [Go Goroutine 系列](languages/golang/goroutine/index.md) — 2026-06-04（4 篇）
     - [Go 单元测试：标准库就够了](languages/golang/unit-testing.md) — 2026-05-30
   - [Java](languages/java/index.md)
@@ -33,6 +34,10 @@
     - [Node.js 最新版本实用特性盘点](languages/nodejs/practical-features.md) — 2026-05-27
   - [Rust](languages/rust/index.md)
     - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](languages/rust/lifetimes.md) — 2026-06-04
+    - [Rust anyhow：应用层错误处理的最简方案](languages/rust/anyhow.md) — 2026-06-07
+    - [Rust Box<dyn>：trait 对象与动态分发完全理解](languages/rust/box-dyn.md) — 2026-06-07
+	    - [Rust Arc：多线程共享所有权的正确姿势](languages/rust/arc.md) — 2026-06-07
+	    - [Rust Tokio：异步运行时的内核、任务与通道](languages/rust/tokio.md) — 2026-06-07
     - [Rust 模块系统：一个文件不是天然模块](languages/rust/modules.md) — 2026-05-30
     - [Rust Trait 与泛型：多态不只是继承](languages/rust/traits-generics.md) — 2026-05-30
     - [Rust 单元测试：编译器帮你测](languages/rust/unit-testing.md) — 2026-05-27

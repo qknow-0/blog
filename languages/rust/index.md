@@ -3,6 +3,10 @@
 ## 文章列表
 
 - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](lifetimes.md) — 2026-06-04
+- [Rust Box\<dyn\>：trait 对象与动态分发完全理解](box-dyn.md) — 2026-06-07
+- [Rust Arc：多线程共享所有权的正确姿势](arc.md) — 2026-06-07
+- [Rust Tokio：异步运行时的内核、任务与通道](tokio.md) — 2026-06-07
+- [Rust anyhow：应用层错误处理的最简方案](anyhow.md) — 2026-06-07
 - [Rust 模块系统：一个文件不是天然模块](modules.md) — 2026-05-30
 - [Rust Trait 与泛型：多态不只是继承](traits-generics.md) — 2026-05-30
 - [Rust 单元测试：编译器帮你测](unit-testing.md) — 2026-05-27
