@@ -33,6 +33,12 @@
     - [Node.js Stream：数据不是一次性搬完的](languages/nodejs/stream.md) — 2026-06-08
     - [Node.js 事件循环：理解了它才算真会用](languages/nodejs/event-loop.md) — 2026-05-30
     - [Node.js 最新版本实用特性盘点](languages/nodejs/practical-features.md) — 2026-05-27
+  - [React](languages/react/index.md)
+    - [React 心智模型：声明式 UI 到底改变了什么](languages/react/react-mental-model.md) — 2026-06-10
+    - [React Hooks 不完全设计史：闭包陷阱与依赖数组](languages/react/react-hooks-design.md) — 2026-06-10
+    - [React 渲染机制：Virtual DOM、Fiber 与批量更新](languages/react/react-rendering.md) — 2026-06-10
+    - [React 19：Server Components 是对 Web 架构的重新分层](languages/react/react-19-server-components.md) — 2026-06-10
+    - [React 19 新 API 全景：Actions 与状态管理新范式](languages/react/react-19-new-apis.md) — 2026-06-10
   - [Rust](languages/rust/index.md)
     - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](languages/rust/lifetimes.md) — 2026-06-04
     - [Rust anyhow：应用层错误处理的最简方案](languages/rust/anyhow.md) — 2026-06-07
