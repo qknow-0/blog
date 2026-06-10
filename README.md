@@ -59,6 +59,7 @@
   - [QuantDinger 源码阅读系列](source-read/quant_dinger/01-intro.md) — 2026-05-30（7 篇）
   - [Sequoia-X 源码阅读系列](source-read/sequoia_x/index.md) — 2026-05-17（5 篇）
 - [随想](thoughts/index.md) — 非技术类的日常思考
+  - [跨服务约定：一套我自己维护的工程纪律](thoughts/cross-service-conventions.md) — 2026-06-10
 
 ## 开发环境
 
