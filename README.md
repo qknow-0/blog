@@ -10,7 +10,7 @@
 - [技术笔记](tech/index.md) — 框架、工具
   - [AI 编程工具链](tech/ai-tooling/index.md) — 13 篇
   - [Claude Code](tech/claude-code/index.md) — 3 篇
-  - [开发工具](tech/dev-tools/index.md) — 12 篇
+  - [开发工具](tech/dev-tools/index.md) — 15 篇
   - [容器化系列](tech/containerization/index.md) — 5 篇
   - [Robot Framework](tech/robotframework/index.md) — 1 篇
 - [编程语言](languages/index.md) — 语法、特性
@@ -25,7 +25,7 @@
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Go](languages/golang/index.md)
     - [Go 面向对象系列](languages/golang/oop/index.md) — 2026-06-07（5 篇）
-	    - [Go Channel 系列](languages/golang/channels/index.md) — 2026-06-04（4 篇）
+    - [Go Channel 系列](languages/golang/channels/index.md) — 2026-06-04（4 篇）
     - [Go Goroutine 系列](languages/golang/goroutine/index.md) — 2026-06-04（4 篇）
     - [Go 单元测试：标准库就够了](languages/golang/unit-testing.md) — 2026-05-30
   - [Java](languages/java/index.md)
@@ -43,10 +43,8 @@
     - [React 19 新 API 全景：Actions 与状态管理新范式](languages/react/react-19-new-apis.md) — 2026-06-10
   - [Rust](languages/rust/index.md)
     - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](languages/rust/lifetimes.md) — 2026-06-04
-    - [Rust anyhow：应用层错误处理的最简方案](languages/rust/anyhow.md) — 2026-06-07
     - [Rust Box<dyn>：trait 对象与动态分发完全理解](languages/rust/box-dyn.md) — 2026-06-07
-	    - [Rust Arc：多线程共享所有权的正确姿势](languages/rust/arc.md) — 2026-06-07
-	    - [Rust Tokio：异步运行时的内核、任务与通道](languages/rust/tokio.md) — 2026-06-07
+    - [Rust Arc：多线程共享所有权的正确姿势](languages/rust/arc.md) — 2026-06-07
     - [Rust 模块系统：一个文件不是天然模块](languages/rust/modules.md) — 2026-05-30
     - [Rust Trait 与泛型：多态不只是继承](languages/rust/traits-generics.md) — 2026-05-30
     - [Rust 单元测试：编译器帮你测](languages/rust/unit-testing.md) — 2026-05-27
