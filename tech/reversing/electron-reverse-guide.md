@@ -130,7 +130,7 @@ Electron 应用的 Node.js 层可以读取环境变量：
 export NODE_TLS_REJECT_UNAUTHORIZED=0
 
 # 指定额外的 CA 证书
-export NODE_EXTRA_CA_CERTS=/Users/mac/.mitmproxy/mitmproxy-ca-cert.pem
+export NODE_EXTRA_CA_CERTS=~/.mitmproxy/mitmproxy-ca-cert.pem
 
 # SSL 密钥日志（Electron 4.x / Chrome 69 不支持！）
 export SSLKEYLOGFILE=/tmp/sslkeys.log

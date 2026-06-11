@@ -48,7 +48,7 @@ Certificate:
 ```bash
 # 只看主题（域名）
 openssl x509 -in cert.pem -subject -noout
-# subject=CN=*.ztqft.com
+# subject=CN=*.example.com
 
 # 只看过期时间
 openssl x509 -in cert.pem -enddate -noout
@@ -66,7 +66,7 @@ openssl x509 -in cert.pem -fingerprint -sha256 -noout
 
 ```bash
 # 连接服务器，获取它的证书信息
-openssl s_client -connect smarttest.ztqft.com:443 -showcerts
+openssl s_client -connect api.example.com:443 -showcerts
 ```
 
 这个命令打印 TLS 握手全过程，包括服务器发来的证书链。结合上面的 `openssl x509` 就能提取指纹、有效期等关键信息。如果你在做证书锁定分析，这是第一步——先搞清楚服务器证书长什么样。
