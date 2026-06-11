@@ -8,13 +8,13 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 13 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 14 篇
   - [Claude Code](tech/claude-code/index.md) — 3 篇
   - [开发工具](tech/dev-tools/index.md) — 15 篇
   - [容器化系列](tech/containerization/index.md) — 5 篇
   - [Robot Framework](tech/robotframework/index.md) — 1 篇
   - [逆向工具链](tech/reversing/index.md) — 6 篇
-  - [AI Agent 系列](tech/ai-agent/index.md) — 6 篇
+  - [AI Agent 系列](tech/ai-agent/index.md) — 7 篇
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
     - [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](languages/python/type-hints.md) — 2026-06-04
@@ -45,7 +45,7 @@
     - [React 19 新 API 全景：Actions 与状态管理新范式](languages/react/react-19-new-apis.md) — 2026-06-10
   - [Rust](languages/rust/index.md)
     - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](languages/rust/lifetimes.md) — 2026-06-04
-    - [Rust Box<dyn>：trait 对象与动态分发完全理解](languages/rust/box-dyn.md) — 2026-06-07
+    - [Rust Box\<dyn\>：trait 对象与动态分发完全理解](languages/rust/box-dyn.md) — 2026-06-07
     - [Rust Arc：多线程共享所有权的正确姿势](languages/rust/arc.md) — 2026-06-07
     - [Rust 模块系统：一个文件不是天然模块](languages/rust/modules.md) — 2026-05-30
     - [Rust Trait 与泛型：多态不只是继承](languages/rust/traits-generics.md) — 2026-05-30

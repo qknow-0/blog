@@ -6,6 +6,7 @@
 
 ## 文章列表
 
+- [第 0 篇：AI 真的会思考吗？——下一个词预测的原理解释](00-how-llm-thinks.md) — 2026-06-11
 - [第 1 篇：什么是 AI Agent — 从 LLM 到 Agent 的进化](01-what-is-agent.md) — 2026-06-10
 - [第 2 篇：LLM API 完全指南 — 从 curl 到系统化调用](02-llm-api-guide.md) — 2026-06-10
 - [第 3 篇：Function Calling — 让 Agent 拥有手脚](03-function-calling.md) — 2026-06-10
