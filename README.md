@@ -13,6 +13,7 @@
   - [开发工具](tech/dev-tools/index.md) — 15 篇
   - [容器化系列](tech/containerization/index.md) — 5 篇
   - [Robot Framework](tech/robotframework/index.md) — 1 篇
+  - [逆向工具链](tech/reversing/index.md) — 1 篇
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
     - [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](languages/python/type-hints.md) — 2026-06-04
