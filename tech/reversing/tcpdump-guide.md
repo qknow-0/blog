@@ -95,7 +95,7 @@ sudo tcpdump -i en0 -n -X host 119.3.82.146
 
 ```bash
 # 1. 后台启动抓包
-sudo tcpdump -i en0 -s 0 -w /tmp/smartx-talk.pcap 'tcp[tcpflags] & tcp-syn != 0' &
+sudo tcpdump -i en0 -s 0 -w /tmp/目标应用-talk.pcap 'tcp[tcpflags] & tcp-syn != 0' &
 
 # 2. 操作应用——点几个按钮、触发几个请求
 
@@ -109,7 +109,7 @@ SYN 包是 TCP 三次握手的第一个包——只抓 SYN 等于只记录"连�
 
 ```bash
 # 从 pcap 中提取所有目标 IP
-tcpdump -r /tmp/smartx-talk.pcap -n | awk '{print $5}' | cut -d. -f1-4 | sort -u
+tcpdump -r /tmp/目标应用-talk.pcap -n | awk '{print $5}' | cut -d. -f1-4 | sort -u
 ```
 
 输出类似：

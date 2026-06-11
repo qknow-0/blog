@@ -10,7 +10,7 @@
 
 ```mermaid
 flowchart LR
-    App["应用（SmartX等）"] -->|"请求"| MITM["mitmproxy<br/>127.0.0.1:8080"]
+    App["应用（目标应用等）"] -->|"请求"| MITM["mitmproxy<br/>127.0.0.1:8080"]
     MITM -->|"转发"| Server["目标服务器"]
     Server -->|"响应"| MITM
     MITM -->|"返回"| App
@@ -177,7 +177,7 @@ mitmdump -p 8080 -s log_requests.py
 
 有些应用会**证书锁定**——不仅验证证书是否由受信任的 CA 签发，还检查证书的指纹（公钥的 hash）是否和代码里硬编码的一致。
 
-mitmproxy 用自己的证书替代了服务器证书，指纹必然不匹配——应用拒绝建立连接。这就是我在 SmartX 上遇到的情况：`smarttest.ztqft.com` 的流量 mitmproxy 看不到，但 `xtp.zts.com.cn` 的能看到——因为前者做了证书锁定，后者没做。
+mitmproxy 用自己的证书替代了服务器证书，指纹必然不匹配——应用拒绝建立连接。这就是我在 目标应用 上遇到的情况：`目标域名` 的流量 mitmproxy 看不到，但 `其他辅助域名` 的能看到——因为前者做了证书锁定，后者没做。
 
 mitmproxy 本身没法绕过证书锁定。需要上 Frida 这类动态插桩工具在应用进程内 Hook 证书验证逻辑——那是下一篇文章的内容。
 

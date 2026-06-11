@@ -54,7 +54,7 @@ codesign --force --sign - $(python3 -c "import frida; print(frida.__path__[0])")
 
 ```bash
 # 找到目标进程 PID
-pgrep -f SmartX
+pgrep -f 目标应用
 # 12345
 
 # attach 并加载 Hook 脚本
@@ -96,7 +96,7 @@ DYLD_INSERT_LIBRARIES=/tmp/frida-gadget.dylib /path/to/target/app
 
 Gadget 模式的关键是让目标进程加载 `frida-gadget.dylib`。`DYLD_INSERT_LIBRARIES` 是 macOS 的环境变量，动态链接器在加载程序时会优先加载列表中的库——Gadget 库一旦加载，就会读配置文件、执行你指定的 JS 脚本。
 
-**但**，Electron 应用的主进程启动子进程时通常不继承 `DYLD_INSERT_LIBRARIES`——这是我在 SmartX 上没成功的原因之一。
+**但**，Electron 应用的主进程启动子进程时通常不继承 `DYLD_INSERT_LIBRARIES`——这是我在 目标应用 上没成功的原因之一。
 
 ## 写第一个 Hook 脚本
 
@@ -127,7 +127,7 @@ Interceptor.attach(openPtr, {
 
 ### Hook Node.js 的 https.request
 
-SmartX 是基于 Electron 的，底层是 Node.js。要捕获它的 HTTPS 请求，Hook Node.js 的 `https.request` 是最直接的入口：
+目标应用 是基于 Electron 的，底层是 Node.js。要捕获它的 HTTPS 请求，Hook Node.js 的 `https.request` 是最直接的入口：
 
 ```javascript
 // hook_https.js
@@ -183,12 +183,12 @@ try {
 保存后，用 Frida 加载：
 
 ```bash
-frida -n SmartX -l hook_https.js
+frida -n 目标应用 -l hook_https.js
 # 或
-frida -p $(pgrep SmartX) -l hook_https.js
+frida -p $(pgrep 目标应用) -l hook_https.js
 ```
 
-SmartX 每次发 HTTPS 请求，Frida 就往 `/tmp/frida-hook.log` 里写一行。这和浏览器 DevTools 的 Network 面板本质上做了同一件事——只是你做在一个闭源的桌面应用里。
+目标应用 每次发 HTTPS 请求，Frida 就往 `/tmp/frida-hook.log` 里写一行。这和浏览器 DevTools 的 Network 面板本质上做了同一件事——只是你做在一个闭源的桌面应用里。
 
 ### 同时 Hook 浏览器里的 XHR 和 fetch
 
@@ -298,7 +298,7 @@ frida -p 12345
 
 ```json
 [
-  {"name": "SmartX", "base": "0x100000000", "size": 123456},
+  {"name": "目标应用", "base": "0x100000000", "size": 123456},
   {"name": "libSystem.B.dylib", "base": "0x7fff68000000", ...},
   ...
 ]

@@ -77,8 +77,8 @@ networksetup -getinfo Wi-Fi
 ```bash
 # 创建 pf 规则文件
 cat > /tmp/pf-redirect.conf << 'EOF'
-# 把所有发往 119.3.82.146:443 的 TCP 流量重定向到本机 8080 端口
-rdr pass inet proto tcp from any to 119.3.82.146 port 443 -> 127.0.0.1 port 8080
+# 把所有发往 203.0.113.1:443 的 TCP 流量重定向到本机 8080 端口
+rdr pass inet proto tcp from any to 203.0.113.1 port 443 -> 127.0.0.1 port 8080
 EOF
 
 # 加载规则（需要 sudo）
@@ -86,7 +86,7 @@ sudo pfctl -f /tmp/pf-redirect.conf
 sudo pfctl -e   # 启用 pf
 ```
 
-原理：在操作系统网络栈层面篡改目标地址——应用以为自己往 `119.3.82.146:443` 发请求，实际上被 `pf` 劫持到了 `127.0.0.1:8080`。
+原理：在操作系统网络栈层面篡改目标地址——应用以为自己往 `203.0.113.1:443` 发请求，实际上被 `pf` 劫持到了 `127.0.0.1:8080`。
 
 ### 查看和关闭
 
@@ -127,12 +127,12 @@ launchctl unsetenv SSLKEYLOGFILE
 ### 查看签名信息
 
 ```bash
-codesign -dvvv /Applications/SmartX.app
+codesign -dvvv /Applications/SomeApp.app
 ```
 
 ```
-Executable=/Applications/SmartX.app/Contents/MacOS/SmartX
-Identifier=com.ztqft.smartx
+Executable=/Applications/SomeApp.app/Contents/MacOS/SomeApp
+Identifier=com.example.someapp
 Format=app bundle with Mach-O thin (arm64)
 CodeDirectory flags=Runtime(10000) - library-validation
 ```

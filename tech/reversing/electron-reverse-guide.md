@@ -62,14 +62,14 @@ Electron 支持在 `Info.plist` 中记录 `.asar` 文件的哈希值，启动时
 
 ```bash
 # 查看应用的完整性配置
-plutil -p /Applications/SmartX.app/Contents/Info.plist | grep -i asar
+plutil -p /Applications/SomeApp.app/Contents/Info.plist | grep -i asar
 ```
 
 如果有 `AsarIntegrity` 字段，说明应用启用了完整性校验。替换 `app.asar` 后启动，应用会直接崩溃——校验失败。
 
 绕过方式：
 - **修改 Info.plist**，删除 `AsarIntegrity` 字段。但这会导致应用签名失效
-- **重新签名整个 .app 包**：`codesign --force --deep --sign - /Applications/SmartX.app`
+- **重新签名整个 .app 包**：`codesign --force --deep --sign - /Applications/SomeApp.app`
 - **如果应用自己有运行时校验**（比较哈希），那就需要 Hook 那个校验逻辑——又回到了 Frida
 
 ## 3. macOS SIP 的保护
@@ -90,15 +90,15 @@ lsof -i :9222 -i :9229 | grep LISTEN
 但大部分生产发布的应用不会开这个端口。这时候可以**修改应用启动参数**——编辑 `.app` 包内的 `Contents/MacOS/` 下的启动脚本，或者创建一个带调试参数的 wrapper：
 
 ```bash
-cat > /tmp/smartx-debug.sh << 'EOF'
+cat > /tmp/someapp-debug.sh << 'EOF'
 #!/bin/bash
-"/Applications/SmartX.app/Contents/MacOS/SmartX" \
+"/Applications/SomeApp.app/Contents/MacOS/SomeApp" \
   --remote-debugging-port=9222 \
   --inspect=9229
 EOF
-chmod +x /tmp/smartx-debug.sh
+chmod +x /tmp/someapp-debug.sh
 
-/tmp/smartx-debug.sh &
+/tmp/someapp-debug.sh &
 # 然后浏览器访问 http://localhost:9222
 ```
 
@@ -111,7 +111,7 @@ chmod +x /tmp/smartx-debug.sh
 - **Sources** — 查看和断点调试前端代码
 - **Application → Local Storage** — 查看 `localStorage` 和 `sessionStorage`
 
-SmartX 的 JWT token 就是通过 `localStorage` 拿到的——在 DevTools 里执行：
+SomeApp 的 JWT token 就是通过 `localStorage` 拿到的——在 DevTools 里执行：
 
 ```javascript
 // 遍历所有 localStorage key
@@ -153,7 +153,7 @@ Electron 应用通常把数据存在：
 
 `Local Storage/leveldb/` 是 Chrome 的 LevelDB 实现——`.ldb` 文件是二进制格式，不能用文本编辑器直接看。但可以用 Python 的 `plyvel` 库读取，或者——更简单的——**用另一个 Electron 应用打开同一份数据**（通过 DevTools → Application）。
 
-如果应用使用了自定义的二进制存储格式（像 SmartX 的 `global.cache`），那就需要具体分析它的序列化格式——这通常需要 Frida Hook 文件读写函数来拦截。
+如果应用使用了自定义的二进制存储格式（像某些应用的 `global.cache`），那就需要具体分析它的序列化格式——这通常需要 Frida Hook 文件读写函数来拦截。
 
 ## 逆向的完整工具箱
 
