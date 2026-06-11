@@ -9,4 +9,4 @@
 - [开发工具](dev-tools/index.md) — 12 篇，开发环境与基础设施
 - [容器化系列](containerization/index.md) — 5 篇，Docker → Compose → K8s → Helm
 - [Robot Framework](robotframework/index.md) — 1 篇，源码阅读
-- [逆向工具链](reversing/index.md) — 闭源应用行为分析工具
+- [逆向工具链](reversing/index.md) — 6 篇，闭源应用行为分析工具
