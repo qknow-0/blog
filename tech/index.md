@@ -10,3 +10,4 @@
 - [容器化系列](containerization/index.md) — 5 篇，Docker → Compose → K8s → Helm
 - [Robot Framework](robotframework/index.md) — 1 篇，源码阅读
 - [逆向工具链](reversing/index.md) — 6 篇，闭源应用行为分析工具
+- [AI Agent 系列](ai-agent/index.md) — 6 篇，从零构建 LLM Agent
