@@ -2,8 +2,8 @@
 
 写了十年代码，再不输出点东西脑子要溢出了。这里没有正确的废话，只有踩过的坑、读过的源码、用过的工具——每一个结论背后都有一段不想回忆的 debug 经历。
 
-- [user.md](user.md) — 我是谁，我在乎什么
-- [memory.md](memory.md) — 我最近在做什么，关心什么
+- [user.md](profile/user.md) — 我是谁，我在乎什么
+- [memory.md](profile/memory.md) — 我最近在做什么，关心什么
 
 ## 目录
 
