@@ -25,6 +25,10 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### newsnow
+
+- [newsnow 源码阅读系列](newsnow_notes/index.md) — 2026-06-11
+
 ### Sequoia-X
 
 - [（一）项目介绍与使用方式](sequoia_x/01-intro.md) — 2026-05-17
