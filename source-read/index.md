@@ -16,6 +16,10 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### TrendRadar
+
+- [TrendRadar 源码阅读系列](trend_radar/index.md) — 2026-06-11（5 篇）
+
 ### Sequoia-X
 
 - [Sequoia-X 源码阅读系列](sequoia_x/index.md) — 2026-05-17（5 篇）
