@@ -27,7 +27,11 @@
 
 ### newsnow
 
-- [newsnow 源码阅读系列](newsnow_notes/index.md) — 2026-06-11
+- [（一）项目概览与架构全景](newsnow_notes/01-architecture.md) — 2026-06-11
+- [（二）源配置系统：从 human-friendly 到 machine-friendly](newsnow_notes/02-source-config.md) — 2026-06-11
+- [（三）抓取引擎：42 个源、三种策略、一套工具](newsnow_notes/03-scraping-engine.md) — 2026-06-11
+- [（四）API 层、缓存策略与认证](newsnow_notes/04-api-and-cache.md) — 2026-06-11
+- [（五）前端架构：状态管理、数据流与交互设计](newsnow_notes/05-frontend.md) — 2026-06-11
 
 ### Sequoia-X
 
