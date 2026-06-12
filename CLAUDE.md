@@ -47,6 +47,7 @@ blog/
   - 保留示例数据、演示代码、通用工具名称——只去掉可追溯性
 - **禁止读取 .env 文件**：任何时候都不要读取项目的 .env 文件内容
 - `.gitignore` 中的条目需同步到 `scripts/backup.sh` 的 `--exclude` 列表中
+- **source-read 源码阅读**：新增源码阅读项目时，按 `source-read/README.md` 的规范操作——clone 源码到 `source-read/<项目名>/`，创建同名笔记文件夹，同时在 `.gitignore` 和 `backup.sh` 中添加排除（见 `source-read/README.md`）
 - **user.md 与 memory.md 更新约定**：
   - `user.md`（稳定画像）更新频率低——每季度或技术栈/价值观明显转向时更新
   - `memory.md`（当下状态）更新频率高——每新增 10 篇以上文章或每两周，提醒用户是否需要刷新
