@@ -43,13 +43,13 @@ sudo tcpdump -i lo0   # 回环接口（localhost）
 
 ```bash
 # 只看特定主机
-sudo tcpdump -i en0 host 203.0.113.1
+sudo tcpdump -i en0 host <目标服务器IP>
 
 # 只看特定端口
 sudo tcpdump -i en0 port 443
 
 # 组合条件
-sudo tcpdump -i en0 host 203.0.113.1 and port 443
+sudo tcpdump -i en0 host <目标服务器IP> and port 443
 
 # 排除某主机
 sudo tcpdump -i en0 not host 192.168.1.1
@@ -58,7 +58,7 @@ sudo tcpdump -i en0 not host 192.168.1.1
 sudo tcpdump -i en0 'tcp[tcpflags] & tcp-syn != 0'
 
 # 按网段过滤
-sudo tcpdump -i en0 net 203.0.113.0/24
+sudo tcpdump -i en0 net <目标服务器IP>/24
 ```
 
 ### 保存到文件（pcap）
@@ -66,7 +66,7 @@ sudo tcpdump -i en0 net 203.0.113.0/24
 ```bash
 # -w: 保存二进制 pcap 文件
 # -s 0: 抓完整包（不截断）
-sudo tcpdump -i en0 -s 0 -w /tmp/capture.pcap host 203.0.113.1
+sudo tcpdump -i en0 -s 0 -w /tmp/capture.pcap host <目标服务器IP>
 ```
 
 `-s 0` 很重要——tcpdump 默认只抓每个包的前 96 字节（看 header 够用，看 body 不够）。`-s 0` 抓完整包，虽然文件大一点，但不会遗漏数据。
@@ -77,13 +77,13 @@ sudo tcpdump -i en0 -s 0 -w /tmp/capture.pcap host 203.0.113.1
 # -n: 不解析主机名（快，避免 DNS 查询噪音）
 # -X: 显示包内容的十六进制 + ASCII
 # -A: 显示包内容的纯 ASCII
-sudo tcpdump -i en0 -n -X host 203.0.113.1
+sudo tcpdump -i en0 -n -X host <目标服务器IP>
 ```
 
 输出示例：
 
 ```
-14:32:01.234567 IP 192.168.1.10.54321 > 203.0.113.1.443: Flags [P.], seq ...
+14:32:01.234567 IP 192.168.1.10.54321 > <目标服务器IP>.443: Flags [P.], seq ...
     0x0000:  4500 012c 8a3c 4000 4006 7b8e c0a8 010a  E..,.<.@.@.{.....
     0x0010:  7703 5292 d431 01bb 3f8e 2c45 6b2d 184d  w.R..1..?.,Ek-.M
     ...
@@ -115,7 +115,7 @@ tcpdump -r /tmp/目标应用-talk.pcap -n | awk '{print $5}' | cut -d. -f1-4 | s
 输出类似：
 
 ```
-203.0.113.1.443
+<目标服务器IP>.443
 47.96.123.45.443
 192.168.1.1.53
 ```
@@ -123,7 +123,7 @@ tcpdump -r /tmp/目标应用-talk.pcap -n | awk '{print $5}' | cut -d. -f1-4 | s
 然后反查这些 IP 是谁：
 
 ```bash
-whois 203.0.113.1 | grep -i "descr\|netname"
+whois <目标服务器IP> | grep -i "descr\|netname"
 ```
 
 ## Wireshark：可视化分析
@@ -156,7 +156,7 @@ brew install --cask wireshark
 |-----------|------|
 | `http` | 只看 HTTP 流量 |
 | `tls` | 只看 TLS 握手 |
-| `ip.addr == 203.0.113.1` | 只看某个 IP |
+| `ip.addr == <目标服务器IP>` | 只看某个 IP |
 | `tcp.port == 443` | 只看 HTTPS |
 | `dns` | 只看 DNS 查询 |
 | `tcp.stream eq 0` | 追踪某一条 TCP 连接的全部包 |

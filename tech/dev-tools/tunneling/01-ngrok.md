@@ -195,7 +195,7 @@ tunnels:
     addr: 3000
     ip_restriction:
       allow_cidrs:
-        - "203.0.113.0/24"     # 只允许公司 VPN 出口 IP
+        - "<目标服务器IP>/24"     # 只允许公司 VPN 出口 IP
 ```
 
 ## ngrok vs 其他方案

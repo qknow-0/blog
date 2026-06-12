@@ -77,8 +77,8 @@ networksetup -getinfo Wi-Fi
 ```bash
 # 创建 pf 规则文件
 cat > /tmp/pf-redirect.conf << 'EOF'
-# 把所有发往 203.0.113.1:443 的 TCP 流量重定向到本机 8080 端口
-rdr pass inet proto tcp from any to 203.0.113.1 port 443 -> 127.0.0.1 port 8080
+# 把所有发往 <目标服务器IP>:443 的 TCP 流量重定向到本机 8080 端口
+rdr pass inet proto tcp from any to <目标服务器IP> port 443 -> 127.0.0.1 port 8080
 EOF
 
 # 加载规则（需要 sudo）
@@ -86,7 +86,7 @@ sudo pfctl -f /tmp/pf-redirect.conf
 sudo pfctl -e   # 启用 pf
 ```
 
-原理：在操作系统网络栈层面篡改目标地址——应用以为自己往 `203.0.113.1:443` 发请求，实际上被 `pf` 劫持到了 `127.0.0.1:8080`。
+原理：在操作系统网络栈层面篡改目标地址——应用以为自己往 `<目标服务器IP>:443` 发请求，实际上被 `pf` 劫持到了 `127.0.0.1:8080`。
 
 ### 查看和关闭
 
