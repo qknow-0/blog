@@ -18,6 +18,7 @@
   - [NewsNow](tech/newsnow/index.md) — 1 篇
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
+    - [Python 并发编程：threading、multiprocessing、asyncio 怎么选](languages/python/concurrency.md) — 2026-06-11
     - [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](languages/python/type-hints.md) — 2026-06-04
     - [Python 面向对象系列](languages/python/oop/index.md) — 2026-06-04（5 篇）
     - [Python 闭包：函数为什么能“记住”外部变量](languages/python/closures.md) — 2026-05-31
