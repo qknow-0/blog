@@ -37,6 +37,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='source-read/FinnewsHunter' \
   --exclude='source-read/QuantDinger' \
   --exclude='source-read/daily-stock-analysis' \
+  --exclude='source-read/TrendRadar' \
   "$BLOG_NAME/"
 
 # 检查压缩包大小——超过 20MB 可能打包了不需要的文件

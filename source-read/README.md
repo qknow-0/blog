@@ -48,3 +48,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | FinnewsHunter | finnews_hunter/ | ✅ | ✅ |
 | QuantDinger | quant_dinger/ | ✅ | ✅ |
 | daily-stock-analysis | daily_stock_analysis/ | ✅ | ✅ |
+| TrendRadar | trend_radar/ | ✅ | ✅ |
