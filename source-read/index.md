@@ -6,6 +6,14 @@
 
 ## 文章列表
 
+### TrendRadar
+
+- [（一）项目概览与架构全景](trend_radar/01-architecture.md) — 2026-06-11
+- [（二）配置系统与调度引擎](trend_radar/02-config-and-scheduler.md) — 2026-06-11
+- [（三）数据采集与存储层](trend_radar/03-crawler-and-storage.md) — 2026-06-11
+- [（四）分析引擎：关键词匹配与 AI 过滤](trend_radar/04-analysis-engine.md) — 2026-06-11
+- [（五）通知分发、报告生成与 MCP Server](trend_radar/05-notification-and-mcp.md) — 2026-06-11
+
 ### QuantDinger
 
 - [（一）项目概览与架构全景](quant_dinger/01-intro.md) — 2026-05-30
@@ -16,10 +24,10 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
-### TrendRadar
-
-- [TrendRadar 源码阅读系列](trend_radar/index.md) — 2026-06-11（5 篇）
-
 ### Sequoia-X
 
-- [Sequoia-X 源码阅读系列](sequoia_x/index.md) — 2026-05-17（5 篇）
+- [（一）项目介绍与使用方式](sequoia_x/01-intro.md) — 2026-05-17
+- [（二）数据引擎](sequoia_x/02-data-engine.md) — 2026-05-17
+- [（三）策略体系](sequoia_x/03-strategies.md) — 2026-05-18
+- [（四）飞书推送与基础设施](sequoia_x/04-notify-infra.md) — 2026-05-18
+- [（五）测试体系](sequoia_x/05-testing.md) — 2026-05-18
