@@ -45,9 +45,11 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
 ARCHIVE_SIZE=$(stat -f%z "/tmp/${ARCHIVE_NAME}" 2>/dev/null || stat -c%s "/tmp/${ARCHIVE_NAME}" 2>/dev/null)
 ARCHIVE_SIZE_MB=$((ARCHIVE_SIZE / 1024 / 1024))
 if [ "$ARCHIVE_SIZE_MB" -gt 20 ]; then
-  echo "⚠️  警告：压缩包大小 ${ARCHIVE_SIZE_MB}MB（超过 20MB），可能打包了不需要的文件"
-  echo "   请检查 .gitignore 和 backup.sh 的 --exclude 列表是否同步"
-  echo "   当前排除：source-read/Sequoia-X, FinnewsHunter, QuantDinger"
+  echo "❌ 错误：压缩包大小 ${ARCHIVE_SIZE_MB}MB（超过 20MB），可能打包了不需要的文件"
+  echo "   已取消上传。请检查 .gitignore 和 backup.sh 的 --exclude 列表是否同步"
+  echo "   当前排除：source-read/Sequoia-X, FinnewsHunter, QuantDinger, daily-stock-analysis"
+  rm -f "/tmp/${ARCHIVE_NAME}"
+  exit 1
 fi
 
 # 上传到坚果云

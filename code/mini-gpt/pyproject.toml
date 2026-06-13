@@ -1,0 +1,11 @@
+[project]
+name = "mini-gpt"
+version = "0.1.0"
+description = "300 行代码训一个微型 GPT——生成《三国演义》风格的中文文本"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0",
+]
+
+[tool.uv]
+dev-dependencies = []

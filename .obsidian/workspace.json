@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tech/ai-agent/llm-training/06-practical.md",
+                "file": "tech/ai-agent/llm-training/02-pretraining.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "06-practical"
+              "title": "02-pretraining"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tech/ai-agent/llm-training/06-practical.md",
+                "file": "tech/ai-agent/llm-training/02-pretraining.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 06-practical"
+              "title": "Backlinks for 02-pretraining"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tech/ai-agent/llm-training/06-practical.md",
+                "file": "tech/ai-agent/llm-training/02-pretraining.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 06-practical"
+              "title": "Outgoing links from 02-pretraining"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tech/ai-agent/llm-training/06-practical.md",
+                "file": "tech/ai-agent/llm-training/02-pretraining.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 06-practical"
+              "title": "Outline of 02-pretraining"
             }
           }
         ]
@@ -183,8 +183,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "68ce94d8a3447074",
+  "active": "04c390e25a3e9052",
   "lastOpenFiles": [
+    "tech/ai-agent/llm-training/06-practical.md",
     "code/mini-gpt/mini-gpt-cn.pt",
     "code/mini-gpt/uv.lock",
     "code/mini-gpt/pyproject.toml.tmp.95674.2c618d1c3c5b",
@@ -195,7 +196,6 @@
     "tech/ai-agent/llm-training/train.py",
     "tech/ai-agent/llm-training/index.md",
     "README.md.tmp.95674.76074cdab249",
-    "tech/ai-agent/llm-training/06-practical.md",
     "tech/ai-agent/llm-training/05-inference.md",
     "tech/ai-agent/06-complete-agent-system.md",
     "tech/ai-agent/05-reasoning-patterns.md",
@@ -204,7 +204,6 @@
     "tech/ai-agent/llm-training/03-finetuning.md",
     "tech/ai-agent/llm-training/02-pretraining.md",
     "tech/ai-agent/llm-training/01-data.md",
-    "tech/ai-agent/llm-training/01-data.md.tmp.95674.935574f2a060",
     "tech/ai-agent/00-how-llm-thinks.md",
     "tech/newsnow/newsnow-guide.md",
     "tech/newsnow/index.md",
