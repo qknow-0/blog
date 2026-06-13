@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "ff5dbb8e218e66a2",
+        "id": "45bee145ac6fe0ea",
         "type": "tabs",
         "children": [
           {
-            "id": "fd99af2d7ae82a49",
+            "id": "04c390e25a3e9052",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source-read/quant_dinger/07-infra.md",
+                "file": "tech/ai-agent/llm-training/06-practical.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "07-infra"
+              "title": "06-practical"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source-read/quant_dinger/07-infra.md",
+                "file": "tech/ai-agent/llm-training/06-practical.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 07-infra"
+              "title": "Backlinks for 06-practical"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source-read/quant_dinger/07-infra.md",
+                "file": "tech/ai-agent/llm-training/06-practical.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 07-infra"
+              "title": "Outgoing links from 06-practical"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source-read/quant_dinger/07-infra.md",
+                "file": "tech/ai-agent/llm-training/06-practical.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 07-infra"
+              "title": "Outline of 06-practical"
             }
           }
         ]
@@ -185,51 +185,51 @@
   },
   "active": "68ce94d8a3447074",
   "lastOpenFiles": [
-    "source-read/QuantDinger/eth_psar_atr_tp_er_strategy_spec.md",
-    "tech/dev-tools/index.md.tmp.71106.983eff9397da",
-    "tech/dev-tools/ta-lib-python-guide.md",
-    "tech/dev-tools/pandas-vs-ta-lib-guide.md",
-    "tech/ai-tooling/html-anything-guide.md",
-    "vocabulary/day-006.md",
-    "tech/ta-lib-python-guide.md",
-    "tech/pandas-vs-ta-lib-guide.md",
-    "tech/html-anything-guide.md",
-    "languages/python/closures.md",
-    "README.md.tmp.71106.e1e816631ec7",
-    "tech/index.md.tmp.71106.b38d88f3f867",
-    "tech/dev-tools/index.md.tmp.71106.72a0c38ad151",
-    "tech/ai-tooling/index.md.tmp.71106.abdf13e7ba15",
-    "source-read/quant_dinger/06-ai-agent.md",
-    "source-read/quant_dinger/05-execution.md",
-    "source-read/quant_dinger/04-strategy-engine.md",
-    "source-read/quant_dinger/02-database.md",
-    "tech/dev-tools/index.md",
-    "tech/claude-code/index.md",
-    "tech/ai-tooling/index.md",
-    "tech/dev-tools/uv-guide.md",
-    "tech/dev-tools/hypothesis-guide.md",
-    "tech/dev-tools/gitlab-install-guide.md",
-    "tech/ai-tooling/understand-anything-guide.md",
-    "tech/ai-tooling/spec-kit-guide.md",
-    "tech/ai-tooling/rtk-guide.md",
-    "tech/ai-tooling/gstack-plus-spec-kit.md",
-    "tech/ai-tooling/gstack-guide.md",
-    "tech/ai-tooling/compound-engineering-guide.md",
-    "tech/ai-tooling/codegraph-guide.md",
-    "tech/dev-tools",
-    "tech/claude-code",
-    "tech/ai-tooling",
-    "source-read/quant_dinger/03-data-layer.md.tmp.71106.2df170bd17ed",
-    "source-read/quant_dinger",
+    "code/mini-gpt/mini-gpt-cn.pt",
+    "code/mini-gpt/uv.lock",
+    "code/mini-gpt/pyproject.toml.tmp.95674.2c618d1c3c5b",
+    "code/mini-gpt/train.py",
+    "code/mini-gpt/pyproject.toml",
+    "code/mini-gpt",
+    "code",
+    "tech/ai-agent/llm-training/train.py",
+    "tech/ai-agent/llm-training/index.md",
+    "README.md.tmp.95674.76074cdab249",
+    "tech/ai-agent/llm-training/06-practical.md",
+    "tech/ai-agent/llm-training/05-inference.md",
+    "tech/ai-agent/06-complete-agent-system.md",
+    "tech/ai-agent/05-reasoning-patterns.md",
+    "tech/ai-agent/llm-training/04-rlhf.md",
+    "tech/ai-agent/index.md.tmp.95674.e0e6dc6f1a81",
+    "tech/ai-agent/llm-training/03-finetuning.md",
+    "tech/ai-agent/llm-training/02-pretraining.md",
+    "tech/ai-agent/llm-training/01-data.md",
+    "tech/ai-agent/llm-training/01-data.md.tmp.95674.935574f2a060",
+    "tech/ai-agent/00-how-llm-thinks.md",
+    "tech/newsnow/newsnow-guide.md",
+    "tech/newsnow/index.md",
+    "source-read/trend_radar/index.md",
+    "source-read/trend_radar/06-database-design.md",
+    "source-read/trend_radar/05-notification-and-mcp.md",
+    "source-read/trend_radar/04-analysis-engine.md",
+    "source-read/trend_radar/03-crawler-and-storage.md",
+    "source-read/trend_radar/02-config-and-scheduler.md",
+    "source-read/trend_radar/01-architecture.md",
+    "source-read/newsnow_notes/index.md",
+    "source-read/newsnow_notes/05-frontend.md",
+    "source-read/newsnow_notes/04-api-and-cache.md",
+    "source-read/newsnow_notes/03-scraping-engine.md",
+    "source-read/newsnow_notes/02-source-config.md",
+    "source-read/newsnow_notes/01-architecture.md",
+    "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
+    "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
+    "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",
+    "source-read/FinnewsHunter/assets/images/arch-20251201.png",
+    "source-read/FinnewsHunter/assets/images/FINNEWS_HUNTER_LOGO_old.png",
+    "source-read/FinnewsHunter/assets/images/FINNEWS_HUNTER_LOGO.png",
+    "source-read/FinnewsHunter/assets/images/FINNEWS_HUNTER.png",
+    "source-read/FinnewsHunter/assets/images/FINNEWS-HUNTER.jpg",
     "source-read/QuantDinger/docs/screenshots/video_demo.png",
-    "source-read/QuantDinger/docs/screenshots/v34.png",
-    "source-read/QuantDinger/docs/screenshots/v33.png",
-    "source-read/QuantDinger/docs/screenshots/v32.png",
-    "source-read/QuantDinger/docs/screenshots/v31.png",
-    "source-read/QuantDinger/docs/screenshots/tuopu.png",
-    "source-read/QuantDinger/docs/screenshots/trading_assistant.png",
-    "source-read/QuantDinger/docs/screenshots/qfs_logo.png",
-    "source-read/QuantDinger/docs/screenshots/portfolio.jpg",
-    "source-read/QuantDinger/docs/screenshots/notification_telegram_userid_get.png"
+    "source-read/QuantDinger/docs/screenshots/v34.png"
   ]
 }

@@ -18,6 +18,13 @@
 # Thumbnails
 ._*
 
+# Python
+__pycache__/
+*.pyc
+
+# Mini-GPT 模型文件
+code/mini-gpt/mini-gpt-cn.pt
+
 # source-read
 source-read/Sequoia-X
 source-read/FinnewsHunter
