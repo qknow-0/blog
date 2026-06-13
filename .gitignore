@@ -21,8 +21,9 @@
 # Python
 __pycache__/
 *.pyc
+.venv/
 
-# Mini-GPT 模型文件
+# Mini-GPT
 code/mini-gpt/mini-gpt-cn.pt
 
 # source-read

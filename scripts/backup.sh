@@ -40,6 +40,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='source-read/TrendRadar' \
   --exclude='source-read/newsnow' \
   --exclude='code/mini-gpt/mini-gpt-cn.pt' \
+  --exclude='code/mini-gpt/.venv' \
   --exclude='__pycache__' \
   --exclude='*.pyc' \
   "$BLOG_NAME/"
