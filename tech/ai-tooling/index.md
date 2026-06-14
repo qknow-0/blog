@@ -6,6 +6,8 @@ AI 辅助编程的工具、框架和实践记录。
 
 - [Agent Reach：给 AI Agent 装上互联网能力](agent-reach-guide.md) — 2026-06-04
 - [Karpathy Skills：把 LLM 编程观察变成可执行的工程纪律](karpathy-skills-guide.md) — 2026-06-07
+- [Anthropic Financial Services：Claude 的金融行业 Agent 工具包](financial-services-guide.md) — 2026-06-14
+- [Dexter：像 Claude Code 一样做金融研究的 AI Agent](dexter-guide.md) — 2026-06-14
 - [AI Shell：自然语言转 Shell 命令](ai-shell-guide.md) — 2026-06-04
 - [Webnovel Writer 系列](webnovel-writer/index.md) — 2026-06-04（2 篇）
 - [FinnewsHunter：一个基于 AgenticX 的多智能体金融新闻分析平台](finnewshunter-guide.md) — 2026-06-04

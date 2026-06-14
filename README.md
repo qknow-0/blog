@@ -8,7 +8,7 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 14 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 16 篇
   - [Claude Code](tech/claude-code/index.md) — 3 篇
   - [开发工具](tech/dev-tools/index.md) — 15 篇
   - [容器化系列](tech/containerization/index.md) — 5 篇
@@ -16,6 +16,7 @@
   - [逆向工具链](tech/reversing/index.md) — 6 篇
   - [AI Agent 系列](tech/ai-agent/index.md) — 13 篇
   - [NewsNow](tech/newsnow/index.md) — 1 篇
+  - [HTTP 协议系列](tech/http/index.md) — 6 篇
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
     - [Python 并发编程：threading、multiprocessing、asyncio 怎么选](languages/python/concurrency.md) — 2026-06-11
