@@ -16,6 +16,7 @@
   - [逆向工具链](tech/reversing/index.md) — 6 篇
   - [AI Agent 系列](tech/ai-agent/index.md) — 13 篇
   - [NewsNow](tech/newsnow/index.md) — 1 篇
+  - [向量数据库系列](tech/vector-db/index.md) — 3 篇
   - [HTTP 协议系列](tech/http/index.md) — 6 篇
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)

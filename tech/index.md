@@ -13,3 +13,4 @@
 - [AI Agent 系列](ai-agent/index.md) — 6 篇，从零构建 LLM Agent
 - [HTTP 协议系列](http/index.md) — 6 篇，从请求响应到 HTTPS 加密
 - [NewsNow](newsnow/index.md) — 1 篇，新闻聚合器架构分析
+- [向量数据库系列](vector-db/index.md) — 3 篇，ChromaDB / Milvus / pgvector
