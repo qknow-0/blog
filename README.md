@@ -8,7 +8,7 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 16 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 18 篇
   - [Claude Code](tech/claude-code/index.md) — 3 篇
   - [开发工具](tech/dev-tools/index.md) — 15 篇
   - [容器化系列](tech/containerization/index.md) — 5 篇
@@ -61,6 +61,8 @@
     - [Rust 单元测试：编译器帮你测](languages/rust/unit-testing.md) — 2026-05-27
     - [Rust 错误处理：Result、Option 和 ? 运算符](languages/rust/error-handling.md) — 2026-05-27
     - [Rust 所有权：三张图看懂最核心的概念](languages/rust/ownership.md) — 2026-05-24
+  - [Solidity](languages/solidity/index.md)
+    - [Solidity 系列](languages/solidity/index.md) — 2026-06-15（7 篇）
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
