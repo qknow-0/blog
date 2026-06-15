@@ -4,6 +4,7 @@ Python 语言的语法、特性和实践记录。
 
 ## 文章列表
 
+- [Python functools：标准库里最被低估的模块](functools.md) — 2026-06-15
 - [Python 并发编程：threading、multiprocessing、asyncio 怎么选](concurrency.md) — 2026-06-11
 - [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](type-hints.md) — 2026-06-04
 - [Python 面向对象系列](oop/index.md) — 2026-06-04（5 篇）
