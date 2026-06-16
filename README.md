@@ -21,6 +21,7 @@
   - [HTTP 协议系列](tech/http/index.md) — 6 篇
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
+    - [Python 描述器：`obj.x` 背后究竟发生了什么](languages/python/descriptors.md) — 2026-06-16
     - [Python functools：标准库里最被低估的模块](languages/python/functools.md) — 2026-06-15
     - [Python 并发编程：threading、multiprocessing、asyncio 怎么选](languages/python/concurrency.md) — 2026-06-11
     - [Python 类型提示：从 Any 到 Protocol 的渐进类型之路](languages/python/type-hints.md) — 2026-06-04
