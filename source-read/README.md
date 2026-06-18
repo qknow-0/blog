@@ -50,3 +50,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | daily-stock-analysis | daily_stock_analysis/ | ✅ | ✅ |
 | TrendRadar | trend_radar/ | ✅ | ✅ |
 | newsnow | newsnow_notes/ | ✅ | ✅ |
+| nanobot | nanobot_notes/ | ✅ | ✅ |
