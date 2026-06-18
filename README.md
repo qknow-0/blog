@@ -71,6 +71,7 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [nanobot 源码阅读系列](source-read/nanobot_notes/) — 2026-06-16（6 篇）
   - [TrendRadar 源码阅读系列](source-read/trend_radar/index.md) — 2026-06-11（6 篇）
   - [QuantDinger 源码阅读系列](source-read/quant_dinger/01-intro.md) — 2026-05-30（7 篇）
   - [Sequoia-X 源码阅读系列](source-read/sequoia_x/index.md) — 2026-05-17（5 篇）

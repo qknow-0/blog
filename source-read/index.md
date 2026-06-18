@@ -25,6 +25,15 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### nanobot
+
+- [（一）架构总览：MessageBus + AgentLoop 状态机](nanobot_notes/01-architecture-overview.md) — 2026-06-16
+- [（二）Provider 系统：一套接口支持十几个 LLM](nanobot_notes/02-provider-system.md) — 2026-06-16
+- [（三）Tool 系统：插件化的工具注册与执行](nanobot_notes/03-tool-system.md) — 2026-06-16
+- [（四）Session 与 Memory：Dream 记忆巩固](nanobot_notes/04-session-memory.md) — 2026-06-16
+- [（五）Channel 系统：15+ 平台的统一抽象](nanobot_notes/05-channel-system.md) — 2026-06-16
+- [（六）WebUI 与 Gateway：前后端通信的多路复用](nanobot_notes/06-webui-gateway.md) — 2026-06-16
+
 ### newsnow
 
 - [（一）项目概览与架构全景](newsnow_notes/01-architecture.md) — 2026-06-11
