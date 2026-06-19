@@ -6,11 +6,11 @@
 
 | 模式 | Rust 关键点 | 状态 |
 |---|---|---|
-| Singleton | `OnceLock` / `lazy_static`；Rust 不鼓励全局可变状态 | 待写 |
+| [Singleton](singleton.md) | `OnceLock` / `lazy_static`；Rust 不鼓励全局可变状态 | ✅ |
 | [Factory Method](factory-method.md) | trait 关联类型 + 泛型 | ✅ |
 | [Abstract Factory](abstract-factory.md) | trait 组合表达产品族 | ✅ |
 | [Builder](builder.md) | Rust 最惯用的模式；生命周期确保 build() 消费 builder | ✅ |
-| Prototype | `Clone` trait；显式深拷贝 | 待写 |
+| [Prototype](prototype.md) | `Clone` trait；显式深拷贝 | ✅ |
 
 ## 结构型
 

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "scripts/setup.md",
+                "file": "tech/ai-tooling/compound-engineering-guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "setup"
+              "title": "compound-engineering-guide"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "scripts/setup.md",
+                "file": "tech/ai-tooling/compound-engineering-guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for setup"
+              "title": "Backlinks for compound-engineering-guide"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "scripts/setup.md",
+                "file": "tech/ai-tooling/compound-engineering-guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from setup"
+              "title": "Outgoing links from compound-engineering-guide"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "scripts/setup.md",
+                "file": "tech/ai-tooling/compound-engineering-guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of setup"
+              "title": "Outline of compound-engineering-guide"
             }
           }
         ]
@@ -185,6 +185,13 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
+    "tech/dev-tools/setup-guide.md",
+    "README.md.tmp.37885.3c589444f125",
+    "architecture/index.md.tmp.37885.ed6f6fe64579",
+    "architecture/design-patterns/index.md.tmp.37885.2ccc29c8be9b",
+    "scripts/setup.sh.tmp.37885.26825b10c2eb",
+    "scripts/setup.sh.tmp.37885.4a0466c79df8",
+    "scripts/setup.md",
     "tech/ai-tooling/superset-guide.md",
     "README.md",
     "CLAUDE.md",
@@ -213,14 +220,7 @@
     "source-read/nanobot_notes/01-architecture-overview.md",
     "source-read/nanobot_notes",
     "languages/python/descriptors.md",
-    "architecture/design-patterns",
     "architecture/fund-premium-data.md",
-    "thoughts/cross-service-conventions.md",
-    "tech/ai-tooling/ai-trader-guide.md",
-    "languages/solidity",
-    "tech/vector-db",
-    "tech/neo4j",
-    "README.md.tmp.95674.b308c3c9bd42",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
     "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",

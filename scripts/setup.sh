@@ -61,6 +61,14 @@ else
     echo "Claude Code 已安装"
 fi
 
+# Orca
+if ! command -v orca &>/dev/null; then
+    echo "安装 Orca..."
+    brew install --cask stablyai/orca/orca
+else
+    echo "Orca 已安装"
+fi
+
 echo ""
 echo "===== 包管理器 ====="
 
@@ -83,38 +91,12 @@ fi
 echo ""
 echo "===== AI 工具链 ====="
 
-# Spec-Kit
-if uv tool list 2>/dev/null | grep -q specify-cli; then
-    echo "Spec-Kit 已安装"
-else
-    echo "安装 Spec-Kit..."
-    uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
-fi
-
-# gstack
-if [ -d ~/.claude/skills/gstack ]; then
-    echo "gstack 已安装"
-else
-    echo "安装 gstack..."
-    git clone --single-branch --depth 1 https://github.com/garrytan/gstack.git ~/.claude/skills/gstack
-    cd ~/.claude/skills/gstack && ./setup
-fi
-
 # RTK
 if command -v rtk &>/dev/null; then
     echo "RTK 已安装"
 else
     echo "安装 RTK..."
     curl -fsSL https://raw.githubusercontent.com/rtk-ai/rtk/main/install.sh | bash
-fi
-
-# code-review-graph
-if command -v code-review-graph &>/dev/null; then
-    echo "code-review-graph 已安装"
-else
-    echo "安装 code-review-graph..."
-    pip install code-review-graph
-    code-review-graph install
 fi
 
 # ccstatusline
@@ -132,6 +114,22 @@ if [ -d ~/.claude/skills/agentmemory ]; then
 else
     echo "安装 agentmemory..."
     git clone --single-branch --depth 1 https://github.com/rohitg00/agentmemory.git ~/.claude/skills/agentmemory
+fi
+
+# CodeGraph
+if command -v codegraph &>/dev/null; then
+    echo "CodeGraph 已安装"
+else
+    echo "安装 CodeGraph..."
+    npm install -g codegraph
+fi
+
+# Compound Engineering
+if [ -d ~/.claude/skills/compound-engineering ]; then
+    echo "Compound Engineering 已安装"
+else
+    echo "安装 Compound Engineering..."
+    npx skills add https://github.com/anthropics/claude-code --skill compound-engineering
 fi
 
 echo ""
