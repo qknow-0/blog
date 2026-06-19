@@ -66,7 +66,7 @@
     - [Solidity 系列](languages/solidity/index.md) — 2026-06-15（7 篇）
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
-  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-06-16（1/23）
+  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-06-16（2/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
