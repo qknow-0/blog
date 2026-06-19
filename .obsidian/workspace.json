@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tech/ai-agent/llm-training/02-pretraining.md",
+                "file": "scripts/setup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "02-pretraining"
+              "title": "setup"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tech/ai-agent/llm-training/02-pretraining.md",
+                "file": "scripts/setup.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 02-pretraining"
+              "title": "Backlinks for setup"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tech/ai-agent/llm-training/02-pretraining.md",
+                "file": "scripts/setup.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 02-pretraining"
+              "title": "Outgoing links from setup"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tech/ai-agent/llm-training/02-pretraining.md",
+                "file": "scripts/setup.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 02-pretraining"
+              "title": "Outline of setup"
             }
           }
         ]
@@ -185,41 +185,42 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
-    "tech/ai-agent/llm-training/06-practical.md",
-    "code/mini-gpt/mini-gpt-cn.pt",
-    "code/mini-gpt/uv.lock",
-    "code/mini-gpt/pyproject.toml.tmp.95674.2c618d1c3c5b",
-    "code/mini-gpt/train.py",
-    "code/mini-gpt/pyproject.toml",
-    "code/mini-gpt",
-    "code",
-    "tech/ai-agent/llm-training/train.py",
-    "tech/ai-agent/llm-training/index.md",
-    "README.md.tmp.95674.76074cdab249",
-    "tech/ai-agent/llm-training/05-inference.md",
-    "tech/ai-agent/06-complete-agent-system.md",
-    "tech/ai-agent/05-reasoning-patterns.md",
-    "tech/ai-agent/llm-training/04-rlhf.md",
-    "tech/ai-agent/index.md.tmp.95674.e0e6dc6f1a81",
-    "tech/ai-agent/llm-training/03-finetuning.md",
-    "tech/ai-agent/llm-training/02-pretraining.md",
-    "tech/ai-agent/llm-training/01-data.md",
-    "tech/ai-agent/00-how-llm-thinks.md",
-    "tech/newsnow/newsnow-guide.md",
-    "tech/newsnow/index.md",
-    "source-read/trend_radar/index.md",
-    "source-read/trend_radar/06-database-design.md",
-    "source-read/trend_radar/05-notification-and-mcp.md",
-    "source-read/trend_radar/04-analysis-engine.md",
-    "source-read/trend_radar/03-crawler-and-storage.md",
-    "source-read/trend_radar/02-config-and-scheduler.md",
-    "source-read/trend_radar/01-architecture.md",
-    "source-read/newsnow_notes/index.md",
-    "source-read/newsnow_notes/05-frontend.md",
-    "source-read/newsnow_notes/04-api-and-cache.md",
-    "source-read/newsnow_notes/03-scraping-engine.md",
-    "source-read/newsnow_notes/02-source-config.md",
-    "source-read/newsnow_notes/01-architecture.md",
+    "tech/ai-tooling/superset-guide.md",
+    "README.md",
+    "CLAUDE.md",
+    "tech/ai-tooling/orca-guide.md",
+    "tech/dev-tools/git-worktree-guide.md",
+    "README.md.tmp.37885.3d5272491859",
+    "tech/dev-tools/index.md.tmp.37885.d0cb1cebe74e",
+    "architecture/design-patterns/prototype.md.tmp.37885.6a89b07f2acb",
+    "architecture/design-patterns/singleton.md",
+    "architecture/design-patterns/prototype.md",
+    "architecture/design-patterns/index.md",
+    "architecture/design-patterns/factory-method.md",
+    "architecture/design-patterns/builder.md",
+    "architecture/design-patterns/adapter.md",
+    "architecture/design-patterns/abstract-factory.md",
+    "architecture/index.md",
+    "architecture/design-patterns.md",
+    "architecture/backend-design-patterns.md",
+    "architecture/index.md.tmp.64739.2b6e6ad35da4",
+    "vocabulary/day-007.md",
+    "source-read/nanobot_notes/06-webui-gateway.md",
+    "source-read/nanobot_notes/05-channel-system.md",
+    "source-read/nanobot_notes/04-session-memory.md",
+    "source-read/nanobot_notes/03-tool-system.md",
+    "source-read/nanobot_notes/02-provider-system.md",
+    "source-read/nanobot_notes/01-architecture-overview.md",
+    "source-read/nanobot_notes",
+    "languages/python/descriptors.md",
+    "architecture/design-patterns",
+    "architecture/fund-premium-data.md",
+    "thoughts/cross-service-conventions.md",
+    "tech/ai-tooling/ai-trader-guide.md",
+    "languages/solidity",
+    "tech/vector-db",
+    "tech/neo4j",
+    "README.md.tmp.95674.b308c3c9bd42",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
     "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",
