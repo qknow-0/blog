@@ -4,6 +4,7 @@ AI 辅助编程的工具、框架和实践记录。
 
 ## 文章列表
 
+- [Superset：AI Agent 的并行调度操作系统](superset-guide.md) — 2026-06-19
 - [Agent Reach：给 AI Agent 装上互联网能力](agent-reach-guide.md) — 2026-06-04
 - [Karpathy Skills：把 LLM 编程观察变成可执行的工程纪律](karpathy-skills-guide.md) — 2026-06-07
 - [Anthropic Financial Services：Claude 的金融行业 Agent 工具包](financial-services-guide.md) — 2026-06-14
