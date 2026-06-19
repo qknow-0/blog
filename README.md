@@ -8,7 +8,7 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 18 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 19 篇
   - [Claude Code](tech/claude-code/index.md) — 3 篇
   - [开发工具](tech/dev-tools/index.md) — 15 篇
   - [容器化系列](tech/containerization/index.md) — 5 篇
