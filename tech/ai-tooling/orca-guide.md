@@ -211,6 +211,27 @@ Agent 也可以通过 skill 安装：
 npx skills add https://github.com/stablyai/orca --skill orca-cli
 ```
 
+### Repo 管理
+
+Worktree 需要知道从哪个仓库创建，所以先把本地项目注册到 Orca：
+
+```bash
+# 注册本地 Git 仓库
+orca repo add --path ~/project/my-app
+
+# 列出已注册的仓库
+orca repo list --json
+
+# 查看某个仓库详情
+orca repo show --repo path:~/project/my-app --json
+
+# 设置默认 base ref（后续 worktree 默认从这里分支）
+orca repo set-base-ref --repo id:<repoId> --ref origin/main
+
+# 搜索仓库内的分支/Tag
+orca repo search-refs --repo id:<repoId> --query "release"
+```
+
 ### Worktree 管理
 
 ```bash

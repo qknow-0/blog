@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tech/ai-tooling/compound-engineering-guide.md",
+                "file": "tech/ai-tooling/orca-guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "compound-engineering-guide"
+              "title": "orca-guide"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tech/ai-tooling/compound-engineering-guide.md",
+                "file": "tech/ai-tooling/orca-guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for compound-engineering-guide"
+              "title": "Backlinks for orca-guide"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tech/ai-tooling/compound-engineering-guide.md",
+                "file": "tech/ai-tooling/orca-guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from compound-engineering-guide"
+              "title": "Outgoing links from orca-guide"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tech/ai-tooling/compound-engineering-guide.md",
+                "file": "tech/ai-tooling/orca-guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of compound-engineering-guide"
+              "title": "Outline of orca-guide"
             }
           }
         ]
@@ -185,6 +185,10 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
+    "tech/ai-tooling/index.md.tmp.96993.7002392894ed",
+    "tech/ai-tooling/planning-with-files-guide.md",
+    "tech/dev-tools/orbstack-guide.md",
+    "tech/ai-tooling/compound-engineering-guide.md",
     "tech/dev-tools/setup-guide.md",
     "README.md.tmp.37885.3c589444f125",
     "architecture/index.md.tmp.37885.ed6f6fe64579",
@@ -216,11 +220,7 @@
     "source-read/nanobot_notes/05-channel-system.md",
     "source-read/nanobot_notes/04-session-memory.md",
     "source-read/nanobot_notes/03-tool-system.md",
-    "source-read/nanobot_notes/02-provider-system.md",
-    "source-read/nanobot_notes/01-architecture-overview.md",
     "source-read/nanobot_notes",
-    "languages/python/descriptors.md",
-    "architecture/fund-premium-data.md",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
     "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",

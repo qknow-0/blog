@@ -4,6 +4,8 @@ AI 辅助编程的工具、框架和实践记录。
 
 ## 文章列表
 
+- [Planning with Files：给 AI Agent 装上"外存"，让它不再失忆](planning-with-files-guide.md) — 2026-06-20
+- [Orca：为并行 AI Agent 设计的下一代 IDE](orca-guide.md) — 2026-06-19
 - [Superset：AI Agent 的并行调度操作系统](superset-guide.md) — 2026-06-19
 - [Agent Reach：给 AI Agent 装上互联网能力](agent-reach-guide.md) — 2026-06-04
 - [Karpathy Skills：把 LLM 编程观察变成可执行的工程纪律](karpathy-skills-guide.md) — 2026-06-07
