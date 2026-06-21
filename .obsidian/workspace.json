@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "vocabulary/day-008.md",
+                "file": "tech/ai-tooling/headroom-guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "day-008"
+              "title": "headroom-guide"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "vocabulary/day-008.md",
+                "file": "tech/ai-tooling/headroom-guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for day-008"
+              "title": "Backlinks for headroom-guide"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "vocabulary/day-008.md",
+                "file": "tech/ai-tooling/headroom-guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from day-008"
+              "title": "Outgoing links from headroom-guide"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "vocabulary/day-008.md",
+                "file": "tech/ai-tooling/headroom-guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of day-008"
+              "title": "Outline of headroom-guide"
             }
           }
         ]
@@ -185,8 +185,12 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
-    "exercise/2026/06-june.md",
     "vocabulary/day-008.md",
+    "README.md.tmp.33022.c4d7880328d7",
+    "tech/ai-tooling/index.md.tmp.33022.e0573bdbf48e",
+    "tech/ai-tooling/headroom-guide.md",
+    "vocabulary/day-007.md",
+    "exercise/2026/06-june.md",
     "exercise/index.md",
     "CLAUDE.md.tmp.33022.b13da2886746",
     "CLAUDE.md.tmp.33022.7d7a6af0109d",
@@ -210,17 +214,12 @@
     "tech/ai-tooling/compound-engineering-guide.md",
     "tech/dev-tools/setup-guide.md",
     "README.md.tmp.37885.3c589444f125",
-    "architecture/index.md.tmp.37885.ed6f6fe64579",
-    "architecture/design-patterns/index.md.tmp.37885.2ccc29c8be9b",
     "tech/ai-tooling/superset-guide.md",
     "README.md",
     "tech/dev-tools/git-worktree-guide.md",
     "architecture/design-patterns/singleton.md",
     "architecture/design-patterns/prototype.md",
     "architecture/design-patterns/index.md",
-    "architecture/design-patterns/factory-method.md",
-    "architecture/design-patterns/builder.md",
-    "architecture/design-patterns/adapter.md",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
     "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",
