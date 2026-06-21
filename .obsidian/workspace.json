@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tech/vector-db/vector-rag-guide.md",
+                "file": "exercise/2026/06-june.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "vector-rag-guide"
+              "title": "06-june"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tech/vector-db/vector-rag-guide.md",
+                "file": "exercise/2026/06-june.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for vector-rag-guide"
+              "title": "Backlinks for 06-june"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tech/vector-db/vector-rag-guide.md",
+                "file": "exercise/2026/06-june.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from vector-rag-guide"
+              "title": "Outgoing links from 06-june"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tech/vector-db/vector-rag-guide.md",
+                "file": "exercise/2026/06-june.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of vector-rag-guide"
+              "title": "Outline of 06-june"
             }
           }
         ]
@@ -185,8 +185,18 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
-    "tech/dev-tools/tenacity-guide.md",
+    "exercise/index.md",
+    "CLAUDE.md.tmp.33022.b13da2886746",
+    "CLAUDE.md.tmp.33022.7d7a6af0109d",
+    "exercise/2026/06-june.md",
+    "thoughts/cross-service-conventions.md",
+    "CLAUDE.md",
+    "README.md.tmp.33022.2fae3d29ccb6",
+    "exercise/2026/06-june.md.tmp.33022.5c8bbd9c8335",
+    "exercise/2026",
+    "exercise",
     "tech/vector-db/vector-rag-guide.md",
+    "tech/dev-tools/tenacity-guide.md",
     "architecture/design-patterns/abstract-factory.md",
     "tech/ai-tooling/orca-guide.md",
     "tech/dev-tools/dbx-guide.md",
@@ -201,26 +211,15 @@
     "README.md.tmp.37885.3c589444f125",
     "architecture/index.md.tmp.37885.ed6f6fe64579",
     "architecture/design-patterns/index.md.tmp.37885.2ccc29c8be9b",
-    "scripts/setup.sh.tmp.37885.26825b10c2eb",
-    "scripts/setup.sh.tmp.37885.4a0466c79df8",
     "tech/ai-tooling/superset-guide.md",
     "README.md",
-    "CLAUDE.md",
     "tech/dev-tools/git-worktree-guide.md",
-    "README.md.tmp.37885.3d5272491859",
-    "tech/dev-tools/index.md.tmp.37885.d0cb1cebe74e",
-    "architecture/design-patterns/prototype.md.tmp.37885.6a89b07f2acb",
     "architecture/design-patterns/singleton.md",
     "architecture/design-patterns/prototype.md",
     "architecture/design-patterns/index.md",
     "architecture/design-patterns/factory-method.md",
     "architecture/design-patterns/builder.md",
     "architecture/design-patterns/adapter.md",
-    "architecture/index.md",
-    "architecture/design-patterns.md",
-    "architecture/backend-design-patterns.md",
-    "architecture/index.md.tmp.64739.2b6e6ad35da4",
-    "vocabulary/day-007.md",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
     "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",

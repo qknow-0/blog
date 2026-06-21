@@ -78,6 +78,8 @@
 - [随想](thoughts/index.md) — 非技术类的日常思考
   - [跨服务约定：一套我自己维护的工程纪律](thoughts/cross-service-conventions.md) — 2026-06-10
 
+- [运动打卡](exercise/index.md) — 每天动一下，不让身体生锈
+
 ## 开发环境
 
 `./scripts/setup.sh` 个人当前使用环境，一键安装。
