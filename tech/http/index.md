@@ -21,3 +21,9 @@
 
 6. **[（六）HTTPS——给明信片加个信封](06-https.md)** — 2026-06-14
    - 对称加密 + 非对称加密 + CA 证书，TLS 握手的简化版解释
+
+## API 设计
+
+- **[RESTful API 设计——让接口像对话一样自然](restful-api-guide.md)** — 2026-06-22
+- **[GraphQL——让客户端决定要什么数据](graphql-guide.md)** — 2026-06-22
+- **[gRPC——微服务间通信的最优解](grpc-guide.md)** — 2026-06-22
