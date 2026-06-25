@@ -4,6 +4,7 @@ AI 辅助编程的工具、框架和实践记录。
 
 ## 文章列表
 
+- [Open Code Review：阿里内部 AI 代码审查工具开源](open-code-review-guide.md) — 2026-06-22
 - [Cua：给 AI Agent 装上能操作电脑的手和眼睛](cua-guide.md) — 2026-06-22
 - [Headroom：把发给 LLM 的 token 砍掉 90% 的上下文压缩层](headroom-guide.md) — 2026-06-21
 - [Planning with Files：给 AI Agent 装上"外存"，让它不再失忆](planning-with-files-guide.md) — 2026-06-20

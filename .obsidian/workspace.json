@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "tech/http/restful-api-guide.md",
+                "file": "tech/ai-tooling/open-code-review-guide.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "restful-api-guide"
+              "title": "open-code-review-guide"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "tech/http/restful-api-guide.md",
+                "file": "tech/ai-tooling/open-code-review-guide.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for restful-api-guide"
+              "title": "Backlinks for open-code-review-guide"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "tech/http/restful-api-guide.md",
+                "file": "tech/ai-tooling/open-code-review-guide.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from restful-api-guide"
+              "title": "Outgoing links from open-code-review-guide"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "tech/http/restful-api-guide.md",
+                "file": "tech/ai-tooling/open-code-review-guide.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of restful-api-guide"
+              "title": "Outline of open-code-review-guide"
             }
           }
         ]
@@ -186,11 +186,12 @@
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
     "tech/ai-tooling/cua-guide.md",
+    "tech/ai-tooling/open-code-review-guide.md",
+    "tech/http/restful-api-guide.md",
     "tech/http/grpc-guide.md",
     "tech/http/graphql-guide.md",
     "tech/ai-tooling/headroom-guide.md",
     "tech/restful-api-guide.md",
-    "tech/http/restful-api-guide.md",
     "languages/python/exec-eval.md",
     "exercise/index.md.tmp.92368.abc15dc3decf",
     "vocabulary/day-008.md",
@@ -220,7 +221,6 @@
     "tech/dev-tools/orbstack-guide.md",
     "tech/ai-tooling/compound-engineering-guide.md",
     "tech/dev-tools/setup-guide.md",
-    "tech/ai-tooling/superset-guide.md",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
     "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",
