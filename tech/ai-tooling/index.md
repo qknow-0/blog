@@ -4,6 +4,7 @@ AI 辅助编程的工具、框架和实践记录。
 
 ## 文章列表
 
+- [Cua：给 AI Agent 装上能操作电脑的手和眼睛](cua-guide.md) — 2026-06-22
 - [Headroom：把发给 LLM 的 token 砍掉 90% 的上下文压缩层](headroom-guide.md) — 2026-06-21
 - [Planning with Files：给 AI Agent 装上"外存"，让它不再失忆](planning-with-files-guide.md) — 2026-06-20
 - [Orca：为并行 AI Agent 设计的下一代 IDE](orca-guide.md) — 2026-06-19

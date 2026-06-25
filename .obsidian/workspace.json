@@ -185,6 +185,7 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
+    "tech/ai-tooling/cua-guide.md",
     "tech/http/grpc-guide.md",
     "tech/http/graphql-guide.md",
     "tech/ai-tooling/headroom-guide.md",
@@ -220,7 +221,6 @@
     "tech/ai-tooling/compound-engineering-guide.md",
     "tech/dev-tools/setup-guide.md",
     "tech/ai-tooling/superset-guide.md",
-    "README.md",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
     "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
     "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",
