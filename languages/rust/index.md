@@ -2,6 +2,7 @@
 
 ## 文章列表
 
+- [Rust LazyLock：延迟初始化的标准答案](lazy-lock.md) — 2026-06-29
 - [Rust 闭包：FnOnce、FnMut、Fn 的区别](closures.md) — 2026-06-15
 - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](lifetimes.md) — 2026-06-04
 - [Rust Box\<dyn\>：trait 对象与动态分发完全理解](box-dyn.md) — 2026-06-07

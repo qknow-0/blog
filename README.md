@@ -58,6 +58,7 @@
     - [React 19：Server Components 是对 Web 架构的重新分层](languages/react/react-19-server-components.md) — 2026-06-10
     - [React 19 新 API 全景：Actions 与状态管理新范式](languages/react/react-19-new-apis.md) — 2026-06-10
   - [Rust](languages/rust/index.md)
+    - [Rust LazyLock：延迟初始化的标准答案](languages/rust/lazy-lock.md) — 2026-06-29
     - [Rust 闭包：FnOnce、FnMut、Fn 的区别](languages/rust/closures.md) — 2026-06-15
     - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](languages/rust/lifetimes.md) — 2026-06-04
     - [Rust Box\<dyn\>：trait 对象与动态分发完全理解](languages/rust/box-dyn.md) — 2026-06-07
