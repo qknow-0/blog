@@ -8,7 +8,7 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 25 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 26 篇
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
   - [开发工具](tech/dev-tools/index.md) — 17 篇
