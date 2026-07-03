@@ -45,6 +45,7 @@
   - [Java](languages/java/index.md)
     - [Java 单元测试：JUnit 5 不是唯一解](languages/java/unit-testing.md) — 2026-05-30
   - [Node.js](languages/nodejs/index.md)
+    - [Node.js 错误处理：别让一个未捕获的异常崩了你的服务](languages/nodejs/error-handling.md) — 2026-07-03
     - [Node.js V8 内存管理：你的内存去哪了](languages/nodejs/v8-memory.md) — 2026-07-03
     - [Node.js Buffer：二进制数据处理](languages/nodejs/buffer.md) — 2026-06-15
     - [Node.js 进程与线程：cluster、worker_threads 与 child_process](languages/nodejs/process-and-threads.md) — 2026-06-11
