@@ -183,8 +183,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "04c390e25a3e9052",
+  "active": "68ce94d8a3447074",
   "lastOpenFiles": [
+    "languages/golang/context.md",
     "languages/nodejs/error-handling.md",
     "languages/nodejs/v8-memory.md",
     "languages/nodejs/index.md.tmp.48424.47d4def3a630",

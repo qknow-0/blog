@@ -38,6 +38,7 @@
     - [with 语句：上下文管理器的正确打开方式](languages/python/with-statement.md) — 2026-05-17
     - [yield 与生成器：惰性求值的艺术](languages/python/yield-statement.md) — 2026-05-17
   - [Go](languages/golang/index.md)
+    - [Go Context：一根贯穿所有 goroutine 的线](languages/golang/context.md) — 2026-07-03
     - [Go 面向对象系列](languages/golang/oop/index.md) — 2026-06-07（5 篇）
     - [Go Channel 系列](languages/golang/channels/index.md) — 2026-06-04（4 篇）
     - [Go Goroutine 系列](languages/golang/goroutine/index.md) — 2026-06-04（4 篇）
