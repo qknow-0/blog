@@ -45,6 +45,7 @@
   - [Java](languages/java/index.md)
     - [Java 单元测试：JUnit 5 不是唯一解](languages/java/unit-testing.md) — 2026-05-30
   - [Node.js](languages/nodejs/index.md)
+    - [Node.js V8 内存管理：你的内存去哪了](languages/nodejs/v8-memory.md) — 2026-07-03
     - [Node.js Buffer：二进制数据处理](languages/nodejs/buffer.md) — 2026-06-15
     - [Node.js 进程与线程：cluster、worker_threads 与 child_process](languages/nodejs/process-and-threads.md) — 2026-06-11
     - [Node.js Stream：数据不是一次性搬完的](languages/nodejs/stream.md) — 2026-06-08
@@ -59,6 +60,7 @@
     - [React 19 新 API 全景：Actions 与状态管理新范式](languages/react/react-19-new-apis.md) — 2026-06-10
   - [Rust](languages/rust/index.md)
     - [Rust LazyLock：延迟初始化的标准答案](languages/rust/lazy-lock.md) — 2026-06-29
+    - [Unsafe Rust：编译器让开，我自己保证安全](languages/rust/unsafe-rust.md) — 2026-07-03
     - [Rust 闭包：FnOnce、FnMut、Fn 的区别](languages/rust/closures.md) — 2026-06-15
     - [Rust 生命周期：'a 不是魔法，是编译器在检查指针有效期](languages/rust/lifetimes.md) — 2026-06-04
     - [Rust Box\<dyn\>：trait 对象与动态分发完全理解](languages/rust/box-dyn.md) — 2026-06-07
