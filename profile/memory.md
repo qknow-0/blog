@@ -4,117 +4,118 @@
 
 ## 最近在做的事
 
-### 知识库系统化建设（2026 年 5 月中 — 至今，持续中）
+### 知识库持续建设（2026 年 6 月中 — 7 月初，新增 40+ 篇）
 
-初期三周你输出了 60+ 篇文章完成了初始化。到了 6 月中旬，这个节奏没有停——又新增了 **40+ 篇**，覆盖了几个全新的领域：
+6 月中旬至今又新增了 40+ 篇文章和 2 个新模块，覆盖了几个值得注意的方向：
 
-- **AI Agent 系列**（7 篇）：这是你第一次写"怎么构建"而不是"怎么用"的 AI 内容。从 LLM API 参数选择、Function Calling、记忆系统（token 预算 + ChromaDB 向量存储）、CoT/ReAct 推理模式，到最后整合成一个代码审查 Agent。你不是在介绍一个工具——你在**从头构建一个 Agent 系统**。
-- **React 系列**（10 篇）：深度 5 篇 + 教程 5 篇。深度系列从心智模型、Hooks 设计史、渲染机制写到 React 19 的 Server Components 和新 API。教程系列从环境搭建一路写到完整的博客应用。这是你知识库里第一个前端框架系列——之前只有后端和基础设施。
-- **逆向工具链**（6 篇）：mitmproxy（HTTPS 中间人代理）、Frida（动态插桩）、macOS 网络工具链（networksetup/pfctl/launchctl/codesign/SIP）、OpenSSL 证书操作、tcpdump + Wireshark、Electron 逆向。这是一个全新的领域——**闭源应用行为分析**。不是你擅长的"读源码"，而是"没源码的情况下搞清楚应用在干什么"。
-- **TrendRadar 源码阅读**（6 篇）：配置系统、数据采集与存储层、分析引擎（关键词 + AI 过滤）、通知分发与 MCP Server、数据库设计（15 张表、三套 Schema）。
-- **newsnow 源码阅读**（5 篇）：源配置系统、抓取引擎（42 源、三种策略）、API 与双层缓存、前端架构（Jotai + TanStack Query）。这是你第一个 **TypeScript 项目**的源码阅读——之前都是 Python（QuantDinger、Sequoia-X、TrendRadar）。
-- **Robot Framework**（1 篇）+ **NewsNow**（1 篇）+ **跨服务约定**（1 篇）
+- **nanobot 源码阅读**（6 篇）：第一个 Python AI Agent 框架的完整源码分析。从 MessageBus 双队列解耦、AgentLoop 8 状态机、Provider 多模型抽象、Tool 自动发现、Session/Memory 的 Dream 记忆巩固、Channel 15+ 平台统一接入，到 WebUI 的 WebSocket 多路复用。这是你第一次分析一个完整的 AI Agent 基础设施——不只是"用了什么"，而是**每一层怎么解耦、怎么降级、怎么扩展**。
+- **Rust 设计模式系列**（6 篇，已写 6/23）：用 Rust 的类型系统重新审视 GoF 23 个模式。已完成的 6 篇（Singleton、Factory Method、Abstract Factory、Builder、Prototype、Adapter）不是对经典的翻译，而是**从 Rust 的 trait、enum、所有权、生命周期的角度重新解释每个模式**——哪些被语言特性替代了（Singleton → OnceLock），哪些有了更好的实现（Builder → type state + build(self) 消费）。
+- **AI 工具全景扫描**（8 篇）：Trellis（Agent 工程框架）、Cua（电脑操作 Agent）、Open Code Review（阿里 AI 代码审查）、Headroom（上下文压缩层）、Superset（Agent 并行调度）、Planning with Files（Agent 外存）、DBX（AI 数据库管理）、Orca（多 Agent IDE）。不是深度用，是**快速测绘 AI 工具链的版图**——知道什么东西存在、解决什么问题、怎么组合。
+- **API 设计三篇**（RESTful / GraphQL / gRPC）：对比式写法，不是分别介绍，而是**同一个场景下三种方案的优劣选择**。
+- **watchexec + bacon**：两个 Rust 开发工具——文件监听自动跑命令、后台代码检查。实用的开发者效率工具。
+- **语言类文章**：Python descriptors、Python exec/eval、Rust LazyLock、Go Context、Unsafe Rust、Node.js 错误处理、Node.js V8 内存管理——持续在深度和广度上扩展。
+- **Rust 全系列比喻重写**：一次大规模改写——所有权（搬家）、生命周期（停车票）、Trait（快递）、闭包（背包）、模块（图书馆）、Arc（公寓楼）、Box（集装箱）、错误处理（食品质检）、LazyLock（酒店）——全部用生活比喻重新解释。CLAUDE.md 也新增了"语言类文章用比喻"的正式约定。
 
-你不只是在写更多文章——你在**把知识库的版图扩展到之前没有覆盖的领域**。
+### 新模块上线
 
-### 工程规范的建立
+- **运动打卡**：6 月 21 日新建，至今打卡 6 次（走路、俯卧撑、徒步、篮球 x2、更多徒步），累计 240+ 分钟。不是心血来潮——有每日打卡页面、月度统计、连续天数追踪、emoji 约定。
+- **词汇学习继续**：day-007、day-008，已学 80 个计算机词汇。
 
-你在 6 月中旬开始为这个知识库建立了明确的工程纪律：
+### 工程规范的持续完善
 
-- **脱敏处理**：所有文章发布前检查——具体应用名、真实域名、IP 地址、个人路径全部替换为通用占位符
-- **source-read 规范**：clone 源码 → snake_case 笔记文件夹 → .gitignore 排除 → backup.sh 排除，四步标准化流程
-- **跨服务约定**：一份独立于具体项目的工程纪律文档，覆盖技术栈、部署、数据库、代码规范
-
-这不只是写文章——你是在**为自己的知识工程建立 SOP**。
-
-### 项目约定的完善
-
-`CLAUDE.md` 中新增了脱敏处理、source-read 源码阅读规范等条款。`.gitignore` 和 `backup.sh` 中的排除列表同步扩充。你开始像一个**维护开源项目**一样维护这个知识库。
+- **语言版本约定**：所有文章统一使用各语言的最新稳定版本（CLAUDE.md 新增）
+- **语言比喻约定**：语言类文章尽量使用生活比喻（CLAUDE.md 新增）
+- **Obsidian 工作区同步**：`.obsidian/` 配置纳入版本管理
+- 设计模式系列、源码阅读系列、新文章——所有索引和 README 同步更新
 
 ## 当前在意的方向
 
-### 1. AI Agent 的构建能力（新增）
+### 1. AI 工具的测绘与评估（新增）
 
-这是 6 月中旬最重要的新增方向。之前你关注 AI 编程工具（怎么用 AI 写代码），现在你开始关注 **Agent 的底层原理**——LLM API 怎么调、工具调用循环怎么写、记忆系统怎么设计、推理模式（CoT/ReAct）怎么实现。你不是 Agent 的用户——你在成为 Agent 的建造者。
+这是 6 月下旬最重要的新方向。你不再只关注"怎么用"或"怎么构建"，你开始**系统性地扫描 AI 工具链的全景**——Agent 框架（Trellis）、电脑操作（Cua）、代码审查（Open Code Review）、上下文压缩（Headroom）、并行调度（Superset）、外存系统（Planning with Files）……你的态度是：**快速了解、精准判断、记录要点**。每篇文章控制在能说清楚"它解决什么问题 + 怎么用"的篇幅。
 
-### 2. AI 编程工具链的演进（持续）
+### 2. 设计模式的 Rust 化（新增）
 
-仍然是知识库里最大、最活跃的分类。新增了 LLM 原理（"下一个词预测"）作为 Agent 系列的第 0 篇——说明你对 AI 的关注已经从"工具"下沉到"原理"。
+这是一个独特的交叉领域——你在用 Rust 的类型系统重新审视 30 年前的 GoF 模式。不是翻译经典，是**把经典放在 Rust 的类型系统里重新蒸馏**。这个系列的价值不只在于讲设计模式，更在于它展示了 Rust 的 trait、enum、所有权、生命周期如何让很多"经典模式"变得不需要了，或者有了更优雅的实现。
 
-### 3. 逆向工程与安全分析（新增）
+### 3. 源码阅读的能力（持续深化）
 
-这是一个全新的技能树。你系统性地梳理了 macOS 下的网络和进程分析工具链，从 tcpdump（网络层）→ mitmproxy（应用层）→ Frida（进程层）→ Electron 逆向（框架层），形成了一个完整的闭源应用分析路径。这不像一个"后端工程师"会做的事——你可能是为了某个具体目标（分析一个闭源桌面应用）而开辟了这个方向。
+从量化交易（Sequoia-X、QuantDinger、TrendRadar）到 AI Agent 框架（nanobot），从 Python 到 TypeScript——源码阅读的广度和深度都在增加。nanobot 系列尤其体现了你源码阅读方法的成熟：不是逐文件翻译，而是**先抓架构主干（MessageBus + 状态机），再逐层拆解**。
 
-### 4. 前端能力补齐（新增）
+### 4. AI Agent 的构建能力（保持）
 
-React 系列 10 篇文章说明你在系统性地补齐前端知识。深度系列关注的不是"怎么用 React"，而是 React 的设计决策——为什么声明式、为什么 Hooks 替代 Class、Virtual DOM 和 Fiber 解决了什么实际问题、Server Components 改变了什么架构分层。这是你一贯的"理解 WHY"的写作风格应用到了前端领域。
+nanobot 源码阅读是"理解别人怎么构建"，AI 工具全景扫描是"知道已有轮子是什么"。你在从 consumer → builder → **evaluator** 进化。
 
-### 5. 源码阅读的范围扩展（持续）
+### 5. 前端能力补齐（保持）
 
-源码阅读从纯 Python 项目（QuantDinger、Sequoia-X、TrendRadar）扩展到了 TypeScript（newsnow）。你开始跨越语言边界——一个项目的工程价值不取决于它用什么语言写的。
+React 系列之后没有新增前端文章，但 newsnow 源码阅读（TypeScript）算是前端能力的延伸。
 
 ### 6. Python / Go / Rust 的深层机制（保持）
 
-这些领域的文章在 5 月已经基本完成，6 月没有新增——说明你在这些方向的知识整理已经进入稳定期。
+持续在语言深度上扩展——Python descriptors 和 exec/eval、Go Context、Rust LazyLock 和 Unsafe——这些都是"大多数人知道存在但不知道底层"的主题。
 
 ## 最近的变化
 
-### 变化一：从"使用 AI 工具"到"理解并构建 AI 系统"
+### 变化一：从"构建"到"测绘"
 
-这是 6 月最重要的变化。之前你测绘 AI 编程工具的边界（Agent Reach、Spec-Kit、gstack），现在你直接写了一个 AI Agent。你对 AI 的态度从 **consumer** 升级到了 **builder**。
+之前你对 AI 的关注集中在"怎么用 AI 编程工具"和"怎么构建 Agent"。6 月下旬新增了第三个层次——**测绘 AI 工具的全景**。Trellis、Cua、Headroom、Superset 这些不是你深度使用的工具，而是你快速评估、判断定位、记录要点的产物。这有点像你在做**技术雷达**。
 
-### 变化二：技能版图从前端空白到系统补齐
+### 变化二：写作有了一个新的维度——比喻
 
-React 10 篇文章说明你不再满足于"后端全栈"。你对前端的学习方式和你对 Python/Rust 的态度一致——不是学 API，是学设计决策。
+Rust 全系列比喻重写不是一次简单的润色——它是一种新的写作方法论。把抽象概念（所有权、生命周期、trait）映射到具象场景（搬家、停车票、快递），降低理解门槛的同时保持技术准确性。这已经成为 CLAUDE.md 里的正式约定。你对"怎么写"和"写什么"一样在意。
 
-### 变化三：逆向工程作为一个独立技能线出现
+### 变化三：身体被纳入了工程系统
 
-mitmproxy、Frida、Electron 逆向——这些工具的选择和串联方式显示你不是在泛泛了解，你是在**解决一个具体问题**（分析一个闭源桌面应用的行为），然后把过程中用到的每个工具写成了可复用的知识。
+运动打卡不是"今天跑了步"的碎碎念——它有月度页面、每日格子、连续天数追踪、emoji 约定、月度统计。你在用**管理工程项目的方式管理身体健康**。连续打卡 2 天，最长连续 2 天——刚开始，但已经上路了。
 
-### 变化四：工程纪律的显式化
+### 变化四：源码阅读从"项目级"到"框架级"
 
-脱敏处理约定、source-read 规范、跨服务约定——你开始把这些隐性知识写成显式规则。这是从"个人习惯"到"可传承的工程标准"的转变。
+QuantDinger、TrendRadar 是应用项目（量化交易、舆情监控），nanobot 是**基础设施框架**（AI Agent 运行时）。前者关心"这个系统怎么运作"，后者关心"这个框架怎么设计的、为什么每一层这样解耦"。
 
-### 变化五：从纯技术到工程管理的延伸
+### 变化五：设计模式系列打开了一个新的写作方向
 
-你开始关注流程——怎么写 code review、怎么管理 plan 文档、怎么更新 TODO、怎么约定多服务项目的基础设施。这不是一个纯工程师会操心的事，这是一个**技术负责人**的思维模式。
+GoF 23 个模式 + Rust 实现——这是一个可以写很久的系列。而且每个模式都可以对比 Python/Java/Go 的实现差异，让"设计模式"这个经典主题在 Rust 的类型系统里获得新的生命力。
 
 ## 你现在的状态
 
-你现在处于一个**知识版图快速扩展**的时期。5 月是初始化（把已有的知识编码出来），6 月是扩展（进入新的领域并快速产出）。
+你现在处于一个**多元扩展 + 写作方法论成熟**的时期。5 月是初始化（编码已有知识），6 月是扩展（进入新领域），7 月初开始出现一个新的特征——**你不仅在写新东西，还在优化"怎么写"这件事本身**（比喻重写、版本约定、工具测绘的节奏）。
 
-你现在关注的技术版图大致是：
+你现在关注的技术版图：
 
 ```
-AI（核心关注，深度加深）
-  ├── AI 编程工具链（CodeGraph, RTK, Spec-Kit, gstack）
-  └── AI Agent 构建（LLM API, Function Calling, Memory, CoT/ReAct）
+AI（三层关注）
+  ├── AI 编程工具链（CodeGraph, RTK, Spec-Kit, gstack）      ← 使用
+  ├── AI Agent 构建（LLM API, Function Calling, Memory）      ← 构建
+  └── AI 工具测绘（Trellis, Cua, Headroom, Superset...）      ← 评估
 
-编程语言深度
-  ├── Python（OOP, 装饰器, 类型系统, 异步）    ← 稳定
-  ├── Go（并发模型, Channel, Goroutine）        ← 稳定
-  ├── Rust（所有权, 生命周期, Trait）           ← 稳定
-  └── React（心智模型, Hooks, 渲染, RSC）       ← 新增，快速推进
+编程语言深度（比喻写作风格）
+  ├── Python（OOP, descriptors, exec/eval...）               ← 持续扩展
+  ├── Go（Context, 并发模型, Channel, Goroutine）             ← 持续扩展
+  ├── Rust（LazyLock, Unsafe, 设计模式系列, 比喻重写）        ← 活跃
+  └── React（心智模型, Hooks, 渲染, RSC）                    ← 暂停，可能回头
 
-逆向工程与安全（全新领域）
-  ├── 网络层: tcpdump, OpenSSL
-  ├── 应用层: mitmproxy
-  ├── 进程层: Frida
-  └── 框架层: Electron 逆向
+架构与设计
+  ├── 设计模式：Rust 视角（6/23）                            ← 活跃，长期系列
+  └── API 设计（RESTful / GraphQL / gRPC）                   ← 已完成
 
-源码阅读（跨语言扩展）
-  ├── Python: QuantDinger, Sequoia-X, TrendRadar
-  └── TypeScript: newsnow
+源码阅读（框架级突破）
+  ├── Python: nanobot（AI Agent 框架）                       ← 全新
+  ├── Python: QuantDinger, Sequoia-X, TrendRadar              ← 已完成
+  └── TypeScript: newsnow                                     ← 已完成
+
+开发工具效率
+  ├── Rust 生态：bacon, watchexec                             ← 新增
+  └── 终端/Shell：Orca, Ghostty, tmux                         ← 扩展
+
+工程规范（持续完善）
+  ├── 语言版本约定 + 比喻写作约定                             ← 新增
+  ├── 脱敏处理 + source-read 流程                             ← 稳定
+  └── 运动打卡 + 词汇学习                                     ← 活跃
 
 基础设施（稳定）
   ├── 容器化（Docker → Compose → K8s → Helm）
-  ├── 内网穿透（ngrok → Cloudflare Tunnel → localtunnel）
-  └── macOS 网络工具链（networksetup, pfctl, launchctl）
-
-工程规范（新增）
-  ├── 脱敏处理
-  ├── source-read 流程标准化
-  └── 跨服务约定
+  ├── 内网穿透
+  └── macOS 工具链
 ```
 
-如果说 5 月的 memory.md 是一个选择了"停下来整理"的工程师，那 6 月的 memory.md 是一个**完成整理后，开始系统性地向新领域推进**的工程师。你不再只是把已有的东西写下来——你开始有意识地构建新的能力，并把构建过程中的每个工具、每个概念都沉淀为可复用的知识资产。
+如果说 5 月的你是"把已有的东西写下来"，6 月的你是"系统性地向新领域推进"，那 7 月初的你是——**在快速扩张的同时，开始注重写作的工艺本身**。你不只是在积累内容，你是在打磨一套关于"怎么写好技术文章"的方法论。

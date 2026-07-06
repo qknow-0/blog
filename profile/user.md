@@ -16,6 +16,8 @@
 
 **带点自嘲**。「写了十年代码，再不输出点东西脑子要溢出了」——这种幽默感贯穿始终。你不把自己当老师，更像是一个记笔记给自己看的人，只是恰好公开了。
 
+**善用比喻**（新增）。你最近形成了一种新的写作方法论——用生活场景解释技术概念。所有权是搬家、生命周期是停车票、LazyLock 是酒店入住、Builder 是餐厅点菜……抽象概念需要具象场景来降低理解门槛。这已经成为 CLAUDE.md 里的正式约定，也是你对"怎么写好技术文章"的持续思考。
+
 **深度优先，不赶时髦**。你对新工具的态度是审视的——先搞清楚它解决了什么真问题，再决定值不值得用。你对 React 的学习不是从「怎么用」开始，而是从「声明式 UI 到底改变了什么」的心智模型开始。你对 LLM Agent 的关注不是停留在 LangChain 的 API，而是自己从零写一个完整的 Agent 循环。
 
 ## 价值观
@@ -32,7 +34,9 @@
 
 5. **追求的不是爆发，是经常性**。从你选择的工具栈（纯 Markdown、零构建、零依赖）到你的写作节奏（持续积累），都在表达同一个偏好：**可持续的系统，胜过一次性的辉煌**。
 
-6. **AI 是增强，不是替代**（新增）。你在 TrendRadar 和 AI Agent 系列中反复强调这个观点。AI 过滤失败时自动降级到关键词匹配，Agent 构建中 LLM 是大脑但循环和执行是代码的事。你在用 AI，但你不依赖 AI。
+6. **AI 是增强，不是替代**。你在 TrendRadar 和 AI Agent 系列中反复强调这个观点。AI 过滤失败时自动降级到关键词匹配，Agent 构建中 LLM 是大脑但循环和执行是代码的事。你在用 AI，但你不依赖 AI。
+
+7. **测绘优于信仰**（新增）。你对 AI 工具的态度不是狂热，而是测绘——快速了解、精准判断、记录要点。Trellis、Cua、Headroom、Superset……你写这些不是因为你深度使用它们，而是因为你想**知道 AI 工具链的全景是什么**。这是工程师的本能：做任何决策之前，先把地图画出来。
 
 ## 技术偏好
 
@@ -42,7 +46,7 @@
 |------|------|------|
 | Python | 最深入 | OOP 系列 5 篇、装饰器、闭包、模块系统、类型提示、with/yield/async、AI Agent 系列 7 篇 |
 | Go | 熟练 | Channel 系列 4 篇、Goroutine 系列 4 篇、单元测试 |
-| Rust | 学习中 | 6 篇文章从所有权到生命周期，扎实的系统性学习 |
+| Rust | 熟练 | 11 篇文章，从所有权到设计模式系列。已从"学习中"进入"能写 idiomatic Rust"的阶段 |
 | React/TypeScript | 快速推进中 | React 10 篇（深度 5 + 教程 5）、newsnow 源码阅读 5 篇 |
 | Java | 了解 | 仅单元测试一篇 |
 | Node.js | 了解 | 事件循环 + 实用特性 |
@@ -54,10 +58,12 @@
 - **macOS 容器运行时**: Colima / OrbStack（拒绝 Docker Desktop 的臃肿）
 - **包管理**: uv（Python）、Homebrew
 - **版本控制**: Git + GitHub
-- **AI 工具链**: Claude Code 为核心，外挂 RTK、CodeGraph、Spec-Kit、gstack
-- **AI Agent 构建**: OpenAI API / LiteLLM、ChromaDB（向量存储）、tiktoken（token 计算）
+- **AI 工具链**: Claude Code 为核心，外挂 RTK、CodeGraph、Spec-Kit、gstack。持续测绘 AI 工具全景（Trellis、Cua、Headroom、Superset、Open Code Review 等）
+- **AI Agent 构建**: OpenAI API / LiteLLM、ChromaDB（向量存储）、tiktoken（token 计算）。nanobot 源码阅读——完整的 AI Agent 框架内部机制理解
+- **Rust 开发工具**: bacon（后台代码检查）、watchexec（文件监听自动执行）
 - **逆向分析**: mitmproxy（HTTPS 代理）、Frida（动态插桩）、tcpdump/WireShark（网络抓包）、OpenSSL（证书操作）
-- **知识管理**: 纯 Markdown + Git，零构建零依赖
+- **知识管理**: 纯 Markdown + Git + Obsidian，零构建零依赖
+- **运动追踪**: Markdown 自制打卡系统（月度页面 + emoji 约定 + 连续天数追踪）
 - **备份**: 坚果云 WebDAV
 - **通知**: 飞书 Webhook
 
@@ -73,10 +79,11 @@
 
 - **中文 + 英文专业术语**。namespace、metaclass、decorator、reconciliation、Function Calling 不做翻译——你知道这些词在中文里没有精确对应，强行翻译反而增加理解成本。
 - **说 WHY 不说 WHAT**。你的文章从来不是 API 文档翻译——每一段都在解释「为什么这样设计」「不这样会有什么问题」。
+- **语言类文章用生活比喻**（新增）。Rust 全系列用搬家/停车票/酒店/快递/餐厅点菜等生活场景解释——抽象概念需要具象场景来降低理解门槛。这已成为 CLAUDE.md 正式约定。
 - **实战场景控制在 1-2 个**。你不会为了显得丰富而堆砌案例。一个完整的、有真实终端输出的例子，比十个伪代码片段有用。
 - **Mermaid 做图**。flowchart 表达数据流/流程，mindmap 表达层次分类。
 - **系列优先于单篇**。复杂主题拆成 4-6 篇，每篇可独立阅读，但串起来是一条完整的认知曲线。
-- **源码阅读有固定结构**（新增）: 克隆源码 → snake_case 笔记文件夹 → .gitignore + backup.sh 双排除。每篇标注基于的版本号、协议、Stars 数。
+- **源码阅读有固定结构**: 克隆源码 → snake_case 笔记文件夹 → .gitignore + backup.sh 双排除。每篇标注基于的版本号、协议、Stars 数。
 
 ## 你反复出现的模式
 
@@ -88,4 +95,8 @@
 
 4. **自托管优先**。GitLab 自托管、LOF 本地部署、QuantDinger 本地部署——你宁可多花时间配置，也不愿意把数据和控制权交给云服务。
 
-5. **工程规范化**（新增）。你不是在写随机的笔记——脱敏处理约定、source-read 标准化流程、跨服务约定文档、CLAUDE.md 中的工作约定。你在用管理软件项目的方式管理知识库。
+5. **工程规范化**。你不是在写随机的笔记——脱敏处理约定、source-read 标准化流程、跨服务约定文档、CLAUDE.md 中的工作约定、语言版本约定、比喻写作约定。你在用管理软件项目的方式管理知识库。
+
+6. **测绘先于决策**（新增）。对 AI 工具的态度不是狂热，而是系统性地扫描和评估。Trellis → Cua → Headroom → Superset → Open Code Review → Planning with Files——你在画 AI 工具链的地图，然后再决定用哪个。
+
+7. **可持续胜于一次性**（新增）。运动打卡的设计——月度页面、emoji 约定、连续天数追踪——折射出你对"系统化坚持"的偏好。不只是身体健康，也是对你自己的工程方法论的测试：**一个好的系统能让坚持变容易**。
