@@ -11,7 +11,8 @@
   - [AI 编程工具链](tech/ai-tooling/index.md) — 26 篇
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
-  - [开发工具](tech/dev-tools/index.md) — 19 篇
+  - [开发工具](tech/dev-tools/index.md) — 20 篇
+    - [Tailscale：WireGuard 的正确打开方式](tech/dev-tools/tailscale-guide.md) — 2026-07-04
     - [watchexec：文件变了就自动跑命令](tech/dev-tools/watchexec-guide.md) — 2026-07-03
     - [bacon：Rust 开发者最该开着不关的终端窗口](tech/dev-tools/bacon-guide.md) — 2026-07-03
   - [容器化系列](tech/containerization/index.md) — 5 篇

@@ -4,6 +4,7 @@
 
 ## 文章列表
 
+- [Tailscale：WireGuard 的正确打开方式](tailscale-guide.md) — 2026-07-04
 - [watchexec：文件变了就自动跑命令](watchexec-guide.md) — 2026-07-03
 - [bacon：Rust 开发者最应该开着不关的终端窗口](bacon-guide.md) — 2026-07-03
 - [DBX：15MB 的数据库管理工具，干掉 400MB 的 DBeaver](dbx-guide.md) — 2026-06-20
