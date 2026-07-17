@@ -51,3 +51,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | TrendRadar | trend_radar/ | ✅ | ✅ |
 | newsnow | newsnow_notes/ | ✅ | ✅ |
 | nanobot | nanobot_notes/ | ✅ | ✅ |
+| MetaGPT | meta_gpt/ | ✅ | ✅ |
