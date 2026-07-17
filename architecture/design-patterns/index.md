@@ -17,7 +17,7 @@
 | 模式 | Rust 关键点 | 状态 |
 |---|---|---|
 | [Adapter](adapter.md) | newtype 模式 + trait 实现 | ✅ |
-| Bridge | trait 对象 vs 泛型；编译期 vs 运行时分发 | 待写 |
+| [Bridge](bridge.md) | trait 对象 vs 泛型；编译期 vs 运行时分发 | ✅ |
 | Composite | enum 递归类型 + `Box<dyn>` | 待写 |
 | Decorator | trait 组合 + `impl Trait` | 待写 |
 | Facade | 模块可见性控制 `pub(crate)` | 待写 |

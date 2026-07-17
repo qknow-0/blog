@@ -25,6 +25,13 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### MetaGPT
+
+- [（一）架构总览：Role、Action、Environment 三角](meta_gpt/01-architecture.md) — 2026-07-17
+- [（二）Role 系统：一个 Agent 的内部运作](meta_gpt/02-role-system.md) — 2026-07-17
+- [（三）Environment 与消息系统：多 Agent 如何协作](meta_gpt/03-messaging.md) — 2026-07-17
+- [（四）值得学的 8 个设计](meta_gpt/04-learnings.md) — 2026-07-17
+
 ### nanobot
 
 - [（一）架构总览：MessageBus + AgentLoop 状态机](nanobot_notes/01-architecture-overview.md) — 2026-06-16
