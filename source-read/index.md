@@ -28,7 +28,8 @@
 ### MetaGPT
 
 - [（六）7 段值得复制的 Python 代码](meta_gpt/06-excellent-code.md) — 2026-07-17
-- [（五）Prompt 系统：AI Agent 的真正壁垒](meta_gpt/05-prompt-system.md) — 2026-07-17
+- [（五）Prompt 系统：中英双语完整版](meta_gpt/05-prompt-system.md) — 2026-07-17
+- [📎 完整 Prompt 大全（中英双语）](meta_gpt/05b-all-prompts.md) — 2026-07-17
 - [（四）值得学的 8 个设计](meta_gpt/04-learnings.md) — 2026-07-17
 - [（三）Environment 与消息系统：多 Agent 如何协作](meta_gpt/03-messaging.md) — 2026-07-17
 - [（二）Role 系统：一个 Agent 的内部运作](meta_gpt/02-role-system.md) — 2026-07-17
