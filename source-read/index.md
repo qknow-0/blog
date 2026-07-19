@@ -63,3 +63,4 @@
 ### DBX
 
 - [（一）架构总览——Tauri 单体仓库如何管理 50+ 数据库](dbx_notes/01-architecture.md) — 2026-07-03
+- [（二）连接管理——50 种数据库，一套 API](dbx_notes/02-connection.md) — 2026-07-03
