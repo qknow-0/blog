@@ -64,3 +64,5 @@
 
 - [（一）架构总览——Tauri 单体仓库如何管理 50+ 数据库](dbx_notes/01-architecture.md) — 2026-07-03
 - [（二）连接管理——50 种数据库，一套 API](dbx_notes/02-connection.md) — 2026-07-03
+- [（三）AI Agent 系统——LLM 对话循环与工具调用](dbx_notes/03-agent-system.md) — 2026-07-03
+- [（四）MCP Server 与 CLI——同一套代码，四个产物](dbx_notes/04-mcp-cli.md) — 2026-07-03

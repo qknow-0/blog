@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source-read/meta_gpt/05b-all-prompts.md",
+                "file": "source-read/dbx_notes/01-architecture.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "05b-all-prompts"
+              "title": "01-architecture"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source-read/meta_gpt/05b-all-prompts.md",
+                "file": "source-read/dbx_notes/01-architecture.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for 05b-all-prompts"
+              "title": "Backlinks for 01-architecture"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source-read/meta_gpt/05b-all-prompts.md",
+                "file": "source-read/dbx_notes/01-architecture.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from 05b-all-prompts"
+              "title": "Outgoing links from 01-architecture"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source-read/meta_gpt/05b-all-prompts.md",
+                "file": "source-read/dbx_notes/01-architecture.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of 05b-all-prompts"
+              "title": "Outline of 01-architecture"
             }
           }
         ]
@@ -185,6 +185,10 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
+    "source-read/dbx_notes/04-mcp-cli.md",
+    "source-read/dbx_notes/03-agent-system.md",
+    "source-read/dbx_notes/02-connection.md",
+    "source-read/meta_gpt/05b-all-prompts.md",
     "source-read/dbx_notes/01-architecture.md",
     "source-read/dbx_notes",
     "source-read/dbx/vitest.config.ts",
@@ -226,10 +230,6 @@
     "source-read/dbx/docs/performance/memory-usage-audit.md",
     "source-read/dbx/docs/performance/dom-density-audit.md",
     "source-read/dbx/docs/mq-quick-start.md",
-    "source-read/dbx/docs/CONTRIBUTORS.md",
-    "source-read/dbx/deploy/database/redis/3.0.7/init/README.md",
-    "source-read/dbx/deploy/database/redis/7.4/init/README.md",
-    "source-read/dbx/deploy/dockerhub/README.md",
-    "source-read/dbx/deploy/database/RECIPE_TEMPLATE.md"
+    "source-read/dbx/docs/CONTRIBUTORS.md"
   ]
 }
