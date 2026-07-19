@@ -41,6 +41,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='source-read/newsnow' \
   --exclude='source-read/nanobot' \
   --exclude='source-read/MetaGPT' \
+  --exclude='source-read/dbx' \
   --exclude='code/mini-gpt/mini-gpt-cn.pt' \
   --exclude='code/mini-gpt/.venv' \
   --exclude='__pycache__' \
