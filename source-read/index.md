@@ -69,3 +69,7 @@
 - [（五）Schema 管理与查询引擎——从表结构到 SQL 执行](dbx_notes/05-schema-query.md) — 2026-07-03
 - [（六）数据传输引擎——导入导出与跨库迁移](dbx_notes/06-data-transfer.md) — 2026-07-03
 - [（七）Prompt 系统——SQL 生成的完整指令链](dbx_notes/07-prompts.md) — 2026-07-03
+
+### Horizon
+
+- 待添加
