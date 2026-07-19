@@ -1,5 +1,68 @@
 # 源码阅读规范
 
+每个源码阅读项目包含两类内容：**整体架构学习** + **具体优秀代码学习**。
+
+## 一、整体架构学习
+
+回答三个问题：
+
+1. **怎么分模块**——画 Mermaid 流程图，标注模块之间的调用关系和数据流
+2. **为什么这么分**——每个模块的职责边界在哪，解耦点在哪
+3. **优缺点分析**——这个架构在什么场景下有效，什么场景下会崩
+
+## 二、优秀代码学习
+
+每篇至少拆解 **1-2 个可复用的具体代码片段**，每个片段包含：
+
+- **源码摘录**——标注文件路径和行号，只保留核心逻辑
+- **好在哪里**——命名？抽象？错误处理？边界条件？
+- **用到了什么模式**——具体说出模式名（策略、状态机、观察者、管道等）
+- **骨架代码**——去掉业务逻辑，留下可复用的代码结构
+- **我第一次写会怎么错**——反模式警示
+
+### 好的优秀代码学习长这样
+
+```markdown
+## 优秀代码：MessageBus 的两个 Queue 解耦
+
+### 源码
+```python
+# nanobot/bus/queue.py:46-50
+class MessageBus:
+    def __init__(self):
+        self.inbound = asyncio.Queue()
+        self.outbound = asyncio.Queue()
+```
+
+### 好在哪
+用两个 asyncio.Queue 替代了回调地狱。Channel 只管往里推消息，
+AgentLoop 只管往外拿消息——互不知道对方存在。
+
+### 模式
+**Mediator 模式**：MessageBus 是中介者，Channel 和 AgentLoop 不直接通信。
+
+### 骨架代码（你敢直接用）
+```python
+import asyncio
+
+class MessageBus:
+    def __init__(self):
+        self._in = asyncio.Queue()
+        self._out = asyncio.Queue()
+    
+    async def send(self, msg): await self._in.put(msg)
+    async def receive(self): return await self._in.get()
+    async def reply(self, msg): await self._out.put(msg)
+
+# 你的项目中：用两个 Queue 解耦 WebSocket 推送和业务逻辑
+```
+
+### 我第一次会怎么错
+"只用一个 Queue 双向通信"——结果消息方向混淆，A → B 的消息被 B 误当成 A 的回复。
+```
+
+## 项目规范
+
 每个源码阅读项目遵循以下步骤：
 
 1. **Clone 源码** — 将项目源码 clone 到本目录下（保持原始仓库名）
