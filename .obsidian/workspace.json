@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "source-read/README.md",
+                "file": "source-read/meta_gpt/05b-all-prompts.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "05b-all-prompts"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "source-read/README.md",
+                "file": "source-read/meta_gpt/05b-all-prompts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for 05b-all-prompts"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "source-read/README.md",
+                "file": "source-read/meta_gpt/05b-all-prompts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from 05b-all-prompts"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "source-read/README.md",
+                "file": "source-read/meta_gpt/05b-all-prompts.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of 05b-all-prompts"
             }
           }
         ]
@@ -185,51 +185,51 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
-    "source-read/meta_gpt/06-excellent-code.md",
-    "source-read/meta_gpt/05b-all-prompts.md",
-    "source-read/meta_gpt/04-learnings.md",
-    "source-read/README.md",
-    "CLAUDE.md",
-    "source-read/meta_gpt/05-prompt-system.md",
-    "source-read/meta_gpt/03-messaging.md",
-    "languages/golang/context.md",
-    "tech/dev-tools/watchexec-guide.md",
-    "tech/dev-tools/tailscale-guide.md",
-    "tech/dev-tools/bacon-guide.md",
-    "source-read/meta_gpt/02-role-system.md",
-    "source-read/meta_gpt/01-architecture.md",
-    "source-read/meta_gpt",
-    "languages/nodejs/esm-cjs-modules.md",
-    "architecture/design-patterns/bridge.md",
-    "languages/nodejs/v8-memory.md",
-    "languages/nodejs/error-handling.md",
-    "languages/nodejs/index.md.tmp.48424.47d4def3a630",
-    "languages/rust/unsafe-rust.md",
-    "tech/ai-tooling/trellis-guide.md",
-    "tech/dev-tools/tunneling/03-localtunnel.md",
-    "tech/claude-code/claude-code-best-practice.md",
-    "languages/rust/lazy-lock.md",
-    "tech/dev-tools/tunneling/02-cloudflare-tunnel.md",
-    "tech/dev-tools/tunneling/01-ngrok.md",
-    "tech/dev-tools/tenacity-guide.md",
-    "tech/ai-tooling/open-code-review-guide.md",
-    "exercise/index.md.tmp.92368.abc15dc3decf",
-    "README.md.tmp.33022.c4d7880328d7",
-    "tech/ai-tooling/index.md.tmp.33022.e0573bdbf48e",
-    "CLAUDE.md.tmp.33022.b13da2886746",
-    "CLAUDE.md.tmp.33022.7d7a6af0109d",
-    "README.md.tmp.33022.2fae3d29ccb6",
-    "exercise/2026/06-june.md.tmp.33022.5c8bbd9c8335",
-    "exercise/2026",
-    "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logotype.svg",
-    "source-read/FinnewsHunter/frontend/node_modules/date-fns/docs/logo.svg",
-    "source-read/FinnewsHunter/assets/images/finnews_hunter_logo_dynamic.png",
-    "source-read/FinnewsHunter/assets/images/arch-20251201.png",
-    "source-read/FinnewsHunter/assets/images/FINNEWS_HUNTER_LOGO_old.png",
-    "source-read/FinnewsHunter/assets/images/FINNEWS_HUNTER_LOGO.png",
-    "source-read/FinnewsHunter/assets/images/FINNEWS_HUNTER.png",
-    "source-read/FinnewsHunter/assets/images/FINNEWS-HUNTER.jpg",
-    "source-read/QuantDinger/docs/screenshots/video_demo.png",
-    "source-read/QuantDinger/docs/screenshots/v34.png"
+    "source-read/dbx_notes/01-architecture.md",
+    "source-read/dbx_notes",
+    "source-read/dbx/vitest.config.ts",
+    "source-read/dbx/tests/fixtures/production-safety-corpus.json",
+    "source-read/dbx/tests/fixtures",
+    "source-read/dbx/tests",
+    "source-read/dbx/src-tauri/windows/nsis/installer.nsi",
+    "source-read/dbx/src-tauri/src/models/mod.rs",
+    "source-read/dbx/src-tauri/src/models/connection.rs",
+    "source-read/dbx/src-tauri/src/db/mod.rs",
+    "source-read/dbx/src-tauri/src/commands/zookeeper_cmd.rs",
+    "source-read/dbx/src-tauri/icons/Square71x71Logo.png",
+    "source-read/dbx/src-tauri/icons/tray-macos-template.png",
+    "source-read/dbx/src-tauri/icons/icon.png",
+    "source-read/dbx/src-tauri/icons/icon-black.png",
+    "source-read/dbx/src-tauri/icons/StoreLogo.png",
+    "source-read/dbx/src-tauri/icons/Square89x89Logo.png",
+    "source-read/dbx/src-tauri/icons/Square107x107Logo.png",
+    "source-read/dbx/src-tauri/icons/Square44x44Logo.png",
+    "source-read/dbx/src-tauri/icons/Square310x310Logo.png",
+    "source-read/dbx/src-tauri/icons/Square30x30Logo.png",
+    "source-read/dbx/skills/dbx/SKILL.md",
+    "source-read/dbx/plugins/jdbc/README.md",
+    "source-read/dbx/plugins/README.md",
+    "source-read/dbx/packages/mcp-darwin-arm64/README.md",
+    "source-read/dbx/packages/mcp-win32-x64/README.md",
+    "source-read/dbx/packages/mcp-linux-arm64-gnu/README.md",
+    "source-read/dbx/packages/mcp-win32-arm64/README.md",
+    "source-read/dbx/packages/mcp-linux-x64-gnu/README.md",
+    "source-read/dbx/packages/mcp-server/README.md",
+    "source-read/dbx/packages/mcp-darwin-x64/README.md",
+    "source-read/dbx/packages/cli/README.md",
+    "source-read/dbx/examples/README.md",
+    "source-read/dbx/docs/superpowers/specs/2026-06-08-sql-formatter-config-design.md",
+    "source-read/dbx/docs/superpowers/specs/2026-07-06-gridfs-manager-filter-sort-design.md",
+    "source-read/dbx/docs/pips/plans/2026-06-24-database-connection-timeout-recovery.md",
+    "source-read/dbx/docs/pips/PIP-0001-database-connection-timeout-recovery.md",
+    "source-read/dbx/docs/performance/runtime-memory-audit.md",
+    "source-read/dbx/docs/performance/memory-usage-audit.md",
+    "source-read/dbx/docs/performance/dom-density-audit.md",
+    "source-read/dbx/docs/mq-quick-start.md",
+    "source-read/dbx/docs/CONTRIBUTORS.md",
+    "source-read/dbx/deploy/database/redis/3.0.7/init/README.md",
+    "source-read/dbx/deploy/database/redis/7.4/init/README.md",
+    "source-read/dbx/deploy/dockerhub/README.md",
+    "source-read/dbx/deploy/database/RECIPE_TEMPLATE.md"
   ]
 }
