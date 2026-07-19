@@ -76,7 +76,7 @@ flowchart TD
     D -->|DuckDb| J[duckdb_list_databases_with_attached]
     D -->|Agent| K[client.list_databases]
     D -->|ExternalDriver| L[session.invoke_with_timeout]
-    D -->|其他| M[Ok(vec![])]
+    D -->|其他| M["Ok(vec![])"]
 ```
 
 每个 `list_xxx_core` 函数（`list_databases_core`, `list_schemas_core`, `list_tables_core`, `get_columns_core`）都遵循同一模式：
