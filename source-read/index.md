@@ -72,4 +72,8 @@
 
 ### Horizon
 
-- 待添加
+- [（一）架构总览——多源采集 + AI 分析 + 多渠道分发](horizon_notes/01-architecture.md) — 2026-07-03
+- [（二）多源采集系统——10 个 Scraper，一个接口](horizon_notes/02-scrapers.md) — 2026-07-03
+- [（三）AI 分析层——多 Provider 抽象 + 内容分析 + 日报生成](horizon_notes/03-ai-layer.md) — 2026-07-03
+- [（四）MCP Server 与存储层——让 AI Agent 查你的知识库](horizon_notes/04-mcp-storage.md) — 2026-07-03
+- [（五）Prompt 系统——中英双语全集](horizon_notes/05-prompts.md) — 2026-07-03
