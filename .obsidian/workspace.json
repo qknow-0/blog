@@ -185,11 +185,12 @@
   },
   "active": "04c390e25a3e9052",
   "lastOpenFiles": [
+    "source-read/dbx_notes/07-prompts.md",
+    "source-read/README.md",
+    "source-read/dbx_notes/03-agent-system.md",
     "source-read/dbx_notes/06-data-transfer.md",
     "source-read/dbx_notes/05-schema-query.md",
-    "source-read/README.md",
     "source-read/index.md",
-    "source-read/dbx_notes/03-agent-system.md",
     "source-read/dbx_notes/02-connection.md",
     "source-read/dbx_notes/01-architecture.md",
     "source-read/dbx_notes/04-mcp-cli.md",
@@ -229,7 +230,6 @@
     "source-read/dbx/docs/superpowers/specs/2026-06-08-sql-formatter-config-design.md",
     "source-read/dbx/docs/superpowers/specs/2026-07-06-gridfs-manager-filter-sort-design.md",
     "source-read/dbx/docs/pips/plans/2026-06-24-database-connection-timeout-recovery.md",
-    "source-read/dbx/docs/pips/PIP-0001-database-connection-timeout-recovery.md",
-    "source-read/dbx/docs/performance/runtime-memory-audit.md"
+    "source-read/dbx/docs/pips/PIP-0001-database-connection-timeout-recovery.md"
   ]
 }
