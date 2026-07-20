@@ -8,7 +8,8 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 26 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 27 篇
+    - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
   - [开发工具](tech/dev-tools/index.md) — 20 篇
@@ -80,11 +81,12 @@
     - [Solidity 系列](languages/solidity/index.md) — 2026-06-15（7 篇）
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
-  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-17（8/23）
+  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-20（9/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [AI Hedge Fund 源码阅读系列](source-read/ai_hedge_fund/) — 2026-07-20（3 篇）
   - [MetaGPT 源码阅读系列](source-read/meta_gpt/) — 2026-07-17（6 篇）
   - [Horizon 源码阅读系列](source-read/horizon_notes/) — 2026-07-03（5 篇）
   - [DBX 源码阅读系列](source-read/dbx_notes/) — 2026-07-03（7 篇）

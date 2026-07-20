@@ -122,3 +122,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | newsnow | newsnow_notes/ | ✅ | ✅ |
 | nanobot | nanobot_notes/ | ✅ | ✅ |
 | MetaGPT | meta_gpt/ | ✅ | ✅ |
+| ai-hedge-fund | ai_hedge_fund/ | ✅ | ✅ |

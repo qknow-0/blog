@@ -352,20 +352,20 @@ Prompt 工程不是「写一段好提示词」——是**把人类的 SOP 翻译
 
 **附：MetaGPT 完整 Prompt 文件清单**
 
-| 文件 | 用途 |
-|---|---|
-| `di/role_zero.py` | 通用基座（ReAct + JSON + Thought Guidance） |
-| `di/engineer2.py` | 工程师 29 条编码规则 |
-| `product_manager.py` | PM：PRD 创建 + 市场调研 |
-| `di/architect.py` | 架构师系统设计 |
-| `di/swe_agent.py` | SWE Agent 操作示例 |
-| `di/team_leader.py` | Team Leader 任务拆分 |
-| `di/write_analysis_code.py` | 数据分析代码生成 |
-| `di/data_analyst.py` | 数据分析师 |
-| `task_type.py` | EDA/特征工程/模型训练/爬虫 |
-| `summarize.py` | 对话摘要 |
-| `generate_skill.md` | Skill 自动生成 |
-| `invoice_ocr.py` | 发票 OCR |
-| `sales.py` | 销售人员 |
-| `tutorial_assistant.py` | 教程助手 |
-| `metagpt_sample.py` | 公共函数库示例 |
+| 文件                          | 用途                                    |
+| --------------------------- | ------------------------------------- |
+| `di/role_zero.py`           | 通用基座（ReAct + JSON + Thought Guidance） |
+| `di/engineer2.py`           | 工程师 29 条编码规则                          |
+| `product_manager.py`        | PM：PRD 创建 + 市场调研                      |
+| `di/architect.py`           | 架构师系统设计                               |
+| `di/swe_agent.py`           | SWE Agent 操作示例                        |
+| `di/team_leader.py`         | Team Leader 任务拆分                      |
+| `di/write_analysis_code.py` | 数据分析代码生成                              |
+| `di/data_analyst.py`        | 数据分析师                                 |
+| `task_type.py`              | EDA/特征工程/模型训练/爬虫                      |
+| `summarize.py`              | 对话摘要                                  |
+| `generate_skill.md`         | Skill 自动生成                            |
+| `invoice_ocr.py`            | 发票 OCR                                |
+| `sales.py`                  | 销售人员                                  |
+| `tutorial_assistant.py`     | 教程助手                                  |
+| `metagpt_sample.py`         | 公共函数库示例                               |
