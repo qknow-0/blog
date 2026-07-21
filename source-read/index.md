@@ -30,6 +30,7 @@
 - [（一）架构总览：19 个 AI 分析师协同决策](ai_hedge_fund/01-architecture.md) — 2026-07-20
 - [（二）巴菲特 Agent 的 600 行分析逻辑](ai_hedge_fund/02-analyst-agents.md) — 2026-07-20
 - [（三）综合决策 + 值得学的 6 个设计](ai_hedge_fund/03-portfolio-learnings.md) — 2026-07-20
+- [📎 Prompt 全集（中英双语，17 个 Agent）](ai_hedge_fund/04-prompts.md) — 2026-07-20
 
 ### MetaGPT
 
