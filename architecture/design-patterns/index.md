@@ -20,7 +20,7 @@
 | [Bridge](bridge.md) | trait 对象 vs 泛型；编译期 vs 运行时分发 | ✅ |
 | [Composite](composite.md) | enum 递归类型 + `Box<dyn>` | ✅ |
 | [Decorator](decorator.md) | trait 组合 + `impl Trait` | ✅ |
-| Facade | 模块可见性控制 `pub(crate)` | 待写 |
+| [Facade](facade.md) | 模块可见性控制 `pub(crate)` | ✅ |
 | Flyweight | `Arc<str>` / `internment`；零拷贝减少需求 | 待写 |
 | Proxy | 智能指针 `Deref` | 待写 |
 

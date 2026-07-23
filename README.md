@@ -81,11 +81,12 @@
     - [Solidity 系列](languages/solidity/index.md) — 2026-06-15（7 篇）
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
 - [架构设计](architecture/index.md) — 系统设计、技术方案
-  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-20（9/23）
+  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（10/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [World Monitor 源码阅读系列](source-read/world_monitor/) — 2026-07-21（3 篇）
   - [AI Hedge Fund 源码阅读系列](source-read/ai_hedge_fund/) — 2026-07-20（3 篇）
   - [MetaGPT 源码阅读系列](source-read/meta_gpt/) — 2026-07-17（6 篇）
   - [Horizon 源码阅读系列](source-read/horizon_notes/) — 2026-07-03（5 篇）
