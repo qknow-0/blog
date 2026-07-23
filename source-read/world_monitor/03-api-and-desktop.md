@@ -128,13 +128,19 @@ class URLStateManager {
         this.pending = true;
         requestAnimationFrame(() => {
             this.applyURLToState(new URLSearchParams(location.search));
-            this.pending = false;
+            this.pending = false);
         });
     };
 }
 ```
 
-**好在哪：** 双向同步而非单向。`history.replaceState` 不会产生多余的历史条目。`requestAnimationFrame` 包裹 popstate 处理——确保在下一帧渲染前完成状态同步，不会出现"URL 变了但 UI 还在闪"的问题。
+### 好在哪
+
+**双向同步而非单向。** `history.replaceState` 不会产生多余的历史条目。`requestAnimationFrame` 包裹 popstate 处理——确保在下一帧渲染前完成状态同步，不会出现"URL 变了但 UI 还在闪"的问题。
+
+### 模式
+
+Bidirectional URL-Application State Sync。
 
 ### 骨架代码
 
@@ -143,12 +149,10 @@ class URLSync<T> {
     private timer = 0;
     push(data: T) {
         clearTimeout(this.timer);
-        this.timer = setTimeout(() => history.replaceState(null, '', `?${serialize(data)}`), 250);
+        this.timer = setTimeout(() => history.replaceState(null, '', `?q=${encode(data)}`), 250);
     }
     pop(handler: (data: T) => void) {
-        window.addEventListener('popstate', () => {
-            requestAnimationFrame(() => handler(deserialize(location.search)));
-        });
+        window.addEventListener('popstate', () => requestAnimationFrame(() => handler(decode(location.search))));
     }
 }
 ```
