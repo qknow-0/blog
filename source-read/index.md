@@ -25,6 +25,12 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### World Monitor
+
+- [（一）架构总览：从 500+ 新闻源到实时全球情报面板](world_monitor/01-architecture.md) — 2026-07-21
+- [（二）AI 合成管线：500 条新闻 → 5 条简报](world_monitor/02-ai-pipeline.md) — 2026-07-21
+- [（三）API 层 + 桌面端 + Promise 队列 + URL 双向同步](world_monitor/03-api-and-desktop.md) — 2026-07-21
+
 ### AI Hedge Fund
 
 - [（一）架构总览：19 个 AI 分析师协同决策](ai_hedge_fund/01-architecture.md) — 2026-07-20
