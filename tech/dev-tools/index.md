@@ -4,6 +4,7 @@
 
 ## 文章列表
 
+- [Atuin：把 Shell 历史变成可搜索、可同步的数据库](atuin-guide.md) — 2026-07-21
 - [superfile：Go 写的终端文件管理器，比 ranger 好看一百倍](superfile-guide.md) — 2026-07-21
 - [git-cliff：用 Git 提交历史自动生成 CHANGELOG](git-cliff-guide.md) — 2026-07-21
 - [jcode：Rust 写的终端 AI 编程助手，性能和 Agent 协作做到极致](jcode-guide.md) — 2026-07-20
