@@ -12,7 +12,8 @@
     - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
-  - [开发工具](tech/dev-tools/index.md) — 20 篇
+  - [开发工具](tech/dev-tools/index.md) — 21 篇
+    - [git-cliff：用 Git 提交历史自动生成 CHANGELOG](tech/dev-tools/git-cliff-guide.md) — 2026-07-21
     - [Tailscale：WireGuard 的正确打开方式](tech/dev-tools/tailscale-guide.md) — 2026-07-04
     - [watchexec：文件变了就自动跑命令](tech/dev-tools/watchexec-guide.md) — 2026-07-03
     - [bacon：Rust 开发者最该开着不关的终端窗口](tech/dev-tools/bacon-guide.md) — 2026-07-03
@@ -80,6 +81,7 @@
   - [Solidity](languages/solidity/index.md)
     - [Solidity 系列](languages/solidity/index.md) — 2026-06-15（7 篇）
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
+  - [当你的 event loop 死了，回调也就死了：ib_insync 持久后台线程调试记](project-retro/ibkr-event-loop-debug.md) — 2026-07-24
 - [架构设计](architecture/index.md) — 系统设计、技术方案
   - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（10/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
