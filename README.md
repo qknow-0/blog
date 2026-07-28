@@ -12,7 +12,8 @@
     - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
-  - [开发工具](tech/dev-tools/index.md) — 21 篇
+  - [开发工具](tech/dev-tools/index.md) — 22 篇
+    - [superfile：Go 写的终端文件管理器](tech/dev-tools/superfile-guide.md) — 2026-07-21
     - [git-cliff：用 Git 提交历史自动生成 CHANGELOG](tech/dev-tools/git-cliff-guide.md) — 2026-07-21
     - [Tailscale：WireGuard 的正确打开方式](tech/dev-tools/tailscale-guide.md) — 2026-07-04
     - [watchexec：文件变了就自动跑命令](tech/dev-tools/watchexec-guide.md) — 2026-07-03
@@ -88,6 +89,7 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [Impeccable 源码阅读系列](source-read/impeccable_notes/) — 2026-07-21（3 篇）
   - [World Monitor 源码阅读系列](source-read/world_monitor/) — 2026-07-21（3 篇）
   - [AI Hedge Fund 源码阅读系列](source-read/ai_hedge_fund/) — 2026-07-20（3 篇）
   - [MetaGPT 源码阅读系列](source-read/meta_gpt/) — 2026-07-17（6 篇）

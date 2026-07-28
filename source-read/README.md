@@ -121,3 +121,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | MetaGPT | meta_gpt/ | ✅ | ✅ |
 | ai-hedge-fund | ai_hedge_fund/ | ✅ | ✅ |
 | worldmonitor | world_monitor/ | ✅ | ✅ |
+| impeccable | impeccable_notes/ | ✅ | ✅ |

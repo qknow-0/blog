@@ -25,6 +25,12 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### Impeccable
+
+- [（一）架构总览：让 AI 生成的前端设计不再"AI 味"](impeccable_notes/01-architecture.md) — 2026-07-21
+- [（二）60 条规则，用代码检测"AI 味"设计](impeccable_notes/02-detect-engine.md) — 2026-07-21
+- [（三）Prompt 全集（中英双语）](impeccable_notes/03-prompts.md) — 2026-07-21
+
 ### World Monitor
 
 - [（一）架构总览：从 500+ 新闻源到实时全球情报面板](world_monitor/01-architecture.md) — 2026-07-21
