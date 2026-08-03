@@ -12,7 +12,8 @@
     - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
-  - [开发工具](tech/dev-tools/index.md) — 23 篇
+  - [开发工具](tech/dev-tools/index.md) — 24 篇
+    - [终端文本处理九把刀：awk、sed、grep...](tech/dev-tools/cli-text-processing.md) — 2026-07-21
     - [Atuin：把 Shell 历史变成可搜索的数据库](tech/dev-tools/atuin-guide.md) — 2026-07-21
     - [superfile：Go 写的终端文件管理器](tech/dev-tools/superfile-guide.md) — 2026-07-21
     - [git-cliff：用 Git 提交历史自动生成 CHANGELOG](tech/dev-tools/git-cliff-guide.md) — 2026-07-21
