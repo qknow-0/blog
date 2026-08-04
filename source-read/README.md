@@ -122,3 +122,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | ai-hedge-fund | ai_hedge_fund/ | ✅ | ✅ |
 | worldmonitor | world_monitor/ | ✅ | ✅ |
 | impeccable | impeccable_notes/ | ✅ | ✅ |
+| Kun | kun_notes/ | ✅ | ✅ |

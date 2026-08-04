@@ -51,7 +51,7 @@ blog/
   - 保留示例数据、演示代码、通用工具名称——只去掉可追溯性
 - **禁止读取 .env 文件**：任何时候都不要读取项目的 .env 文件内容
 - `.gitignore` 中的条目需同步到 `scripts/backup.sh` 的 `--exclude` 列表中
-- **source-read 源码阅读**：新增源码阅读项目时，按 `source-read/README.md` 的规范操作——clone 源码到 `source-read/<项目名>/`，创建同名笔记文件夹，同时在 `.gitignore` 和 `backup.sh` 中添加排除。每篇文章必须包含三层内容：
+- **source-read 源码阅读**：新增源码阅读项目时，按 `source-read/README.md` 的规范操作——clone 源码到 `source-read/<项目名>/`，创建同名笔记文件夹，同时在 `.gitignore` 和 `backup.sh` 中添加排除。每个源码阅读项目至少 **8~10 篇**，深度分析项目的架构、核心模块、关键代码、设计模式。每篇文章必须包含三层内容：
   - （1）**整体架构学习**——模块划分、数据流、设计决策 WHY
   - （2）**优秀代码学习**——摘录具体代码、标注好在哪、提炼骨架代码
   - （3）**Prompt 提取**——如果源码中有 LLM prompt 模板，单独写一篇中英双语 prompt 全集

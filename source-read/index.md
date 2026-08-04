@@ -25,6 +25,19 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### Kun
+
+- [（一）架构总览：GUI+TUI 共享运行时](kun_notes/01-architecture.md) — 2026-07-21
+- [（二）Agent Loop：model-round-engine](kun_notes/02-agent-loop.md) — 2026-07-21
+- [（三）Graph 系统：reducer+scheduler+recovery](kun_notes/03-graph-system.md) — 2026-07-21
+- [（四）委派系统：subagent-router](kun_notes/04-delegation.md) — 2026-07-21
+- [（五）Memory & Context：token-economy](kun_notes/05-context-memory.md) — 2026-07-21
+- [（六）Tool 系统：执行+修复+熔断](kun_notes/06-tool-system.md) — 2026-07-21
+- [（七）Browser Use：68KB 管理器](kun_notes/07-browser-use.md) — 2026-07-21
+- [（八）Extensions：类型安全 SDK](kun_notes/08-extensions.md) — 2026-07-21
+- [（九）IM 桥接：飞书/微信/Telegram](kun_notes/09-im-bridges.md) — 2026-07-21
+- [（十）全仓库优秀代码模式精选](kun_notes/10-code-patterns.md) — 2026-07-21
+
 ### Impeccable
 
 - [（一）架构总览：让 AI 生成的前端设计不再"AI 味"](impeccable_notes/01-architecture.md) — 2026-07-21
