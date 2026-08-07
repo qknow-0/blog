@@ -12,7 +12,8 @@
     - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
-  - [开发工具](tech/dev-tools/index.md) — 25 篇
+  - [开发工具](tech/dev-tools/index.md) — 26 篇
+    - [Kafka 系列](tech/kafka/index.md) — 2026-07-21（10 篇）
     - [autossh SSH 隧道：内网安全访问远程 PostgreSQL](tech/dev-tools/autossh-pg-tunnel.md) — 2026-07-21
     - [终端文本处理九把刀：awk、sed、grep...](tech/dev-tools/cli-text-processing.md) — 2026-07-21
     - [Atuin：把 Shell 历史变成可搜索的数据库](tech/dev-tools/atuin-guide.md) — 2026-07-21
