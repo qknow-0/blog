@@ -123,3 +123,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | worldmonitor | world_monitor/ | ✅ | ✅ |
 | impeccable | impeccable_notes/ | ✅ | ✅ |
 | Kun | kun_notes/ | ✅ | ✅ |
+| deepseek-harness | deepseek_harness_notes/ | ✅ | ✅ |

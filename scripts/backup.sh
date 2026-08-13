@@ -47,6 +47,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='source-read/worldmonitor' \
   --exclude='source-read/impeccable' \
   --exclude='source-read/Kun' \
+  --exclude='source-read/deepseek-harness' \
   --exclude='code/mini-gpt/mini-gpt-cn.pt' \
   --exclude='code/mini-gpt/.venv' \
   --exclude='__pycache__' \
