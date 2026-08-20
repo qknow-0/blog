@@ -124,3 +124,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | impeccable | impeccable_notes/ | ✅ | ✅ |
 | Kun | kun_notes/ | ✅ | ✅ |
 | deepseek-harness | deepseek_harness_notes/ | ✅ | ✅ |
+| ib_async | ib_async_notes/ | ✅ | ✅ |
