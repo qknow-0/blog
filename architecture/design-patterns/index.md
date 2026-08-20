@@ -35,6 +35,6 @@
 | Memento | serde 序列化；所有权防止非法状态 | 待写 |
 | [Observer](observer.md) | `tokio::broadcast` / channel 替代 trait 回调 | ✅ |
 | [State](state.md) | enum + match 替代 State 类继承 | ✅ |
-| Strategy | trait 泛型静态分发 vs `dyn Trait` 动态分发 | 待写 |
+| [Strategy](strategy.md) | 泛型静态分发 vs `dyn Trait` 动态分发 vs 闭包 | ✅ |
 | Template Method | trait 默认方法实现 | 待写 |
 | Visitor | enum + match vs 传统 Visitor | 待写 |

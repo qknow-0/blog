@@ -89,10 +89,11 @@
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
   - [当你的 event loop 死了，回调也就死了：ib_insync 持久后台线程调试记](project-retro/ibkr-event-loop-debug.md) — 2026-07-24
 - [架构设计](architecture/index.md) — 系统设计、技术方案
-  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（12/23）
+  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（13/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
     - [Observer 模式：channel 就是最好的观察者](architecture/design-patterns/observer.md) — 2026-07-29
     - [State 模式：enum + match 天然就是状态机](architecture/design-patterns/state.md) — 2026-07-29
+    - [Strategy 模式：泛型零开销策略切换](architecture/design-patterns/strategy.md) — 2026-07-29
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
