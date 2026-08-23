@@ -19,8 +19,8 @@
 | [Adapter](adapter.md) | newtype 模式 + trait 实现 | ✅ |
 | [Bridge](bridge.md) | trait 对象 vs 泛型；编译期 vs 运行时分发 | ✅ |
 | [Composite](composite.md) | enum 递归类型 + `Box<dyn>` | ✅ |
-| Decorator | trait 组合 + `impl Trait` | 待写 |
-| Facade | 模块可见性控制 `pub(crate)` | 待写 |
+| [Decorator](decorator.md) | trait 组合 + `impl Trait` | ✅ |
+| [Facade](facade.md) | 模块可见性控制 `pub(crate)` | ✅ |
 | Flyweight | `Arc<str>` / `internment`；零拷贝减少需求 | 待写 |
 | Proxy | 智能指针 `Deref` | 待写 |
 
@@ -33,8 +33,8 @@
 | Iterator | 标准库一等公民；for 循环语法糖 | 待写 |
 | Mediator | channel 通信 vs 对象引用 | 待写 |
 | Memento | serde 序列化；所有权防止非法状态 | 待写 |
-| Observer | `tokio::watch` / 事件 channel | 待写 |
-| State | enum + match 替代 State 类继承 | 待写 |
-| Strategy | trait 泛型静态分发 vs `dyn Trait` 动态分发 | 待写 |
+| [Observer](observer.md) | `tokio::broadcast` / channel 替代 trait 回调 | ✅ |
+| [State](state.md) | enum + match 替代 State 类继承 | ✅ |
+| [Strategy](strategy.md) | 泛型静态分发 vs `dyn Trait` 动态分发 vs 闭包 | ✅ |
 | Template Method | trait 默认方法实现 | 待写 |
 | Visitor | enum + match vs 传统 Visitor | 待写 |

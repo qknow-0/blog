@@ -63,9 +63,6 @@ class MessageBus:
 
 # 你的项目中：用两个 Queue 解耦 WebSocket 推送和业务逻辑
 ```
-
-### 我第一次会怎么错
-"只用一个 Queue 双向通信"——结果消息方向混淆，A → B 的消息被 B 误当成 A 的回复。
 ```
 
 ## 项目规范
@@ -122,3 +119,9 @@ echo "source-read/MyProject" >> ../.gitignore
 | newsnow | newsnow_notes/ | ✅ | ✅ |
 | nanobot | nanobot_notes/ | ✅ | ✅ |
 | MetaGPT | meta_gpt/ | ✅ | ✅ |
+| ai-hedge-fund | ai_hedge_fund/ | ✅ | ✅ |
+| worldmonitor | world_monitor/ | ✅ | ✅ |
+| impeccable | impeccable_notes/ | ✅ | ✅ |
+| Kun | kun_notes/ | ✅ | ✅ |
+| deepseek-harness | deepseek_harness_notes/ | ✅ | ✅ |
+| ib_async | ib_async_notes/ | ✅ | ✅ |

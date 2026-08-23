@@ -2,6 +2,7 @@
 
 ## 文章列表
 
+- [Rust async/await：异步编程不是多线程](async-await.md) — 2026-07-29
 - [Rust LazyLock：延迟初始化的标准答案](lazy-lock.md) — 2026-06-29
 - [Unsafe Rust：编译器让开，我自己保证安全](unsafe-rust.md) — 2026-07-03
 - [Rust 闭包：FnOnce、FnMut、Fn 的区别](closures.md) — 2026-06-15

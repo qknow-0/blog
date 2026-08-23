@@ -8,13 +8,17 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 26 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 27 篇
+    - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
-  - [开发工具](tech/dev-tools/index.md) — 21 篇
-    - [Tailscale：WireGuard 的正确打开方式](tech/dev-tools/tailscale-guide.md) — 2026-07-04
-    - [watchexec：文件变了就自动跑命令](tech/dev-tools/watchexec-guide.md) — 2026-07-03
-    - [bacon：Rust 开发者最该开着不关的终端窗口](tech/dev-tools/bacon-guide.md) — 2026-07-03
+- [开发工具](tech/dev-tools/index.md) — 27 篇
+    - [Kafka 系列](tech/kafka/index.md) — 2026-07-21（10 篇）
+    - [autossh SSH 隧道：内网安全访问远程 PostgreSQL](tech/dev-tools/autossh-pg-tunnel.md) — 2026-07-21
+    - [终端文本处理九把刀：awk、sed、grep...](tech/dev-tools/cli-text-processing.md) — 2026-07-21
+    - [Atuin：把 Shell 历史变成可搜索的数据库](tech/dev-tools/atuin-guide.md) — 2026-07-21
+    - [superfile：Go 写的终端文件管理器](tech/dev-tools/superfile-guide.md) — 2026-07-21
+    - [git-cliff：用 Git 提交历史自动生成 CHANGELOG](tech/dev-tools/git-cliff-guide.md) — 2026-07-21
     - [Orbien：Rust 写的自托管内网穿透，5MB 的 frp 替代品](tech/dev-tools/tunneling/04-orbien.md) — 2026-08-23
   - [容器化系列](tech/containerization/index.md) — 5 篇
   - [Robot Framework](tech/robotframework/index.md) — 1 篇
@@ -66,6 +70,7 @@
     - [React 19：Server Components 是对 Web 架构的重新分层](languages/react/react-19-server-components.md) — 2026-06-10
     - [React 19 新 API 全景：Actions 与状态管理新范式](languages/react/react-19-new-apis.md) — 2026-06-10
   - [Rust](languages/rust/index.md)
+    - [Rust async/await：异步编程不是多线程](languages/rust/async-await.md) — 2026-07-29
     - [Rust LazyLock：延迟初始化的标准答案](languages/rust/lazy-lock.md) — 2026-06-29
     - [Unsafe Rust：编译器让开，我自己保证安全](languages/rust/unsafe-rust.md) — 2026-07-03
     - [Rust 闭包：FnOnce、FnMut、Fn 的区别](languages/rust/closures.md) — 2026-06-15
@@ -80,12 +85,20 @@
   - [Solidity](languages/solidity/index.md)
     - [Solidity 系列](languages/solidity/index.md) — 2026-06-15（7 篇）
 - [项目复盘](project-retro/index.md) — 项目回顾与总结
+  - [当你的 event loop 死了，回调也就死了：ib_insync 持久后台线程调试记](project-retro/ibkr-event-loop-debug.md) — 2026-07-24
 - [架构设计](architecture/index.md) — 系统设计、技术方案
-  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-17（8/23）
+  - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（13/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
+    - [Observer 模式：channel 就是最好的观察者](architecture/design-patterns/observer.md) — 2026-07-29
+    - [State 模式：enum + match 天然就是状态机](architecture/design-patterns/state.md) — 2026-07-29
+    - [Strategy 模式：泛型零开销策略切换](architecture/design-patterns/strategy.md) — 2026-07-29
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [Kun 源码阅读系列](source-read/kun_notes/) — 2026-07-21（10 篇）
+  - [Impeccable 源码阅读系列](source-read/impeccable_notes/) — 2026-07-21（3 篇）
+  - [World Monitor 源码阅读系列](source-read/world_monitor/) — 2026-07-21（3 篇）
+  - [AI Hedge Fund 源码阅读系列](source-read/ai_hedge_fund/) — 2026-07-20（3 篇）
   - [MetaGPT 源码阅读系列](source-read/meta_gpt/) — 2026-07-17（6 篇）
   - [Horizon 源码阅读系列](source-read/horizon_notes/) — 2026-07-03（5 篇）
   - [DBX 源码阅读系列](source-read/dbx_notes/) — 2026-07-03（7 篇）

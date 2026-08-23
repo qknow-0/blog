@@ -25,6 +25,38 @@
 - [（六）AI 集成：Agent Gateway 与 MCP Server](quant_dinger/06-ai-agent.md) — 2026-05-30
 - [（七）基础设施：Docker 部署、认证计费与安全设计](quant_dinger/07-infra.md) — 2026-05-30
 
+### Kun
+
+- [（一）架构总览：GUI+TUI 共享运行时](kun_notes/01-architecture.md) — 2026-07-21
+- [（二）Agent Loop：model-round-engine](kun_notes/02-agent-loop.md) — 2026-07-21
+- [（三）Graph 系统：reducer+scheduler+recovery](kun_notes/03-graph-system.md) — 2026-07-21
+- [（四）委派系统：subagent-router](kun_notes/04-delegation.md) — 2026-07-21
+- [（五）Memory & Context：token-economy](kun_notes/05-context-memory.md) — 2026-07-21
+- [（六）Tool 系统：执行+修复+熔断](kun_notes/06-tool-system.md) — 2026-07-21
+- [（七）Browser Use：68KB 管理器](kun_notes/07-browser-use.md) — 2026-07-21
+- [（八）Extensions：类型安全 SDK](kun_notes/08-extensions.md) — 2026-07-21
+- [（九）IM 桥接：飞书/微信/Telegram](kun_notes/09-im-bridges.md) — 2026-07-21
+- [（十）全仓库优秀代码模式精选](kun_notes/10-code-patterns.md) — 2026-07-21
+
+### Impeccable
+
+- [（一）架构总览：让 AI 生成的前端设计不再"AI 味"](impeccable_notes/01-architecture.md) — 2026-07-21
+- [（二）60 条规则，用代码检测"AI 味"设计](impeccable_notes/02-detect-engine.md) — 2026-07-21
+- [（三）Prompt 全集（中英双语）](impeccable_notes/03-prompts.md) — 2026-07-21
+
+### World Monitor
+
+- [（一）架构总览：从 500+ 新闻源到实时全球情报面板](world_monitor/01-architecture.md) — 2026-07-21
+- [（二）AI 合成管线：500 条新闻 → 5 条简报](world_monitor/02-ai-pipeline.md) — 2026-07-21
+- [（三）API 层 + 桌面端 + Promise 队列 + URL 双向同步](world_monitor/03-api-and-desktop.md) — 2026-07-21
+
+### AI Hedge Fund
+
+- [（一）架构总览：19 个 AI 分析师协同决策](ai_hedge_fund/01-architecture.md) — 2026-07-20
+- [（二）巴菲特 Agent 的 600 行分析逻辑](ai_hedge_fund/02-analyst-agents.md) — 2026-07-20
+- [（三）综合决策 + 值得学的 6 个设计](ai_hedge_fund/03-portfolio-learnings.md) — 2026-07-20
+- [📎 Prompt 全集（中英双语，17 个 Agent）](ai_hedge_fund/04-prompts.md) — 2026-07-20
+
 ### MetaGPT
 
 - [（六）7 段值得复制的 Python 代码](meta_gpt/06-excellent-code.md) — 2026-07-17
