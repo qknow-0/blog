@@ -9,7 +9,7 @@
 - [bacon：Rust 开发者最应该开着不关的终端窗口](bacon-guide.md) — 2026-07-03
 - [DBX：15MB 的数据库管理工具，干掉 400MB 的 DBeaver](dbx-guide.md) — 2026-06-20
 - [tqsdk-python：天勤量化——事件驱动型量化交易 SDK](tqsdk-guide.md) — 2026-06-07
-- [内网穿透系列](tunneling/index.md) — 2026-06-06（3 篇）
+- [内网穿透系列](tunneling/index.md) — 2026-06-06（4 篇）
 - [Tokio：Rust 异步运行时的内核、任务与通道](tokio-guide.md) — 2026-06-07
 - [anyhow：Rust 应用层错误处理的最简方案](anyhow-guide.md) — 2026-06-07
 - [tmux：终端复用器的正确打开方式](tmux-guide.md) — 2026-06-04

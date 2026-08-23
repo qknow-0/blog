@@ -12,3 +12,6 @@
 
 3. **[（三）localtunnel 与轻量替代方案](03-localtunnel.md)** — 2026-06-06
    - localtunnel、bore、localhost.run、serveo——零注册方案 + 最终选型指南
+
+4. **[（四）Orbien：Rust 写的自托管内网穿透，5MB 的 frp 替代品](04-orbien.md)** — 2026-08-23
+   - 自托管架构、TCP/UDP/HTTP/HTTPS 隧道、TLS/mTLS、四种传输协议、桌面客户端
