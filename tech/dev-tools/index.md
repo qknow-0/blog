@@ -4,6 +4,7 @@
 
 ## 文章列表
 
+- [free-for-dev：开发者免费资源大全，零成本跑完整项目](free-for-dev-guide.md) — 2026-08-14
 - [awk、sed、grep 和其他六个：终端文本处理的九把刀](cli-text-processing.md) — 2026-07-21
 - [autossh + PostgreSQL SSH 隧道：内网安全访问远程数据库](autossh-pg-tunnel.md) — 2026-07-21
 - [Atuin：把 Shell 历史变成可搜索、可同步的数据库](atuin-guide.md) — 2026-07-21

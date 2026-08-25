@@ -14,6 +14,7 @@
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
 - [开发工具](tech/dev-tools/index.md) — 27 篇
     - [Kafka 系列](tech/kafka/index.md) — 2026-07-21（10 篇）
+    - [free-for-dev：开发者免费资源大全](tech/dev-tools/free-for-dev-guide.md) — 2026-08-14
     - [autossh SSH 隧道：内网安全访问远程 PostgreSQL](tech/dev-tools/autossh-pg-tunnel.md) — 2026-07-21
     - [终端文本处理九把刀：awk、sed、grep...](tech/dev-tools/cli-text-processing.md) — 2026-07-21
     - [Atuin：把 Shell 历史变成可搜索的数据库](tech/dev-tools/atuin-guide.md) — 2026-07-21
