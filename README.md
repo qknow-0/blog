@@ -32,6 +32,9 @@
     - [RESTful API 设计](tech/http/restful-api-guide.md) — 2026-06-22
     - [GraphQL](tech/http/graphql-guide.md) — 2026-06-22
     - [gRPC](tech/http/grpc-guide.md) — 2026-06-22
+  - [网络底层系列](tech/network/index.md) — 2026-08-14（7 篇）
+    - [TCP 三次握手与四次挥手](tech/network/02-tcp-handshake.md) — 2026-08-14
+    - [TCP 可靠传输：不丢、不乱、不堵](tech/network/03-tcp-reliability.md) — 2026-08-14
 - [编程语言](languages/index.md) — 语法、特性
   - [Python](languages/python/index.md)
     - [Python exec 与 eval：危险的动态代码执行](languages/python/exec-eval.md) — 2026-06-19
