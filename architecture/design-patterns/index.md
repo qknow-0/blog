@@ -30,7 +30,7 @@
 |---|---|---|
 | Chain of Responsibility | Iterator + fold | 待写 |
 | Command | 闭包 Fn/FnMut/FnOnce + async | 待写 |
-| Iterator | 标准库一等公民；for 循环语法糖 | 待写 |
+| [Iterator](iterator.md) | 标准库一等公民；惰性求值 + 零成本适配器链 | ✅ |
 | Mediator | channel 通信 vs 对象引用 | 待写 |
 | Memento | serde 序列化；所有权防止非法状态 | 待写 |
 | [Observer](observer.md) | `tokio::broadcast` / channel 替代 trait 回调 | ✅ |
