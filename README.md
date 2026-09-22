@@ -74,6 +74,7 @@
     - [React 19：Server Components 是对 Web 架构的重新分层](languages/react/react-19-server-components.md) — 2026-06-10
     - [React 19 新 API 全景：Actions 与状态管理新范式](languages/react/react-19-new-apis.md) — 2026-06-10
   - [Rust](languages/rust/index.md)
+    - [Rust 宏：macro_rules! 写模式，过程宏写逻辑](languages/rust/macros.md) — 2026-09-22
     - [Rust Rc 与 RefCell：编译期管不了的共享可变，运行时来管](languages/rust/rc-refcell.md) — 2026-09-22
     - [Rust async/await：异步编程不是多线程](languages/rust/async-await.md) — 2026-07-29
     - [Rust LazyLock：延迟初始化的标准答案](languages/rust/lazy-lock.md) — 2026-06-29

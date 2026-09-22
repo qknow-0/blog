@@ -2,6 +2,7 @@
 
 ## 文章列表
 
+- [Rust 宏：macro_rules! 写模式，过程宏写逻辑](macros.md) — 2026-09-22
 - [Rust Rc 与 RefCell：编译期管不了的共享可变，运行时来管](rc-refcell.md) — 2026-09-22
 - [Rust async/await：异步编程不是多线程](async-await.md) — 2026-07-29
 - [Rust LazyLock：延迟初始化的标准答案](lazy-lock.md) — 2026-06-29
