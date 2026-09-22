@@ -37,4 +37,4 @@
 | [State](state.md) | enum + match 替代 State 类继承 | ✅ |
 | [Strategy](strategy.md) | 泛型静态分发 vs `dyn Trait` 动态分发 vs 闭包 | ✅ |
 | Template Method | trait 默认方法实现 | 待写 |
-| Visitor | enum + match vs 传统 Visitor | 待写 |
+| [Visitor](visitor.md) | enum + match 吃掉双重分发；只有类型集合开放时才需要真 Visitor | ✅ |
