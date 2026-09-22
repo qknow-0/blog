@@ -15,6 +15,7 @@
 - [watchexec：文件变了就自动跑命令](watchexec-guide.md) — 2026-07-03
 - [bacon：Rust 开发者最应该开着不关的终端窗口](bacon-guide.md) — 2026-07-03
 - [DBX：15MB 的数据库管理工具，干掉 400MB 的 DBeaver](dbx-guide.md) — 2026-06-20
+- [Git Worktree：同一个仓库，多个工作区同时干活](git-worktree-guide.md) — 2026-06-19
 - [tqsdk-python：天勤量化——事件驱动型量化交易 SDK](tqsdk-guide.md) — 2026-06-07
 - [内网穿透系列](tunneling/index.md) — 2026-06-06（4 篇）
 - [Tokio：Rust 异步运行时的内核、任务与通道](tokio-guide.md) — 2026-06-07

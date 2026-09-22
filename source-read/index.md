@@ -109,3 +109,26 @@
 - [（三）AI 分析层——多 Provider 抽象 + 内容分析 + 日报生成](horizon_notes/03-ai-layer.md) — 2026-07-03
 - [（四）MCP Server 与存储层——让 AI Agent 查你的知识库](horizon_notes/04-mcp-storage.md) — 2026-07-03
 - [（五）Prompt 系统——中英双语全集](horizon_notes/05-prompts.md) — 2026-07-03
+
+### DeepSeek Harness
+
+- [（一）架构全景——一切皆插件的 Agent 运行时](deepseek_harness_notes/01-architecture.md) — 2026-08-14
+- [（二）Cordis 插件框架深度解析——Context 即服务仓库](deepseek_harness_notes/02-cordis-framework.md) — 2026-08-14
+- [（三）Agent Loop 与 Turn 流程](deepseek_harness_notes/03-agent-loop.md) — 2026-08-14
+- [（四）Session 系统——append-only 日志与 Event Sourcing](deepseek_harness_notes/04-session-system.md) — 2026-08-14
+- [（五）工具系统——注册、执行、防护](deepseek_harness_notes/05-tool-system.md) — 2026-08-14
+- [（六）Prompt 组装系统——四层优先级](deepseek_harness_notes/06-prompt-assembly.md) — 2026-08-14
+- [（七）LLM 适配器层——多模型统一接口](deepseek_harness_notes/07-llm-adapter.md) — 2026-08-14
+- [（八）Subagent 系统——任务委派与隔离](deepseek_harness_notes/08-subagent.md) — 2026-08-14
+- [（九）关键代码模式精选](deepseek_harness_notes/09-code-patterns.md) — 2026-08-14
+- [（十）Prompt 全集——翻译流水线的提示词工程](deepseek_harness_notes/10-prompts.md) — 2026-08-14
+
+### ib_async
+
+- [（一）架构全景——IBKR 异步客户端的门面设计](ib_async_notes/01-architecture.md) — 2026-08-20
+- [（二）事件系统——eventkit 驱动的自动同步](ib_async_notes/02-event-system.md) — 2026-08-20
+- [（三）Client 与 IBKR 二进制协议](ib_async_notes/03-client-protocol.md) — 2026-08-20
+- [（四）合约与订单系统](ib_async_notes/04-contract-order.md) — 2026-08-20
+- [（五）Ticker 与行情数据](ib_async_notes/05-ticker-market-data.md) — 2026-08-20
+- [（六）异步模式——asyncio + eventkit](ib_async_notes/06-async-patterns.md) — 2026-08-20
+- [（七）关键代码模式精选](ib_async_notes/07-code-patterns.md) — 2026-08-20

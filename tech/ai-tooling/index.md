@@ -10,6 +10,8 @@ AI 辅助编程的工具、框架和实践记录。
 - [Cua：给 AI Agent 装上能操作电脑的手和眼睛](cua-guide.md) — 2026-06-22
 - [Headroom：把发给 LLM 的 token 砍掉 90% 的上下文压缩层](headroom-guide.md) — 2026-06-21
 - [Planning with Files：给 AI Agent 装上"外存"，让它不再失忆](planning-with-files-guide.md) — 2026-06-20
+- [AI-Trader：一个给 AI Agent 用的交易平台](ai-trader-guide.md) — 2026-06-20
+- [TradingAgents：用多 Agent 模拟一家交易公司的完整决策链](trading-agents-guide.md) — 2026-06-20
 - [Orca：为并行 AI Agent 设计的下一代 IDE](orca-guide.md) — 2026-06-19
 - [Superset：AI Agent 的并行调度操作系统](superset-guide.md) — 2026-06-19
 - [Agent Reach：给 AI Agent 装上互联网能力](agent-reach-guide.md) — 2026-06-04
