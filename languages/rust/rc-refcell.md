@@ -318,13 +318,118 @@ flowchart LR
     style B2 fill:#1a2e1b,stroke:#53d769,color:#fff
 ```
 
-### `Weak<T>`：不阻止对方消失的引用
+右边那个解法用的就是 `Weak`——**它不是「更弱的 `Rc`」，而是「不参与所有权计数的引用」**，这个定义上的差别带来了不少反直觉的行为，值得单独一节讲清楚。
 
-`Weak` 是 `Rc` 的**非拥有型**版本——`Rc::downgrade` 造出来，**不增加强计数**。它带来一个关键性质：
+## `Weak<T>`：不参与所有权计数的引用
 
-> **`Weak` 永远不能直接解引用。** 想访问必须过 `upgrade()`，返回 `Option<Rc<T>>`——因为对方可能已经没了。
+`Weak` 是 `Rc` 的**非拥有型**版本——它指向同一块分配，但**不增加强计数**。
 
-修复上面的环：
+回到开头那个比喻：**`Rc` 是房产证，`Weak` 是通讯录里的电话号码。** 存个号码不会让对方不搬家，所以你打过去可能已经是空号——必须先确认人在不在。
+
+### 两条铁律
+
+**① `Weak` 不能直接解引用。**
+
+`Weak<T>` 没有实现 `Deref<Target = T>`。`*w` 或 `w.field` 都编译不过。原因很直接：**对象随时可能已经死了，允许解引用就等于允许 UB。**
+
+**② 必须 `upgrade()` 才能访问，而它返回的是「临时所有权」。**
+
+```rust
+weak.upgrade()   // -> Option<Rc<T>>
+```
+
+拿到 `Some` 说明对方还活着，同时你手里多了一份**真正的强引用**：
+
+```console
+升级成功，现在 strong=2
+drop 原始 rc2 后 strong=1
+   ↑ 升级出的 Rc 让它活着，直到它自己也被释放
+   >>> [值被销毁] Data(9)
+```
+
+注意第二行——**原始的 `Rc` 已经释放了，对象却还活着**，因为升级出来的那个 `Rc` 撑着它。所以别把 `upgrade()` 的结果长期存着，那等于偷偷把弱引用转成了强引用，用 `Weak` 的意义就没了。正确的用法永远是「**升级 → 立刻用 → 用完就放**」。
+
+### 值的销毁和内存的回收是两件事
+
+这是 `Weak` 最容易搞错的地方。很多人以为「`Rc` 死了，`Weak` 就指向空气」，实际是**两次独立的销毁**：
+
+```mermaid
+flowchart TB
+    A["Rc::new(value)"] --> B["RcInner 分配<br>strong=1  weak=1（隐式）<br>+ value"]
+    B --> C{"strong 归零？"}
+    C -->|"是（最后一个 Rc 释放）"| D["① 销毁 value<br>同时释放那个隐式 weak"]
+    D --> E{"weak 也归零？"}
+    E -->|"否（还有 Weak 存活）"| F["② 内存保留<br>upgrade() 安全返回 None"]
+    F --> G{"最后一个 Weak 释放"}
+    G --> H["③ 释放整块内存"]
+    E -->|是| H
+
+    style A fill:#1a1a2e,stroke:#e94560,color:#fff
+    style B fill:#1a1a2e,stroke:#e94560,color:#fff
+    style D fill:#3a2a1a,stroke:#e9a860,color:#fff
+    style F fill:#16213e,stroke:#e94560,color:#fff
+    style H fill:#1a2e1b,stroke:#53d769,color:#fff
+```
+
+- **值（`T`）**：`strong == 0` 时**立刻**销毁
+- **内存（装计数器和值的那个 box）**：`strong == 0` **且** `weak == 0` 才释放
+
+中间那段「值没了、内存还在」的窗口，正是 `upgrade()` 能安全返回 `None` 而不是崩溃的原因——它得读得到那个计数器，才能告诉你「人没了」。
+
+std 源码里这段写在 `drop_slow`（`library/alloc/src/rc.rs`）：
+
+```rust
+unsafe fn drop_slow(&mut self) {
+    // Reconstruct the "strong weak" pointer and drop it when this
+    // variable goes out of scope. This ensures that the memory is
+    // deallocated even if the destructor of `T` panics.
+    let _weak = Weak { ptr: self.ptr, alloc: &self.alloc };
+    ptr::drop_in_place(&mut (*self.ptr.as_ptr()).value);   // 只销毁值
+}
+```
+
+而 `Rc::new` 里那个 `weak: Cell::new(1)` 就是注释说的 **implicit weak pointer**：
+
+```rust
+Box::leak(Box::new(RcInner { strong: Cell::new(1), weak: Cell::new(1), value }))
+```
+
+它是**所有强引用共同拥有的一个隐式弱引用**，专门保证「strong 的析构函数还在跑的时候，内存不会被提前释放」。
+
+### 一个 API 陷阱：`weak_count()` 会突然变 0
+
+这是实测才发现的坑，跟直觉完全不符：
+
+```console
+[强计数 > 0 时]
+  Rc::strong_count       = 1
+  Rc::weak_count         = 2
+  Weak::weak_count(w1)   = 2
+
+[强计数 = 0，w1/w2 都还在]
+  Weak::weak_count(w1)   = 0    ← 明明两个 Weak 都活着
+  Weak::weak_count(w2)   = 0
+```
+
+源码里这是**故意**的：
+
+```rust
+pub fn weak_count(&self) -> usize {
+    if let Some(inner) = self.inner() {
+        if inner.strong() > 0 {
+            inner.weak() - 1 // subtract the implicit weak ptr
+        } else {
+            0
+        }
+    } else { 0 }
+}
+```
+
+一旦 `strong == 0` 就直接返回 0。**它的语义是「还有几个 `Weak` 指向这个活着的分配」，不是「还有几个 `Weak` 对象存在」。** 所以别拿它当排查内存泄漏的指标——想知道漏没漏，看 `strong_count` 更靠谱。
+
+### 用途一：打破循环
+
+修复上面那个环：
 
 ```rust
 struct Fixed {
@@ -351,9 +456,9 @@ struct Fixed {
 
 强计数都是 1，作用域结束就干净释放。
 
-回到开头那个比喻：**`Rc` 是房产证，`Weak` 是通讯录里的电话号码。** 存号码不会让对方不搬家，打过去可能空号——所以必须先 `upgrade()` 确认人在不在。
+本质是**给环指定一个方向**：一个方向用 `Rc`（拥有），另一个方向用 `Weak`（不拥有）。哪个方向用 `Weak`，取决于「谁是主体」——目录树里子目录不该拥有父目录，所以 `parent` 用 `Weak`（见下一节的实战）。
 
-### `Weak` 的另一个用途：缓存
+### 用途二：缓存 / 注册表
 
 `upgrade()` 返回 `None` 这件事本身很有价值。比如做个「对象注册表」，用 `HashMap<Id, Weak<T>>` 存——**对象没人用了，表项自动失效**，不需要任何清理逻辑：
 
@@ -376,6 +481,61 @@ impl Registry {
     }
 }
 ```
+
+实测行为：
+
+```console
+复用同一对象 = true       ← 第二次调用拿到同一个
+重建后 id = 1             ← 前一个被 drop 后，重新建
+```
+
+### 用途三：观察者列表
+
+订阅者列表用 `Vec<Weak<dyn Observer>>` 存，**发布者不会因为「我还在」就让已经没人用的订阅者活着**：
+
+```rust
+struct Publisher {
+    subscribers: RefCell<Vec<Weak<dyn Observer>>>,
+}
+
+impl Publisher {
+    fn publish(&self, event: &Event) {
+        // retain 顺手清理已死的订阅者 —— 一步完成「通知 + 回收」
+        self.subscribers.borrow_mut().retain(|w| match w.upgrade() {
+            Some(obs) => { obs.on_event(event); true }   // 还活着：通知，保留
+            None => false,                                // 已死：丢弃
+        });
+    }
+}
+```
+
+```console
+订阅后槽位 = 2
+    [A] 收到 第一次
+    [B] 收到 第一次
+    >>> LogObserver(B) 被释放
+
+drop 掉 B 之后：
+    [A] 收到 第二次
+  发布后槽位 = 1  ← B 的空槽被 retain 顺手清掉
+```
+
+这是 `Weak` 一个很讨喜的性质：**「顺便清理」是天然的**。`retain` 里那句 `None => false` 就是回收，不需要任何额外的生命周期管理代码。
+
+（channel 方案解决的是同一个问题，只是换了条路——见 [Observer 模式](../../architecture/design-patterns/observer.md)。）
+
+### 什么时候不该用 `Weak`
+
+| 情况 | 问题 |
+|------|------|
+| 只是不想付 `Rc` 的计数开销 | `Weak` 反而多一层 `Option` 检查 |
+| 指望它自动清理 | `Weak` **不会**主动清任何东西，`upgrade()` 返回 `None` 就完了，回收得你自己做 |
+| 想要「可选的所有者」 | 那应该是 `Option<Rc<T>>`，不是 `Weak` |
+
+**判断标准**：问自己「**这个引用应该让对方活得久一点吗？**」
+
+- 应该 → `Rc` / `Arc`
+- 不应该，但我想知道它还在不在 → `Weak`
 
 ## 实战：带父指针的目录树
 
@@ -561,13 +721,20 @@ if let Ok(mut g) = r.try_borrow_mut() {      // 不 panic，返回 Result
 let shared = Rc::new(RefCell::new(state));
 shared.borrow_mut().update();                // 两个计数器各管各的
 
-// ========== 5. Weak：打破循环 ==========
+// ========== 5. Weak：不参与所有权计数的引用 ==========
 use std::rc::Weak;
 let weak: Weak<T> = Rc::downgrade(&shared);  // 不增加强计数
-match weak.upgrade() {                       // 必须升级才能访问
-    Some(strong) => { /* 还活着 */ }
-    None => { /* 已释放 */ }
+match weak.upgrade() {                       // 必须升级才能访问，返回临时所有权
+    Some(strong) => { /* 还活着，且被这份临时 Rc 撑着 */ }
+    None => { /* 已释放 —— 不 panic、不 UB */ }
 }
+// ⚠️ upgrade() 的结果别长期持有，否则等于偷偷转成了强引用
+// ⚠️ weak_count() 在 strong==0 后返回 0，别拿它排查泄漏
+
+// ========== 6. 两段式销毁：值 vs 内存 ==========
+// strong == 0            → 值（T）立刻销毁
+// strong == 0 && weak == 0 → 整块内存才释放
+// 「值没了、内存还在」的窗口期，正是 upgrade() 能安全返回 None 的原因
 ```
 
 ## 总结
@@ -579,7 +746,7 @@ match weak.upgrade() {                       // 必须升级才能访问
 | `Arc<T>` | 多线程共享所有权 | 原子引用计数 | 循环引用 → 泄漏 |
 | `Cell<T>` | `Copy` 类型的内部可变 | 整体值存取 | 无（不会失败） |
 | `RefCell<T>` | 任意类型的内部可变 | 运行时借用计数 | 借用冲突 → **panic** |
-| `Weak<T>` | 非拥有型引用 | 不加强计数 | `upgrade()` 返回 `None` |
+| `Weak<T>` | 不参与所有权计数的引用 | 只加弱计数 | `upgrade()` 返回 `None`（不是错误，是正常路径） |
 
 **一句话概括整篇文章：**
 
