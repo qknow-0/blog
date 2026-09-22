@@ -26,6 +26,9 @@ __pycache__/
 # Mini-GPT
 code/mini-gpt/mini-gpt-cn.pt
 
+# Obsidian（.obsidian/ 本身纳入版本管理，只排除第三方主题）
+.obsidian/themes/
+
 # source-read
 source-read/Sequoia-X
 source-read/FinnewsHunter

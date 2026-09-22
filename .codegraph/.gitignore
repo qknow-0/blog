@@ -14,3 +14,7 @@ cache/
 
 # Hook markers
 .dirty
+
+# Daemon 运行时产物
+daemon.pid
+daemon.sock
