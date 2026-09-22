@@ -10,7 +10,7 @@
 - [Atuin：把 Shell 历史变成可搜索、可同步的数据库](atuin-guide.md) — 2026-07-21
 - [superfile：Go 写的终端文件管理器，比 ranger 好看一百倍](superfile-guide.md) — 2026-07-21
 - [git-cliff：用 Git 提交历史自动生成 CHANGELOG](git-cliff-guide.md) — 2026-07-21
-- [jcode：Rust 写的终端 AI 编程助手，性能和 Agent 协作做到极致](jcode-guide.md) — 2026-07-20
+- [jcode：Rust 写的终端 AI 编程助手，性能和 Agent 协作做到极致](../ai-tooling/jcode-guide.md) — 2026-07-20
 - [Tailscale：WireGuard 的正确打开方式](tailscale-guide.md) — 2026-07-04
 - [watchexec：文件变了就自动跑命令](watchexec-guide.md) — 2026-07-03
 - [bacon：Rust 开发者最应该开着不关的终端窗口](bacon-guide.md) — 2026-07-03
