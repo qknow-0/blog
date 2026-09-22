@@ -56,7 +56,7 @@
 
 ### 工具栈
 
-- **编辑器/IDE**: Claude Code + VS Code/Cursor
+- **编辑器/IDE**: Claude Code + Zed
 - **容器**: Docker → Docker Compose → K8s → Helm（完整演进路线）
 - **macOS 容器运行时**: Colima / OrbStack（拒绝 Docker Desktop 的臃肿）
 - **包管理**: uv（Python）、Homebrew
