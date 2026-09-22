@@ -27,6 +27,6 @@
 ## 前提条件
 
 - Node.js 20+（`node --version` 确认）
-- 一个代码编辑器（VS Code 推荐）
+- 一个代码编辑器（Zed 推荐）
 - 终端（macOS 用 Terminal.app 或 iTerm2）
 - JavaScript 基础（ES6+）
