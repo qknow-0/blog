@@ -95,12 +95,11 @@
   - [当你的 event loop 死了，回调也就死了：ib_insync 持久后台线程调试记](project-retro/ibkr-event-loop-debug.md) — 2026-07-24
 - [架构设计](architecture/index.md) — 系统设计、技术方案
   - [System Design 架构地图](architecture/system-design/index.md) — 2026-08-14（11 篇）
-  - [企业应用架构](architecture/app-architecture/index.md) — 2026-09-24（9/19，写作中）
+  - [企业应用架构](architecture/app-architecture/index.md) — 2026-09-24（12/19，写作中）
     - [总纲：三个问题与一张地图](architecture/app-architecture/00-overview.md) — 2026-09-24
-    - [MVC：一个名字，四种东西](architecture/app-architecture/05-mvc.md) — 2026-09-24
-    - [MVP：为了让 View 能测，付出的第一笔代价](architecture/app-architecture/06-mvp.md) — 2026-09-24
-    - [MVVM：数据绑定的红利与代价](architecture/app-architecture/07-mvvm.md) — 2026-09-24
-    - [Flux / Redux：当双向绑定失控](architecture/app-architecture/08-flux.md) — 2026-09-24
+    - [三层架构：从 UI 分层到整栈](architecture/app-architecture/09-three-tier.md) — 2026-09-24
+    - [六边形 / 洋葱 / Clean：同一个想法的三种画法](architecture/app-architecture/10-hexagonal-onion-clean.md) — 2026-09-24
+    - [服务层：应用服务和领域服务的分工](architecture/app-architecture/11-service-layer.md) — 2026-09-24
   - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（15/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
     - [Observer 模式：channel 就是最好的观察者](architecture/design-patterns/observer.md) — 2026-07-29
