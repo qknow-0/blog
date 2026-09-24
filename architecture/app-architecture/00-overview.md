@@ -195,7 +195,11 @@ flowchart LR
 
 ## 这个系列从哪来的
 
-主要参考 **Martin Fowler《Patterns of Enterprise Application Architecture》**（2002）的三分法——领域逻辑、表现层、数据源。这本书 20 多年后依然是最准确的坐标系，因为它不是罗列模式，而是**先切出问题，再给答案**。
+主要参考 **Martin Fowler《Patterns of Enterprise Application Architecture》**（2002）。这本书 20 多年后依然是最准确的坐标系，因为它不是罗列模式，而是**先切出问题，再给答案**。
+
+需要说明的是：**书里并不是「三分法」**。它是一本 duplex book——前半是叙述（讲分层、怎么组织领域逻辑、怎么映射到关系库、Web 表现层……），后半是模式参考，四十来个模式分成 **10 类**（领域逻辑、数据源架构、对象-关系行为/结构/元数据映射、Web 表现、分布式、离线并发、会话状态、基础模式）。
+
+**本系列借用了其中三类作为骨架**——领域逻辑、表现层（书里叫 Web Presentation）、数据源。这是为了组织内容的取舍，不是 Fowler 的原结构。
 
 DDD 部分参考 **Eric Evans《Domain-Driven Design》**（2003）和后续的实践修正。
 

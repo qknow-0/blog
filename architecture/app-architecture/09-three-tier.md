@@ -294,7 +294,7 @@ def handler(input):
 
 # 业务层：规则 + 事务边界
 class BusinessService:
-    def do_something(self, ...):
+    def do_something(self, cmd):
         # ① 读数据（通过 Repo）
         # ② 应用业务规则   ← 这一层存在的唯一理由
         # ③ 写数据 + 事务
@@ -302,8 +302,8 @@ class BusinessService:
 
 # 数据层：只说数据的语言，不判断业务
 class Repo:
-    def find(...)   -> 原始数据
-    def save(...)   -> 无返回值 / 影响行数
+    def find(self, key) -> Row: ...       # 返回原始数据
+    def save(self, row) -> int: ...       # 无返回值 / 影响行数
     # ❌ 不写 if vip_level >= 3 这种判断
 
 # ========== 2. 判断三层是不是真的分开了 ==========

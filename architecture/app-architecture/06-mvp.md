@@ -176,6 +176,8 @@ MVP 在实践中分化成两支，差别在于**多少逻辑留给 View**：
 
 **大多数项目实际用的是 Supervising Controller**——因为纯 Passive View 的接口会爆炸。
 
+> **一个历史注脚**：Fowler 明确说过 **Passive View「不属于 MVP 的原始描述」**——它是后来为了让 View 更好测而发展出来的极端形态。原始的 MVP（1990 年代 Taligent 时期）里，Presenter 和 View 的分工没有这么彻底。
+
 ## 代价：接口爆炸
 
 MVP 最疼的地方在这。**每一个 View 上的变化，都要在接口上加一个方法。**

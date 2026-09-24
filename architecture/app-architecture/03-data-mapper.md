@@ -242,7 +242,7 @@ class DomainObject:
     id: int | None = None
     # 只有数据和业务方法 —— 无 conn / 无 table / 无 save
 
-    def business_rule(self, ...) -> ...:
+    def business_rule(self, arg) -> Result:
         """纯计算：输入什么返回什么，不碰 I/O"""
         ...
 
@@ -259,10 +259,10 @@ class XxxMapper:
     # 进阶：拆出 _to_domain / _to_row 两个纯函数，映射逻辑本身也能单测
 
 # ========== 3. 应用层：只编排，不含规则 ==========
-def use_case(conn, ...):
+def use_case(conn, cmd):
     mapper = XxxMapper(conn)
-    obj = mapper.find(id)
-    obj.business_rule(...)      # 规则在对象上
+    obj = mapper.find(cmd.id)
+    obj.business_rule(cmd.arg)  # 规则在对象上
     mapper.update(obj)          # 持久化交给映射器
 ```
 

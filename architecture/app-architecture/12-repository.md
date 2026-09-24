@@ -254,6 +254,7 @@ class OrderRepository:
 # ❌ 返回一个展示用的结构
 def find(self, oid) -> OrderDTO:
     # 只挑了页面需要的字段
+    ...
 ```
 
 **返回部分字段的仓储不是仓储。** 因为领域对象需要**完整状态**才能执行它的业务方法——只加载一半的 `Order` 调 `cancel()`，可能算错。

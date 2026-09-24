@@ -42,8 +42,10 @@
 ```
 
 ```console
-=== 本系列全部 demo ===
+=== 本系列 15 个 demo ===
+  flux.mjs             84
   ts.py                85   ← 事务脚本
+  value_object.py      90
   mvp.mjs             101
   mvvm.mjs            106
   hexagonal.py        114   ← 六边形
@@ -51,10 +53,13 @@
   aggregate.py        127
   ar.py               130   ← 活动记录
   layers.py           134   ← 三层架构
+  uow_n1.py           139
   acl.py              145
   cqrs_es.py          147
   dm.py               150   ← 数据映射器
   service_layer.py    174   ← 服务层
+  ────────────────────────
+  合计               1852
 ```
 
 **同一件事，从 85 行到 174 行——两倍。** 而这还是**教学用的最小实现**，真实项目里这个倍数只会更大（还要加依赖注入容器、配置文件、目录结构）。

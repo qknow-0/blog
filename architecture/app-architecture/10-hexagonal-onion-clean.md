@@ -203,7 +203,9 @@ flowchart TB
 | 中心是什么 | 「应用」 | Domain Model | Entities |
 | 命名风格 | 讲**边界** | 讲**层次** | 讲**依赖规则** |
 
-**Clean 的贡献是把前两者的共识提炼成一条规则**——Robert Martin 自己就说过，他的 Clean Architecture 是「把六边形、洋葱、以及另外几种收敛成一种可通用的说法」。
+**Clean 的贡献是把前两者的共识提炼成一条规则。** Robert Martin 自己的说法是：Clean Architecture 是「把这些架构**整合成一个可操作的统一想法**」——他点名整合了六边形、洋葱、Screaming Architecture、DCI、BCE 五种，落点是那条 **Dependency Rule**（依赖只能指向内层）。
+
+**注意他的落点是「一条规则」，不是「一个分类框架」。** 洋葱和六边形主要回答「怎么画」，Clean 主要回答「什么不许做」。
 
 所以：
 
@@ -296,7 +298,7 @@ Controller → QueryUseCase → QueryPort → QueryAdapter → SQL
 # ========== 3. 端口定义在核心侧 ==========
 class SomePort(ABC):
     @abstractmethod
-    def do_something(self, ...) -> ...: ...
+    def do_something(self, arg) -> Result: ...
 # 注意：方法的参数和返回值只用核心自己的类型，不要出现框架类型
 
 # ========== 4. 判断值不值得上这套 ==========

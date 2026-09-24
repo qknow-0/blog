@@ -20,7 +20,13 @@
 
 ## 版本一：原始 MVC（Smalltalk-80, 1979）
 
-Trygve Reenskaug 在 Xerox PARC 做 Smalltalk-80 时提出了这个模式。当时的原始命名甚至不叫 MVC，而是 **Thing-Model-View-Editor**——「Editor」后来才改名成 Controller。
+Trygve Reenskaug 在 Xerox PARC 做 Smalltalk-80 时提出了这个模式（1978–79 年间构思，1979 年成文）。当时的原始命名甚至不叫 MVC，而是 **Thing-Model-View-Editor**——「Editor」后来才改名成 Controller。
+
+**这里有个几乎没人提的细节，它本身就是「同名不同物」的第五个例子：**
+
+Reenskaug 原版里的 **Controller**，是他后来称之为 **Tool** 的东西（负责输入设备与光标）；而 **Smalltalk-80 类库里的 `Controller`**（Jim Althoff 实现的那套）对应的其实是 Reenskaug 原版的 **Editor**。
+
+**也就是说：连「Controller」这个词，在 MVC 诞生后的第一年就已经换过一次意思了。** 这个名字的漂移不是从 Web 才开始的。
 
 它的结构是这样的：
 
@@ -56,7 +62,7 @@ View **直接订阅** Model。Model 变了，它主动通知所有订阅它的 V
 
 **这个前提后面三个版本全都不成立。**
 
-## 版本二：Web MVC（Rails / Django, 2004+）
+## 版本二：Web MVC（Rails 2004 / Django 2005）
 
 Web 来了，有人把 MVC 往 HTTP 上套。**结果套歪了，但歪得很成功。**
 
@@ -181,7 +187,7 @@ flowchart TB
         A1["Controller<br/>薄"] --> A2["Model"] -.->|Observer| A3["View<br/>主动订阅"]
     end
 
-    subgraph V2["② Web（2004+）"]
+    subgraph V2["② Web（2004/05）"]
         direction LR
         B1["Controller<br/>厚：取数据+渲染"] --> B2["Model"] --> B3["View<br/>模板，被动"]
     end

@@ -283,6 +283,7 @@ class XxxAppService:
             # ③ 从仓储取聚合
             # ④ 把规则委托给领域（对象或领域服务）
             # ⑤ 存回
+            ...
         return result
     # ❌ 不写 if total > 1000 这种规则
 

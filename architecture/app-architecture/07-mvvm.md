@@ -200,7 +200,7 @@ flowchart TB
 | Vue | `Object.defineProperty` / `Proxy` 响应式系统 | 2014 |
 | SwiftUI | `@State` / `@Published` + Combine | 2019 |
 | Jetpack Compose | `mutableStateOf` + 重组 | 2021 |
-| Android DataBinding | 注解处理器生成绑定代码 | 2015 |
+| Android DataBinding | 注解处理器生成绑定代码 | 2015 年推出（当年仍是 beta，1.0 稳定版在 2016） |
 
 上面那个 demo 里，绑定层是我用 `Proxy` 手写的 10 行。**在 2005 年，写这 10 行是不可能的**——这就是为什么 MVVM 直到 WPF 出现才被提出来（John Gossman, 2005）。
 

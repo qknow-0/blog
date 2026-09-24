@@ -39,7 +39,14 @@ public class OrderService {
         orderMapper.insert(order);
     }
 
-    private BigDecimal calculateTotal(...) { /* 折扣规则在这里 */ }
+    private BigDecimal calculateTotal(List<OrderItem> items, int vipLevel) {
+        // 折扣规则在这里
+        BigDecimal sum = items.stream()
+            .map(i -> i.getPrice().multiply(BigDecimal.valueOf(i.getQty())))
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+        // ... VIP 折扣与满减
+        return sum;
+    }
 }
 ```
 
