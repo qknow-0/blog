@@ -19,6 +19,9 @@ TIMESTAMP=$(date +%Y-%m-%d-%H%M)
 ARCHIVE_NAME="blog-backup-${TIMESTAMP}.tar.gz"
 BLOG_NAME="$(basename "$BLOG_DIR")"
 
+# 无论成功、失败还是 Ctrl-C，退出时都清掉临时包
+trap 'rm -f "/tmp/${ARCHIVE_NAME}"' EXIT
+
 # 打包
 cd "$(dirname "$BLOG_DIR")"
 tar -czf "/tmp/${ARCHIVE_NAME}" \
@@ -64,7 +67,6 @@ if [ "$ARCHIVE_SIZE_MB" -gt 20 ]; then
   echo "❌ 错误：压缩包大小 ${ARCHIVE_SIZE_MB}MB（超过 20MB），可能打包了不需要的文件"
   echo "   已取消上传。请检查 .gitignore 和 backup.sh 的 --exclude 列表是否同步"
   echo "   当前排除：source-read/（16个）, .codegraph, .obsidian/themes, code/mini-gpt/*.pt, __pycache__, .env 等"
-  rm -f "/tmp/${ARCHIVE_NAME}"
   exit 1
 fi
 
@@ -98,6 +100,4 @@ if [ -n "$REMOTE_LIST" ]; then
   echo "旧备份清理完成"
 fi
 
-# 清理本地临时文件
-rm -f "/tmp/${ARCHIVE_NAME}"
 echo "备份完成"
