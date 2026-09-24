@@ -95,13 +95,14 @@
   - [当你的 event loop 死了，回调也就死了：ib_insync 持久后台线程调试记](project-retro/ibkr-event-loop-debug.md) — 2026-07-24
 - [架构设计](architecture/index.md) — 系统设计、技术方案
   - [System Design 架构地图](architecture/system-design/index.md) — 2026-08-14（11 篇）
-  - [企业应用架构](architecture/app-architecture/index.md) — 2026-09-24（14/19，写作中）
+  - [企业应用架构](architecture/app-architecture/index.md) — 2026-09-24（19 篇，已完成）
     - [总纲：三个问题与一张地图](architecture/app-architecture/00-overview.md) — 2026-09-24
     - [三层架构：从 UI 分层到整栈](architecture/app-architecture/09-three-tier.md) — 2026-09-24
     - [六边形 / 洋葱 / Clean：同一个想法的三种画法](architecture/app-architecture/10-hexagonal-onion-clean.md) — 2026-09-24
     - [服务层：应用服务和领域服务的分工](architecture/app-architecture/11-service-layer.md) — 2026-09-24
     - [仓储：不只是 DAO 换个名字](architecture/app-architecture/12-repository.md) — 2026-09-24
     - [工作单元与延迟加载：N+1 是怎么来的](architecture/app-architecture/13-unit-of-work.md) — 2026-09-24
+    - [反方：什么时候这些全是过度设计](architecture/app-architecture/19-when-overkill.md) — 2026-09-24
   - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（15/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
     - [Observer 模式：channel 就是最好的观察者](architecture/design-patterns/observer.md) — 2026-07-29
