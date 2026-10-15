@@ -113,6 +113,7 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [REA 源码阅读系列](source-read/rea_notes/) — 2026-10-12（15 篇）
   - [Kun 源码阅读系列](source-read/kun_notes/) — 2026-07-21（10 篇）
   - [Impeccable 源码阅读系列](source-read/impeccable_notes/) — 2026-07-21（3 篇）
   - [World Monitor 源码阅读系列](source-read/world_monitor/) — 2026-07-21（3 篇）

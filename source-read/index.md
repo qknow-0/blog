@@ -132,3 +132,21 @@
 - [（五）Ticker 与行情数据](ib_async_notes/05-ticker-market-data.md) — 2026-08-20
 - [（六）异步模式——asyncio + eventkit](ib_async_notes/06-async-patterns.md) — 2026-08-20
 - [（七）关键代码模式精选](ib_async_notes/07-code-patterns.md) — 2026-08-20
+
+### REA
+
+- [（一）架构全景——23 万行 TypeScript 如何维持一条依赖规则](rea_notes/01-architecture.md) — 2026-10-12
+- [（二）domain 层怎么做到纯的——「纯」的边界划在哪](rea_notes/02-domain-layer.md) — 2026-10-12
+- [（三）进程所有权——PID 会被复用，「这是我启动的进程」怎么证](rea_notes/03-process-ownership.md) — 2026-10-12
+- [（四）错误代数——TypeScript 里写 Rust 的 Result](rea_notes/04-error-algebra.md) — 2026-10-12
+- [（五）证据模型——「未知」为什么不是一个枚举值](rea_notes/05-evidence-model.md) — 2026-10-12
+- [（六）组装根——23 个文件，542 行](rea_notes/06-composition-root.md) — 2026-10-12
+- [（七）进程内桥接——把代码塞进别人的进程](rea_notes/07-in-process-bridges.md) — 2026-10-12
+- [（八）Provider 适配——16 个引擎，两族契约](rea_notes/08-provider-adapters.md) — 2026-10-12
+- [（九）测试策略——模拟的 provider 不构成真实 provider 行为的证据](rea_notes/09-testing-strategy.md) — 2026-10-12
+- [（十）Prompt 全集——一个逆向工程 Agent 的全部指令文本](rea_notes/10-prompt-collection.md) — 2026-10-12
+- [（十一）浏览器观测——为什么「拍到了」不够，还要说「拍全了没」](rea_notes/11-browser-observation.md) — 2026-10-12
+- [（十二）契约层——目录顺序永远不能决定用哪个操作](rea_notes/12-contracts-catalog.md) — 2026-10-12
+- [（十三）Windows 原生扩展——把「事后证明」换成「事前归属」](rea_notes/13-windows-native.md) — 2026-10-12
+- [（十四）Agent 评估——逆向任务没有标准答案，那怎么评](rea_notes/14-agent-evaluation.md) — 2026-10-12
+- [（十五）规格文档即约束——写在墙上的规矩和装成门禁的规矩](rea_notes/15-spec-as-constraint.md) — 2026-10-12

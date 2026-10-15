@@ -125,3 +125,5 @@ echo "source-read/MyProject" >> ../.gitignore
 | Kun | kun_notes/ | ✅ | ✅ |
 | deepseek-harness | deepseek_harness_notes/ | ✅ | ✅ |
 | ib_async | ib_async_notes/ | ✅ | ✅ |
+| rea | rea_notes/ | ✅ | ✅ |
+| mattpocock-skills-zh-CN | mattpocock_skills_notes/ | ✅ | ✅ |
