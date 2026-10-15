@@ -199,7 +199,7 @@ flowchart LR
 | RocketMQ | Topic | 十万级 | 事务消息、延迟消息 | 电商订单 |
 | Pulsar | Topic | 百万级 | 存储计算分离 | 云原生 |
 
-**Kafka 的详细机制（分区、消费组、Exactly-Once、Kafka Streams）见 [Kafka 系列](tech/kafka/index.md) 10 篇文章。**
+**Kafka 的详细机制（分区、消费组、Exactly-Once、Kafka Streams）见 [Kafka 系列](../../tech/kafka/index.md) 10 篇文章。**
 
 ## 与架构地图的衔接
 
