@@ -150,3 +150,17 @@
 - [（十三）Windows 原生扩展——把「事后证明」换成「事前归属」](rea_notes/13-windows-native.md) — 2026-10-12
 - [（十四）Agent 评估——逆向任务没有标准答案，那怎么评](rea_notes/14-agent-evaluation.md) — 2026-10-12
 - [（十五）规格文档即约束——写在墙上的规矩和装成门禁的规矩](rea_notes/15-spec-as-constraint.md) — 2026-10-12
+
+### AI Job Search
+
+- [（一）架构全景——把 Claude Code 当应用框架](ai_job_search_notes/01-architecture.md) — 2026-10-19
+- [（二）命令的设计学——12 个 slash command 如何覆盖一条求职链路](ai_job_search_notes/02-command-design.md) — 2026-10-19
+- [（三）/apply 的 drafter-reviewer 流水线——为什么写 CV 要两个 Agent](ai_job_search_notes/03-drafter-reviewer.md) — 2026-10-19
+- [（四）信任边界——招聘启事是不可信输入](ai_job_search_notes/04-trust-boundary.md) — 2026-10-19
+- [（五）验证闭环——从 .tex 到 PDF 到 ATS 文本层](ai_job_search_notes/05-verification-loop.md) — 2026-10-19
+- [（六）确定性与 LLM 的分工——把哪些活儿从模型手里拿走](ai_job_search_notes/06-determinism-vs-llm.md) — 2026-10-19
+- [（七）门户搜索 Skill——6 个站点、一套契约、零依赖](ai_job_search_notes/07-portal-skills.md) — 2026-10-19
+- [（八）供应链与仓库纪律——让陌生人 fork 后能安全运行](ai_job_search_notes/08-supply-chain.md) — 2026-10-19
+- [（九）上游同步——「能干净地 cherry-pick」不等于「正确」](ai_job_search_notes/09-upstream-sync.md) — 2026-10-19
+- [（十）Prompt 全集——一个求职 Agent 的全部核心指令（中英双语）](ai_job_search_notes/10-prompt-collection.md) — 2026-10-19
+- [（十一）收尾——「Markdown 即应用」能复用到什么程度](ai_job_search_notes/11-closing.md) — 2026-10-19

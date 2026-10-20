@@ -78,7 +78,7 @@ echo "密码长度: ${#WEBDAV_PASS}"'
 
 | 排除项 | 原因 |
 |--------|------|
-| `source-read/` 下 18 个项目目录 | 开源项目源码，可重新 clone；笔记另行保留 |
+| `source-read/` 下 20 个项目目录 | 开源项目源码，可重新 clone；笔记另行保留 |
 | `code/mini-gpt/mini-gpt-cn.pt` | 模型权重 |
 | `code/mini-gpt/.venv` | 虚拟环境 |
 | `__pycache__` `*.pyc` | Python 缓存 |

@@ -127,3 +127,5 @@ echo "source-read/MyProject" >> ../.gitignore
 | ib_async | ib_async_notes/ | ✅ | ✅ |
 | rea | rea_notes/ | ✅ | ✅ |
 | mattpocock-skills-zh-CN | mattpocock_skills_notes/ | ✅ | ✅ |
+| ai-job-search | ai_job_search_notes/ | ✅ | ✅ |
+| The-Quant-Trading-Vault | the_quant_trading_vault_notes/ | ✅ | ✅ |
