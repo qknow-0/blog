@@ -28,6 +28,8 @@
   - [NewsNow](tech/newsnow/index.md) — 1 篇
   - [向量数据库系列](tech/vector-db/index.md) — 4 篇
   - [Neo4j](tech/neo4j/index.md) — 1 篇
+  - [QMT 量化终端](tech/qmt/index.md) — 1 篇
+    - [xtquant_big_convert：把大 QMT 变成可远程调用的 RPC 服务](tech/qmt/xtquant-big-convert.md) — 2026-10-21
   - [HTTP 协议系列](tech/http/index.md) — 9 篇
     - [RESTful API 设计](tech/http/restful-api-guide.md) — 2026-06-22
     - [GraphQL](tech/http/graphql-guide.md) — 2026-06-22
