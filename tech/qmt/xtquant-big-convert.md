@@ -158,6 +158,18 @@ def get_full_tick(code_list, types=None):
 
 真正的实现在 `xtquant_compat.py`（约 7,200 行），shim 只负责名字对齐。这样切换成本就从"重写业务代码"降到了"把仓库的 `src` 放到 `PYTHONPATH` 最前面"。
 
+### shim 的三层
+
+| 层 | 文件 | 作用 |
+|---|------|------|
+| 模块层 | `src/xtquant/` | 用同名的包、模块、函数签名骗过 `import` |
+| 协议层 | `xtquant_compat.py` | 把方法调用编码成 RPC 请求，发给 QMT |
+| 对象层 | `CompatObject` / `OrderId` / `XtOrder` | 把 JSON 还原成 MiniQMT 风格的对象 |
+
+模块层只负责"名字像"；协议层负责"调用能通"；对象层负责"返回值的形状也像"。
+
+很多人以为 shim 只是一层 import 转发，实际上最费工的是第三层：MiniQMT 的下游代码会直接读 `asset.cash`、`position.can_use_volume`、`order.order_id`，还会比较 `order_id == -1`、用 `str(order_id)` 取柜台编号。所以 `xtquant_compat.py` 里大部分代码不是在发 RPC，而是在补字段、补别名、补 `int` / `str` 双重身份。
+
 ### 一个循环依赖，和它的解法
 
 `src/xtquant/__init__.py` 里有一段容易被忽略的设计（`src/xtquant/__init__.py:7-33`）：
@@ -236,6 +248,45 @@ xtquant.__init__  →  xtquant.xtdata  →  bigqmt_signal_trader.xtquant_compat
 | `mysql` | pymysql + DBUtils | Redis/ZMQ 都不可用时的兜底；轮询延迟较高 |
 | `pipe` | Python 标准库 + `ctypes` | 券商沙箱禁 socket、禁 pip 时的命名管道方案 |
 | `shm` | — | 共享内存传输，当前为 stub（选中会报错） |
+
+### 响应怎么回去
+
+handler 执行完只做一件事：返回一个和请求同 `request_id` 的响应 dict。真正把响应送回客户端的是 transport 的 `send_response(request, response)`。
+
+响应信封大致是：
+
+```python
+{
+    "schema_version": 1,
+    "request_id": "<和请求相同>",
+    "account_id": "...",
+    "method": "query_stock_positions",
+    "ok": True,
+    "data": {...},
+    "error": "",
+    "server_error": "",
+    "handled_at": "YYYY-MM-DD HH:MM:SS",
+}
+```
+
+不同传输的回包方式：
+
+| 传输 | 服务端怎么发 | 客户端怎么收 |
+|------|-------------|-------------|
+| Redis | 一次 pipeline：`SETEX reply_key` + `RPUSH reply_list` + `PUBLISH reply_channel` | 轮询 `GET reply_key` / `BLPOP reply_list`，或订阅 `reply_channel`；按 `request_id` 匹配 |
+| ZMQ | ROUTER 按请求来源的 identity 回 `[identity, payload]` | DEALER 直接收；服务端用 `request_id -> identity` 找到对端 |
+| pipe | 把响应放进该连接的 outbox，唤醒读循环后写回 | 同一条命名管道读 |
+| MySQL | 写入 `responses` 表（DELETE-then-INSERT） | 轮询 `responses` 表 |
+
+Redis 之所以写三处，是因为它们解决不同问题：
+
+- `reply_key`：客户端来晚或错过 pubsub 消息时，还能 `GET` 到
+- `reply_list`：客户端可以 `BLPOP` 阻塞等，不用忙轮询
+- `reply_channel`：实时唤醒订阅者
+
+客户端在 `call_redis_rpc()` 里生成 `request_id`、把 `reply_*` 写进请求，然后等待匹配 `request_id` 的响应。服务端回的 `ok=False` 会在客户端变成 `RpcServerRepliedError`；`server_error` 非空也会；超时则是 `TimeoutError`。订单超时后，客户端还会调用 `get_request_outcome` 判断"到底下没下"。
+
+> 执行回报（`on_stock_order` / `on_stock_trade`）不走这条 RPC 响应路径：它们是 QMT 回调触发后，服务端单独 publish 到事件通道，客户端的监听线程再分发给你的 callback。
 
 ### 工厂里那句"问类，不要问名单"
 
