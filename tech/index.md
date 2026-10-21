@@ -17,4 +17,4 @@
 - [NewsNow](newsnow/index.md) — 1 篇，新闻聚合器架构分析
 - [向量数据库系列](vector-db/index.md) — 4 篇，ChromaDB / Milvus / pgvector
 - [Neo4j](neo4j/index.md) — 1 篇，图数据库实战
-- [QMT 量化终端](qmt/index.md) — 1 篇，大 QMT 的远程调用与 xtquant 兼容桥
+- [QMT 量化终端](qmt/index.md) — 2 篇，大 QMT 的远程调用、xtquant 兼容桥与同花顺客户端自动化
