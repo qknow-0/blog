@@ -29,6 +29,9 @@ code/mini-gpt/mini-gpt-cn.pt
 # Obsidian（.obsidian/ 本身纳入版本管理，只排除第三方主题）
 .obsidian/themes/
 
+# codebase-memory-mcp 本地索引
+.codebase-memory/
+
 # source-read
 source-read/Sequoia-X
 source-read/FinnewsHunter
@@ -50,3 +53,4 @@ source-read/rea
 source-read/mattpocock-skills-zh-CN
 source-read/ai-job-search
 source-read/The-Quant-Trading-Vault
+source-read/free-stockdb

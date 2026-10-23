@@ -1,0 +1,31 @@
+---
+description: codebase-memory-mcp usage guide — graph-first structural lookup
+alwaysApply: true
+---
+## codebase-memory-mcp
+
+This project uses **codebase-memory-mcp** for structural code questions. It is a tree-sitter-parsed knowledge graph of symbols, edges, and files, indexed per project. Tool names may appear with a server prefix (for example `codebase-memory-mcp_search_graph`); use the client's exposed names.
+
+### Prefer the graph for structure
+
+| Question | Tool |
+|---|---|
+| "Is this project indexed?" | `list_projects` / `index_status` |
+| "Where is X defined?" | `search_graph(name_pattern="X")` |
+| "Who calls Y?" | `trace_path(function_name="Y", direction="inbound")` |
+| "What does Y call?" | `trace_path(function_name="Y", direction="outbound")` |
+| "Show Y's source / signature" | `get_code_snippet(qualified_name="...")` |
+| "Architecture overview" | `get_architecture` |
+| "Cross-service / multi-hop query" | `query_graph` (Cypher) |
+| "What would break if I changed Z?" | `detect_changes` |
+| "Is coverage complete?" | `check_index_coverage` |
+
+Use native grep/read for **literal text** (strings, comments, logs), configs, or after you already have a specific file open.
+
+### Rules of thumb
+
+- Discover exact symbol names with `search_graph` before calling `trace_path`.
+- For negative claims (missing/dead code), call `check_index_coverage` and read any incomplete ranges before concluding.
+- `trace_path(direction="outbound")` can miss cross-service callers; prefer `direction="both"` unless you know better.
+- Paginate `search_graph` (50 rows/page) and add explicit `LIMIT` to Cypher.
+- If the project is not indexed, ask the user first, then use `index_repository` (or `codebase-memory-mcp cli index_repository --repo-path <path>`).

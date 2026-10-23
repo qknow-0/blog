@@ -164,3 +164,16 @@
 - [（九）上游同步——「能干净地 cherry-pick」不等于「正确」](ai_job_search_notes/09-upstream-sync.md) — 2026-10-19
 - [（十）Prompt 全集——一个求职 Agent 的全部核心指令（中英双语）](ai_job_search_notes/10-prompt-collection.md) — 2026-10-19
 - [（十一）收尾——「Markdown 即应用」能复用到什么程度](ai_job_search_notes/11-closing.md) — 2026-10-19
+
+### free-stockdb
+
+- [（一）架构全景：一个本地数据引擎的边界](free_stockdb_notes/01-architecture.md) — 2026-10-22
+- [（二）Key 就是 API：LevelDB 的 key 设计与查询 DSL](free_stockdb_notes/02-data-model.md) — 2026-10-22
+- [（三）增量同步器：manifest + SHA-256 + 原子替换](free_stockdb_notes/03-updater.md) — 2026-10-22
+- [（四）371 行 C++ 服务：能教什么，不能教什么](free_stockdb_notes/04-cpp-server.md) — 2026-10-22
+- [（五）Python SDK：同步/异步、批量 pipeline 与结果整形](free_stockdb_notes/05-python-sdk.md) — 2026-10-22
+- [（六）周 K、月 K 与分钟 K 的时间轴](free_stockdb_notes/06-period-aggregation.md) — 2026-10-22
+- [（七）复权：全市场因子与二分查找](free_stockdb_notes/07-adjustment.md) — 2026-10-22
+- [（八）指标层：薄适配器与编译核心](free_stockdb_notes/08-indicators.md) — 2026-10-22
+- [（九）板块索引与私有存储](free_stockdb_notes/09-board-and-storage.md) — 2026-10-22
+- [（十）自实现 MCP 与五种调用面](free_stockdb_notes/10-native-mcp.md) — 2026-10-22

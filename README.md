@@ -116,17 +116,21 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
-  - [REA 源码阅读系列](source-read/rea_notes/) — 2026-10-12（15 篇）
+  - [free-stockdb 源码阅读系列](source-read/free_stockdb_notes/) — 2026-10-22（10 篇）
   - [AI Job Search 源码阅读系列](source-read/ai_job_search_notes/) — 2026-10-19（11 篇）
+  - [REA 源码阅读系列](source-read/rea_notes/) — 2026-10-12（15 篇）
+  - [ib_async 源码阅读系列](source-read/ib_async_notes/) — 2026-08-20（7 篇）
+  - [DeepSeek Harness 源码阅读系列](source-read/deepseek_harness_notes/) — 2026-08-14（10 篇）
   - [Kun 源码阅读系列](source-read/kun_notes/) — 2026-07-21（10 篇）
   - [Impeccable 源码阅读系列](source-read/impeccable_notes/) — 2026-07-21（3 篇）
   - [World Monitor 源码阅读系列](source-read/world_monitor/) — 2026-07-21（3 篇）
-  - [AI Hedge Fund 源码阅读系列](source-read/ai_hedge_fund/) — 2026-07-20（3 篇）
-  - [MetaGPT 源码阅读系列](source-read/meta_gpt/) — 2026-07-17（6 篇）
+  - [AI Hedge Fund 源码阅读系列](source-read/ai_hedge_fund/) — 2026-07-20（4 篇）
+  - [MetaGPT 源码阅读系列](source-read/meta_gpt/) — 2026-07-17（7 篇）
   - [Horizon 源码阅读系列](source-read/horizon_notes/) — 2026-07-03（5 篇）
   - [DBX 源码阅读系列](source-read/dbx_notes/) — 2026-07-03（7 篇）
   - [nanobot 源码阅读系列](source-read/nanobot_notes/) — 2026-06-16（6 篇）
   - [TrendRadar 源码阅读系列](source-read/trend_radar/index.md) — 2026-06-11（6 篇）
+  - [newsnow 源码阅读系列](source-read/newsnow_notes/) — 2026-06-11（5 篇）
   - [QuantDinger 源码阅读系列](source-read/quant_dinger/01-intro.md) — 2026-05-30（7 篇）
   - [Sequoia-X 源码阅读系列](source-read/sequoia_x/index.md) — 2026-05-17（5 篇）
 - [随想](thoughts/index.md) — 非技术类的日常思考

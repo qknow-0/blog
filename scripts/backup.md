@@ -63,7 +63,7 @@ echo "密码长度: ${#WEBDAV_PASS}"'
 |--------|------|
 | `.git` | 版本历史，已有 GitHub 备份 |
 | `.claude` | Claude Code 本地配置 |
-| `.codegraph` | 索引数据库（192MB，是体积大头） |
+| `.codebase-memory` | codebase-memory-mcp 本地索引，可重新生成 |
 | `.obsidian/themes` | 第三方主题（`.obsidian/` 本身纳入备份） |
 
 ### 凭据与系统文件
@@ -78,7 +78,7 @@ echo "密码长度: ${#WEBDAV_PASS}"'
 
 | 排除项 | 原因 |
 |--------|------|
-| `source-read/` 下 20 个项目目录 | 开源项目源码，可重新 clone；笔记另行保留 |
+| `source-read/` 下 21 个项目目录 | 开源项目源码，可重新 clone；笔记另行保留 |
 | `code/mini-gpt/mini-gpt-cn.pt` | 模型权重 |
 | `code/mini-gpt/.venv` | 虚拟环境 |
 | `__pycache__` `*.pyc` | Python 缓存 |

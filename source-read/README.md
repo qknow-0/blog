@@ -120,6 +120,8 @@ echo "source-read/MyProject" >> ../.gitignore
 | nanobot | nanobot_notes/ | ✅ | ✅ |
 | MetaGPT | meta_gpt/ | ✅ | ✅ |
 | ai-hedge-fund | ai_hedge_fund/ | ✅ | ✅ |
+| dbx | dbx_notes/ | ✅ | ✅ |
+| horizon | horizon_notes/ | ✅ | ✅ |
 | worldmonitor | world_monitor/ | ✅ | ✅ |
 | impeccable | impeccable_notes/ | ✅ | ✅ |
 | Kun | kun_notes/ | ✅ | ✅ |
@@ -129,3 +131,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | mattpocock-skills-zh-CN | mattpocock_skills_notes/ | ✅ | ✅ |
 | ai-job-search | ai_job_search_notes/ | ✅ | ✅ |
 | The-Quant-Trading-Vault | the_quant_trading_vault_notes/ | ✅ | ✅ |
+| free-stockdb | free_stockdb_notes/ | ✅ | ✅ |

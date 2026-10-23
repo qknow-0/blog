@@ -116,12 +116,12 @@ else
     git clone --single-branch --depth 1 https://github.com/rohitg00/agentmemory.git ~/.claude/skills/agentmemory
 fi
 
-# CodeGraph
-if command -v codegraph &>/dev/null; then
-    echo "CodeGraph 已安装"
+# codebase-memory-mcp
+# 本项目通过 MCP 使用 codebase-memory-mcp；CLI 是否安装不影响 MCP 工具。
+if command -v codebase-memory-mcp &>/dev/null; then
+    echo "codebase-memory-mcp CLI 已安装"
 else
-    echo "安装 CodeGraph..."
-    npm install -g codegraph
+    echo "codebase-memory-mcp CLI 未安装（MCP 配置不受影响）"
 fi
 
 # Compound Engineering
