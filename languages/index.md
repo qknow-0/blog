@@ -4,6 +4,7 @@
 
 ## 分类
 
+- [C++](cpp/index.md)
 - [Python](python/index.md)
 - [Rust](rust/index.md)
 - [Go](golang/index.md)
