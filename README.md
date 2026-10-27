@@ -39,7 +39,12 @@
     - [TCP 三次握手与四次挥手](tech/network/02-tcp-handshake.md) — 2026-08-14
     - [TCP 可靠传输：不丢、不乱、不堵](tech/network/03-tcp-reliability.md) — 2026-08-14
 - [编程语言](languages/index.md) — 语法、特性
-  - [C++](languages/cpp/index.md) — 8 篇
+  - [C++](languages/cpp/index.md) — 13 篇
+    - [C++ 基础语法：变量、类型与初始化，先把数据放进正确的盒子](languages/cpp/basics-types.md) — 2026-10-27
+    - [C++ 基础语法：条件、循环与函数，把执行路径写清楚](languages/cpp/basics-control-flow.md) — 2026-10-27
+    - [C++ 基础语法：指针与引用，地址、别名和空指针](languages/cpp/basics-pointers-references.md) — 2026-10-27
+    - [C++ 基础语法：类与对象，把状态和行为装进同一个盒子](languages/cpp/basics-classes.md) — 2026-10-27
+    - [C++ 基础语法：vector、string、map 与标准库入门](languages/cpp/basics-stl.md) — 2026-10-27
     - [C++ RAII：让析构函数替你收拾房间](languages/cpp/raii.md) — 2026-10-27
     - [C++ 移动语义：std::move 到底搬走了什么](languages/cpp/move-semantics.md) — 2026-10-27
     - [C++ 智能指针：unique_ptr、shared_ptr、weak_ptr 的所有权账本](languages/cpp/smart-pointers.md) — 2026-10-27
