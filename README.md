@@ -130,6 +130,7 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [Cindy 源码阅读系列](source-read/cindy_notes/) — 2026-11-02（10 篇）
   - [free-stockdb 源码阅读系列](source-read/free_stockdb_notes/) — 2026-10-22（10 篇）
   - [AI Job Search 源码阅读系列](source-read/ai_job_search_notes/) — 2026-10-19（11 篇）
   - [REA 源码阅读系列](source-read/rea_notes/) — 2026-10-12（15 篇）

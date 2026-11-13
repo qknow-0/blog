@@ -6,6 +6,19 @@
 
 ## 文章列表
 
+### Cindy
+
+- [（一）一个 Agent 客户端如何把自己拆成连接层](cindy_notes/01-architecture.md) — 2026-11-02
+- [（二）Maker、Session、BaseAgent 的三层骨架](cindy_notes/02-maker-core.md) — 2026-11-02
+- [（三）三种引擎，一条事件流](cindy_notes/03-agent-adapters.md) — 2026-11-02
+- [（四）看门狗、循环守卫与中断续跑](cindy_notes/04-session-reliability.md) — 2026-11-02
+- [（五）device-link，手机如何控制电脑](cindy_notes/05-device-link.md) — 2026-11-02
+- [（六）权限档位与自动审核](cindy_notes/06-permissions.md) — 2026-11-02
+- [（七）插件沙箱、Skill 与 Ghost 渐进发现](cindy_notes/07-plugins-skills.md) — 2026-11-02
+- [（八）Electron 进程边界与布局树](cindy_notes/08-electron-security.md) — 2026-11-02
+- [（九）Prompt 全集（中英双语）](cindy_notes/09-prompts.md) — 2026-11-02
+- [（十）文档即约束，测试即门禁](cindy_notes/10-governance.md) — 2026-11-02
+
 ### TrendRadar
 
 - [（一）项目概览与架构全景](trend_radar/01-architecture.md) — 2026-06-11
