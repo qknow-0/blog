@@ -39,7 +39,7 @@
     - [TCP 三次握手与四次挥手](tech/network/02-tcp-handshake.md) — 2026-08-14
     - [TCP 可靠传输：不丢、不乱、不堵](tech/network/03-tcp-reliability.md) — 2026-08-14
 - [编程语言](languages/index.md) — 语法、特性
-  - [C++](languages/cpp/index.md) — 13 篇
+  - [C++](languages/cpp/index.md) — 14 篇
     - [C++ 基础语法：变量、类型与初始化，先把数据放进正确的盒子](languages/cpp/basics-types.md) — 2026-10-27
     - [C++ 基础语法：条件、循环与函数，把执行路径写清楚](languages/cpp/basics-control-flow.md) — 2026-10-27
     - [C++ 基础语法：指针与引用，地址、别名和空指针](languages/cpp/basics-pointers-references.md) — 2026-10-27
@@ -53,6 +53,7 @@
     - [C++ 虚函数：一张 vtable 背后的点菜流程](languages/cpp/virtual-functions.md) — 2026-10-27
     - [C++ STL 迭代器失效：书架扩容时，书签为什么会作废](languages/cpp/stl-iterators.md) — 2026-10-27
     - [C++ 并发：共享白板、原子操作与内存序](languages/cpp/concurrency.md) — 2026-10-27
+    - [C++ Unix Domain Socket：把本机 IPC 做成一条文件路径](languages/cpp/unix-domain-socket.md) — 2026-11-02
   - [Python](languages/python/index.md)
     - [Python exec 与 eval：危险的动态代码执行](languages/python/exec-eval.md) — 2026-06-19
     - [Python 描述器：`obj.x` 背后究竟发生了什么](languages/python/descriptors.md) — 2026-06-16
