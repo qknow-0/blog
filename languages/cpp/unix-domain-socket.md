@@ -41,6 +41,29 @@ flowchart LR
 
 ## 地址结构：一条路径就是一个 socket
 
+### `.sock` 是门牌，不是通道
+
+先把两个东西分开：
+
+- **路径（pathname）**：文件系统里的名字，指向内核里的 socket 对象；
+- **通道（channel）**：内核里的 socket 对象 + send/receive buffer，连接建立后数据才在这里流动。
+
+| 对象 | 在哪里 | 生命周期 |
+|------|--------|----------|
+| `.sock` 路径 | 文件系统 | 直到 `unlink`；进程退出不会自动删除 |
+| socket 对象 | 内核 | 随 fd 关闭或进程退出而释放 |
+| 连接缓冲区 | 内核 | 连接存在期间 |
+
+三个证据：
+
+1. **`stat` 大小是 0**，`cat` 会报 `ENOTSUP`/`ENXIO`——路径里没有数据。
+2. **服务端运行中 `unlink` 掉 `.sock`**：已经建立的连接继续工作，但新客户端 `connect()` 会失败。通道还在，入口没了。
+3. **Linux 抽象命名空间**：完全没有文件，只有一个名字，UDS 照样工作。
+
+所以更准确的说法是：**`.sock` 是通道的入口/门牌，不是通道本身。** 路径的生命周期和连接的生命周期是两件事。
+
+一句话：**`.sock` 的唯一职责，就是让客户端找到服务端；找到之后，数据的传输和它无关。**
+
 UDS 的地址结构是 `sockaddr_un`：
 
 ```cpp
@@ -655,6 +678,236 @@ sequenceDiagram
 
 另外，`SCM_RIGHTS` 需要 `sendmsg`/`recvmsg`，普通 `send`/`recv` 带不了控制消息；控制消息的缓冲区要用 `CMSG_SPACE` 算大小，`cmsg_len` 要用 `CMSG_LEN`，不能手写常数。
 
+## 文件内容怎么通过 UDS 传输
+
+先澄清一个常见误解：**socket 文件里没有文件内容**。`bind()` 之后你能看到 `/tmp/echo.sock`，但它的 `stat` 大小是 0：
+
+```text
+$ stat -f 'type=%HT size=%z mode=%Sp' /tmp/cpp-uds-echo.sock
+type=Socket size=0 mode=srwxr-xr-x
+```
+
+它也不能像普通文件一样读：
+
+```text
+$ cat /tmp/cpp-uds-echo.sock
+cat: /tmp/cpp-uds-echo.sock: Operation not supported on socket
+```
+
+UDS 路径只是一个门牌号。真正的文件内容要由应用自己从普通文件里读出来，再写进已经连接的 socket fd。
+
+### 协议：头部 + 字节流
+
+`socket` 是字节流，接收端不知道文件在哪里结束。所以协议里必须有一个头部，至少包含。下面这段代码还需要 `<filesystem>`、`<array>`、`<algorithm>`、`<cstdint>`、`<sys/stat.h>`、`<fcntl.h>`；`decode_u32` / `decode_u64` 是 `encode_u32` / `encode_u64` 的逆操作。
+
+```text
+[name_len: u32][file_size: u64][name: name_len bytes][file bytes]
+```
+
+```cpp
+constexpr std::uint64_t kMaxFileSize = 1ull << 30; // 1 GiB，按业务调整
+```
+
+两个整数用大端序写，避免发送端和接收端字节序不同。发送端骨架：
+
+```cpp
+// 复用前面的 UniqueFd / fail / write_all
+void send_file(int sock, const std::filesystem::path& path) {
+    UniqueFd file(::open(path.c_str(), O_RDONLY));
+    if (!file) fail("open");
+
+    struct stat st {};
+    if (::fstat(file.get(), &st) < 0) fail("fstat");
+
+    const std::string name = path.filename().string();
+    if (name.size() > 255) fail("filename too long");
+
+    std::string header;
+    header += encode_u32(static_cast<std::uint32_t>(name.size()));
+    header += encode_u64(static_cast<std::uint64_t>(st.st_size));
+
+    write_all(sock, header.data(), header.size());
+    write_all(sock, name.data(), name.size());
+
+    char buf[64 * 1024];
+    while (true) {
+        ssize_t n = ::read(file.get(), buf, sizeof(buf));
+        if (n == 0) break;                 // 文件读完
+        if (n < 0) {
+            if (errno == EINTR) continue;
+            fail("read file");
+        }
+        write_all(sock, buf, static_cast<std::size_t>(n));
+    }
+}
+```
+
+`encode_u32` / `encode_u64` 只是把整数按大端写进 `std::string`：
+
+```cpp
+std::string encode_u32(std::uint32_t v) {
+    std::string out(4, '\0');
+    for (int i = 0; i < 4; ++i) {
+        out[i] = static_cast<char>((v >> (24 - i * 8)) & 0xff);
+    }
+    return out;
+}
+
+std::string encode_u64(std::uint64_t v) {
+    std::string out(8, '\0');
+    for (int i = 0; i < 8; ++i) {
+        out[i] = static_cast<char>((v >> (56 - i * 8)) & 0xff);
+    }
+    return out;
+}
+```
+
+接收端先读 12 字节头部，再读文件名，最后按 `file_size` 精确读 `file_size` 字节：
+
+```cpp
+void read_exact(int fd, void* data, std::size_t size) {
+    auto* p = static_cast<char*>(data);
+    while (size > 0) {
+        ssize_t n = ::read(fd, p, size);
+        if (n == 0) throw std::runtime_error("unexpected EOF");
+        if (n < 0) {
+            if (errno == EINTR) continue;
+            fail("read");
+        }
+        p += n;
+        size -= static_cast<std::size_t>(n);
+    }
+}
+
+void recv_file(int sock, const std::filesystem::path& dir) {
+    std::array<unsigned char, 12> header {};
+    read_exact(sock, header.data(), header.size());
+
+    const std::uint32_t name_len = decode_u32(header.data());
+    const std::uint64_t file_size = decode_u64(header.data() + 4);
+
+    if (name_len == 0 || name_len > 255 || file_size > kMaxFileSize) {
+        fail("bad file header");
+    }
+
+    std::string name(name_len, '\0');
+    read_exact(sock, name.data(), name.size());
+
+    // 文件名不可信：只取 basename，拒绝目录穿越
+    const std::string safe = std::filesystem::path(name).filename().string();
+    if (safe.empty() || safe == "." || safe == "..") fail("bad filename");
+
+    const auto final_path = dir / safe;
+    auto temp_path = final_path;
+    temp_path += ".part";
+
+    UniqueFd out(::open(temp_path.c_str(),
+                        O_CREAT | O_EXCL | O_WRONLY, 0600));
+    if (!out) fail("open output");
+
+    std::uint64_t left = file_size;
+    char buf[64 * 1024];
+    while (left > 0) {
+        const auto want = static_cast<std::size_t>(
+            std::min<std::uint64_t>(sizeof(buf), left));
+        ssize_t n = ::read(sock, buf, want);
+        if (n <= 0) {
+            if (n < 0 && errno == EINTR) continue;
+            fail("socket closed before file completed");
+        }
+        write_all(out.get(), buf, static_cast<std::size_t>(n));
+        left -= static_cast<std::uint64_t>(n);
+    }
+
+    if (::fsync(out.get()) < 0) fail("fsync");
+    out.reset(); // 先关闭，再 rename
+    if (::rename(temp_path.c_str(), final_path.c_str()) < 0) fail("rename");
+}
+```
+
+用 `socketpair(AF_UNIX, SOCK_STREAM)` 把发送和接收逻辑接起来，实测：
+
+```text
+$ ./file_xfer
+child received file
+parent verified: 36 bytes
+$ cmp source.txt out/source.txt && echo same
+same
+```
+
+这段代码有几个刻意为之的选择：
+
+- **头部固定 12 字节**，先读固定长度，再按 `name_len` 读名字，不会把文件名和文件内容混在一起。
+- **先写 `.part` 临时文件，`fsync` 后再 `rename`**。中途失败不会留下半截正式文件。
+- **`file_size` 有上限**，防止对端声明一个超大文件把磁盘写满。
+- **文件名只取 basename**，不信任对端的路径；否则 `../../.ssh/authorized_keys` 这类名字会变成路径穿越。
+- **读完 `file_size` 字节就停**，不依赖对端关闭连接来判断结束。
+
+### 内核里发生了什么
+
+```mermaid
+flowchart LR
+    subgraph SENDER["发送进程"]
+        F1["真实文件<br/>page cache"] -->|"read()"| U1["用户缓冲区"]
+        U1 -->|"write(sock)"| S1["socket send buffer"]
+    end
+    subgraph KERNEL["内核"]
+        S1 -->|"UDS 直接传递"| S2["socket receive buffer"]
+    end
+    subgraph RECEIVER["接收进程"]
+        S2 -->|"read(sock)"| U2["用户缓冲区"]
+        U2 -->|"write(file)"| F2["目标文件"]
+    end
+```
+
+UDS 只负责把 `socket send buffer` 里的字节送到 `socket receive buffer`，不经过 TCP/IP 协议栈。文件内容仍然要经过两次用户态拷贝：文件 → 用户缓冲区 → socket 缓冲区，接收端反过来再来一次。
+
+### 同机大文件：传 fd，而不是传内容
+
+如果两个进程在同一台机器上，最省事的方案往往不是把文件读出来发过去，而是把打开的文件 fd 传过去——也就是上一节的 `SCM_RIGHTS`：
+
+```cpp
+send_fd(sock, file_fd);            // 发送端只传 fd
+UniqueFd received(recv_fd(sock));  // 接收端拿到同一个文件的引用
+```
+
+这时 UDS 只传一个整数 fd，**文件内容根本不经过 socket**；接收方直接读原文件。它适合父子进程、同一服务的 worker、大文件和不方便重新解析路径的场景。
+
+代价是：
+
+- 接收方拿到的是同一个 open file description，**共享文件偏移**；
+- 接收方也获得了该文件的访问权限，**不要传给不可信进程**；
+- 跨机器无效，`SCM_RIGHTS` 只在同一内核内生效。
+
+### 减少拷贝：sendfile / splice
+
+Linux 上还可以用 `sendfile` 把文件内容直接送到 socket：
+
+```cpp
+off_t offset = 0;
+while (offset < file_size) {
+    ssize_t n = ::sendfile(sock, file_fd, &offset, file_size - offset);
+    if (n < 0) {
+        if (errno == EINTR) continue;
+        fail("sendfile");
+    }
+}
+```
+
+它减少了“文件 → 用户缓冲区 → socket”的一次用户态拷贝，但**内核仍然要把数据放进 socket buffer**，不是完全零拷贝。macOS 也有 `sendfile`，但函数签名和参数与 Linux 不同，使用前查 `man 2 sendfile`；`splice` 则是 Linux 专属。
+
+### 文件传输的安全清单
+
+| 检查 | 原因 |
+|------|------|
+| 文件名只取 basename | 防止 `../` 路径穿越 |
+| 拒绝空名、`.`、`..` | 防止写到目录本身或上级目录 |
+| 限制 `file_size` | 防止磁盘被写满 |
+| 先写 `.part`，`fsync` 后 `rename` | 失败不留半截正式文件 |
+| 校验 SHA-256（可选） | 确认内容完整 |
+| 检查对端 credentials | 只接受预期用户/进程 |
+| 目录权限 `0700`、文件 `0600` | 防止其他用户读取或替换 |
+
 ## 性能与选型
 
 UDS 通常比 TCP loopback 快，主要因为省掉了 TCP/IP 协议栈、校验和、端口管理和路由查找；但它仍然要经过内核缓冲区，**不是零拷贝**。
@@ -693,6 +946,9 @@ UDS 通常比 TCP loopback 快，主要因为省掉了 TCP/IP 协议栈、校验
 | 忘记关闭接收到的 fd | `SCM_RIGHTS` 接收方泄漏 fd |
 | fork/exec 后 socket fd 泄漏 | `accept` 返回的新 fd 不继承 listening fd 的 CLOEXEC；用 `accept4(..., SOCK_CLOEXEC)`（Linux）或对每个 accepted fd 调 `fcntl(fd, F_SETFD, FD_CLOEXEC)` |
 | 以为 UDS 能跨机器 | 它只在本机内核内通信 |
+| 把 socket 文件当普通文件读 | `stat` 大小是 0，`cat` 会报 `ENOTSUP`/`ENXIO`；必须 `connect()` 后读写 |
+| 文件传输没有头部/大小 | 接收端无法判断文件在哪里结束，会把后续消息当文件内容 |
+| 直接用对端文件名拼路径 | 可能路径穿越；只取 basename，拒绝 `..` 和空名 |
 
 ## 收尾
 
