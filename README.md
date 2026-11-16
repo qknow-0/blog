@@ -8,7 +8,8 @@
 ## 目录
 
 - [技术笔记](tech/index.md) — 框架、工具
-  - [AI 编程工具链](tech/ai-tooling/index.md) — 28 篇
+  - [AI 编程工具链](tech/ai-tooling/index.md) — 29 篇
+    - [T3 Code：给 Claude Code 和 Codex 装一个随时在线的驾驶舱](tech/ai-tooling/t3code-guide.md) — 2026-11-16
     - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
   - [Claude Code](tech/claude-code/index.md) — 4 篇
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26

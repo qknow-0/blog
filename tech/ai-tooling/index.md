@@ -4,6 +4,7 @@ AI 辅助编程的工具、框架和实践记录。
 
 ## 文章列表
 
+- [T3 Code：给 Claude Code 和 Codex 装一个随时在线的驾驶舱](t3code-guide.md) — 2026-11-16
 - [jcode：Rust 写的终端 AI 编程助手，性能和 Agent 协作做到极致](jcode-guide.md) — 2026-07-20
 - [Trellis：给 AI Agent 装上工程框架，不再每次从零开始](trellis-guide.md) — 2026-06-29
 - [Open Code Review：阿里内部 AI 代码审查工具开源](open-code-review-guide.md) — 2026-06-22
