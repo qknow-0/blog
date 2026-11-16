@@ -353,6 +353,7 @@ classDiagram
 
 - [C++ 基础语法：变量、类型与初始化](basics-types.md)
 - [C++ 基础语法：指针与引用](basics-pointers-references.md)
+- [C++ 面向对象系列：封装、继承与运算符重载](oop/index.md)
 - [C++ RAII：让析构函数替你收拾房间](raii.md)
 - [C++ 移动语义：std::move 到底搬走了什么](move-semantics.md)
 - [C++ 虚函数：一张 vtable 背后的点菜流程](virtual-functions.md)

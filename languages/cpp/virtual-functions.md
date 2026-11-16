@@ -376,6 +376,7 @@ flowchart TD
 
 **相关文章**
 
+- [C++ 面向对象系列：封装、继承与运算符重载](oop/index.md)
 - [C++ RAII：让析构函数替你收拾房间](raii.md)
 - [C++ 模板与 Concepts：给模具贴上规格说明](templates-concepts.md)
 - [C++ 智能指针：所有权账本](smart-pointers.md)
