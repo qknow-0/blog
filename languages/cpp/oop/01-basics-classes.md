@@ -301,6 +301,125 @@ BankAccount& operator=(const BankAccount&) = delete;
 
 因为账户有身份，复制一个账户在业务上没有意义。如果你的类需要拷贝，优先使用 Rule of Zero：让成员自己管理资源（`std::string`、`std::vector`、`std::unique_ptr`），不要手写析构函数和拷贝函数。详细规则见[RAII](../raii.md)和[移动语义](../move-semantics.md)。
 
+### `= delete`：把「不允许复制」写进类型
+
+`= delete` 是 C++11 的语法。它不是「把函数注释掉」，而是明确声明：**这个函数存在，但被删除，任何调用都是编译错误。**
+
+```cpp
+BankAccount(const BankAccount&) = delete;
+BankAccount& operator=(const BankAccount&) = delete;
+```
+
+逐部分看：
+
+| 部分 | 含义 |
+|:-----|:-----|
+| `BankAccount(const BankAccount&)` | 拷贝构造函数。没有返回类型，参数是 `const` 左值引用 |
+| `BankAccount& operator=(const BankAccount&)` | 拷贝赋值运算符。返回自身引用，支持 `a = b = c` |
+| `= delete` | 删除定义：不生成函数体，禁止调用 |
+
+`const` 让拷贝构造能接收 const 对象和临时对象；`&` 是引用，避免按值传参时又触发一次拷贝。`operator=` 返回 `BankAccount&` 是惯例，和内置类型的赋值语义保持一致。
+
+`= delete` 的函数仍然**参与重载决议**：编译器先正常选函数，选中后发现它是 deleted，再报错：
+
+```text
+error: call to deleted constructor of 'BankAccount'
+    BankAccount b = a;
+note: 'BankAccount' has been explicitly marked deleted here
+    BankAccount(const BankAccount&) = delete;
+
+error: overload resolution selected deleted operator '='
+    c = a;
+note: candidate function has been explicitly deleted
+    BankAccount& operator=(const BankAccount&) = delete;
+```
+
+这比 C++98 的旧写法清楚得多。旧写法是「声明为 private，但不定义」：
+
+```cpp
+class BankAccount {
+private:
+    BankAccount(const BankAccount&);              // 只声明，不定义
+    BankAccount& operator=(const BankAccount&);
+};
+```
+
+外部调用报的是访问权限错误，内部或 friend 调用可能拖到链接期才报 undefined reference。`= delete` 把两种情况都变成编译期错误，而且可以放在 `public` 区域，让诊断直接指向「已删除」。
+
+**只删一个不够。** C++ 把拷贝构造和拷贝赋值当成两个独立操作；只删拷贝构造，隐式拷贝赋值仍然会生成：
+
+```cpp
+struct OnlyCtor {
+    OnlyCtor() = default;
+    OnlyCtor(const OnlyCtor&) = delete;
+};
+
+int main() {
+    OnlyCtor a, b;
+    a = b;   // 仍然可编译
+}
+```
+
+Clang 会警告 `-Wdeprecated-copy`，但不会阻止编译。所以「完全不可拷贝」必须两行一起删。
+
+**它还会抑制移动。** 用户声明了拷贝构造或拷贝赋值后，编译器不再隐式生成移动构造和移动赋值；`BankAccount` 还有用户声明的析构函数，移动操作更不会生成。结果是一个「既不能拷贝、也不能移动」的类型：
+
+```text
+is_copy_constructible_v<BankAccount> = false
+is_move_constructible_v<BankAccount> = false
+is_copy_assignable_v<BankAccount>    = false
+is_move_assignable_v<BankAccount>    = false
+```
+
+这会影响容器。`std::vector<BankAccount>` 在扩容时要求元素可移动或可拷贝，`emplace_back` 可能触发编译器的静态断言：
+
+```text
+error: static assertion failed due to requirement '__is_cpp17_move_insertable_v<...>':
+The specified type does not meet the requirements of Cpp17MoveInsertable
+```
+
+如果类型确实需要放进容器，有两个选择：
+
+- **让它可移动**：删除拷贝，显式 `= default` 移动构造和移动赋值，并标 `noexcept`；
+- **存指针**：用 `std::vector<std::unique_ptr<BankAccount>>`，把对象身份留在堆上。
+
+一个 move-only 的骨架：
+
+```cpp
+class MoveOnly {
+public:
+    MoveOnly() = default;
+
+    MoveOnly(const MoveOnly&) = delete;
+    MoveOnly& operator=(const MoveOnly&) = delete;
+
+    MoveOnly(MoveOnly&&) noexcept = default;
+    MoveOnly& operator=(MoveOnly&&) noexcept = default;
+};
+```
+
+`noexcept` 不是装饰：`std::vector` 只有在移动构造承诺不抛异常时，才愿意在扩容时优先使用移动。
+
+**C++17 的拷贝消除是例外。** 即使拷贝和移动都被删除，下面这行仍然能编译：
+
+```cpp
+BankAccount b = BankAccount{"Alice"};   // ok：没有发生拷贝/移动
+```
+
+因为 C++17 起，用纯右值（prvalue）初始化对象时的拷贝消除是强制的：对象直接在目标位置构造，根本不需要拷贝构造或移动构造。不要因为「这行能编译」就以为删除没生效；`BankAccount c = b;` 依然会报错。
+
+**怎么选：**
+
+| 需求 | 写法 |
+|:-----|:-----|
+| 完全不可拷贝、不可移动 | 删除拷贝构造和拷贝赋值，不声明移动（当前 `BankAccount`） |
+| 不可拷贝但可移动 | 删除拷贝，显式 `= default` 移动构造/赋值，并标 `noexcept` |
+| 可拷贝 | 优先 Rule of Zero，让成员自己管理资源 |
+| 多态基类防止切片 | 虚析构 + 删除拷贝，或把拷贝设为 `protected` |
+| 只想禁止某个重载 | 对那个重载 `= delete`，不要影响整个类型 |
+
+`BankAccount` 选择完全不可拷贝，是因为账户有身份：复制会制造两个对象代表同一个账户，`static count_` 也会失真——拷贝构造不增加计数，析构却会减少计数。与其让默认拷贝带来这种隐蔽错误，不如在类型层面直接禁止。
+
 ## 类的结构
 
 ```mermaid
@@ -332,6 +451,8 @@ classDiagram
 | 返回成员引用但对象已销毁 | 引用的生命周期不能超过对象 |
 | 通过基类指针删除派生类 | 基类析构函数不是 virtual 会 UB |
 | 默认拷贝有指针成员 | 浅拷贝导致 double free；用 Rule of Zero/Five |
+| 只删拷贝构造 | 隐式拷贝赋值仍会生成，类型仍可赋值；两行一起删 |
+| 删除拷贝后仍要放容器 | 需要显式移动或存 `unique_ptr`，否则扩容无法编译 |
 | 在 `const` 函数里修改成员 | 除非成员是 `mutable`，否则编译错误 |
 | 静态成员未定义 | C++17 之前类内声明只是声明，需要类外定义 |
 
