@@ -373,5 +373,5 @@ flowchart LR
 **相关文章**
 
 - [C++ 编译与链接：菜单、厨房和分店](compile-and-link.md)
-- [C++ 虚函数：一张 vtable 背后的点菜流程](virtual-functions.md)
+- [C++ 虚函数：一张 vtable 背后的点菜流程](oop/04-virtual-functions.md)
 - [C++ 移动语义：std::move 到底搬走了什么](move-semantics.md)

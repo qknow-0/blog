@@ -290,7 +290,7 @@ public:
 };
 ```
 
-具体机制在[虚函数与 vtable](virtual-functions.md)里展开。
+具体机制在[虚函数与 vtable](oop/04-virtual-functions.md)里展开。
 
 ### 3. 构造/析构函数里不要调用虚函数
 
@@ -358,4 +358,4 @@ RAII 的本质不是某个语法，而是一条契约：**谁构造，谁析构�
 
 - [C++ 移动语义：std::move 到底搬走了什么](move-semantics.md)
 - [C++ 智能指针：所有权账本](smart-pointers.md)
-- [C++ 虚函数：vtable 与动态分发](virtual-functions.md)
+- [C++ 虚函数：vtable 与动态分发](oop/04-virtual-functions.md)

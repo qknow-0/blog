@@ -1,4 +1,4 @@
-# C++ 面向对象（二）：继承的边界，is-a 不是万能钥匙
+# C++ 面向对象（三）：继承的边界，is-a 不是万能钥匙
 
 > 本文基于 C++23，编译器 Apple Clang 21.0.0（macOS arm64）。三种继承方式、虚继承、名字隐藏在 C++98 就存在；`override`/`final` 从 C++11 开始。
 
@@ -132,7 +132,7 @@ Derived()
 
 这个顺序解释了两个常见现象：
 
-- 在基类构造函数里调用虚函数，调到的是基类版本，因为派生类部分还没构造（详见[虚函数](../virtual-functions.md)）；
+- 在基类构造函数里调用虚函数，调到的是基类版本，因为派生类部分还没构造（详见[虚函数](04-virtual-functions.md)）；
 - 如果构造函数抛异常，已经构造完成的基类和成员会按逆序析构，但对象自己的析构函数不会执行（详见[异常安全](../exception-safety.md)）。
 
 顺序本身不复杂，复杂的是**依赖顺序**：基类构造函数里不能依赖派生类成员（那时还不存在），派生类成员的初始化也不要去碰尚未初始化的其他成员。不要跨层依赖构造顺序，接口该传的参数就显式传。
@@ -374,7 +374,7 @@ flowchart TD
 | 派生类同名函数隐藏基类重载 | 加 `using Base::name;` 或改名字 |
 | 忘记 `override` | 签名差一点就变成新函数，多态静默失效 |
 | 菱形继承 | 两份基类状态，访问歧义；虚继承又有布局和构造成本 |
-| 对象切片 | 按值传递多态类型，派生部分被切掉（见[虚函数](../virtual-functions.md)） |
+| 对象切片 | 按值传递多态类型，派生部分被切掉（见[虚函数](04-virtual-functions.md)） |
 | 继承标准容器 | 接口全暴露，且标准容器没有虚析构 |
 | `protected` 数据 | 派生类可以绕过基类不变量 |
 | 构造函数里调用虚函数 | 派生类部分还没构造，调到基类版本 |
@@ -397,9 +397,9 @@ flowchart TD
 
 **相关文章**
 
-- [（一）封装与接口](01-encapsulation.md)
-- [（三）运算符重载](03-operator-overloading.md)
-- [C++ 基础语法：类与对象](../basics-classes.md)
-- [C++ 虚函数：一张 vtable 背后的点菜流程](../virtual-functions.md)
-- [C++ 拷贝控制：Rule of 0/3/5](../copy-control.md)
+- [（二）封装与接口](02-encapsulation.md)
+- [（六）运算符重载](06-operator-overloading.md)
+- [C++ 基础语法：类与对象](01-basics-classes.md)
+- [C++ 虚函数：一张 vtable 背后的点菜流程](04-virtual-functions.md)
+- [C++ 拷贝控制：Rule of 0/3/5](05-copy-control.md)
 - [C++ 异常安全：栈展开时谁来收拾残局](../exception-safety.md)

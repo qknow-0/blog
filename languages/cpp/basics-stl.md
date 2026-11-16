@@ -326,6 +326,6 @@ world at 6
 
 - [C++ 基础语法：变量、类型与初始化](basics-types.md)
 - [C++ 基础语法：条件、循环与函数](basics-control-flow.md)
-- [C++ 基础语法：类与对象](basics-classes.md)
+- [C++ 基础语法：类与对象](oop/01-basics-classes.md)
 - [C++ STL 迭代器失效：书架扩容时，书签为什么会作废](stl-iterators.md)
 - [C++ 并发：共享白板、原子操作与内存序](concurrency.md)

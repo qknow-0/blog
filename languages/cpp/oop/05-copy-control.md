@@ -1,4 +1,4 @@
-# C++ 拷贝控制：Rule of 0/3/5 与被省掉的拷贝
+# C++ 面向对象（五）：拷贝控制，Rule of 0/3/5 与被省掉的拷贝
 
 > 本文基于 C++23，编译器 Apple Clang 21.0.0（macOS arm64）。移动语义从 C++11 引入；C++17 起部分拷贝消除（copy elision）成为强制要求；`std::exchange` 最低 C++14，`std::is_*_v` 系列最低 C++17。
 
@@ -342,7 +342,7 @@ a=hello b=hello c=(null) d=hello
 
 **`c` 变成了 `(null)`：** 移动构造把 `c` 的指针偷走了，并把源指针置成 `nullptr`。这是「有效但未指定」状态的一个具体实现——我们的代码显式 `std::exchange` 成空指针，所以能确定打印 `(null)`。标准只要求 moved-from 对象可以被析构和重新赋值，不要求它为空；换一个实现，它可能保留原指针。
 
-**移动操作都标了 `noexcept`：** 这样 `std::vector` 扩容时才会选择移动而不是拷贝。原因在[异常安全](exception-safety.md)里详细讲过：移动可能抛异常时，标准库为了强保证会退回拷贝。
+**移动操作都标了 `noexcept`：** 这样 `std::vector` 扩容时才会选择移动而不是拷贝。原因在[异常安全](../exception-safety.md)里详细讲过：移动可能抛异常时，标准库为了强保证会退回拷贝。
 
 移动构造和移动赋值的实现套路是：
 
@@ -589,7 +589,8 @@ flowchart TD
 
 相关阅读：
 
-- [C++ 移动语义：std::move 到底搬走了什么](move-semantics.md)——移动构造如何窃取资源，moved-from 对象为什么不能依赖
-- [C++ RAII：让析构函数替你收拾房间](raii.md)——Rule of Zero 的成员为什么能自动清理
-- [C++ 异常安全：栈展开时谁来收拾残局](exception-safety.md)——copy-and-swap 与三档异常安全保证
-- [C++ 智能指针：unique_ptr、shared_ptr、weak_ptr 的所有权账本](smart-pointers.md)——用类型表达所有权
+- [C++ 面向对象系列](index.md)
+- [C++ 移动语义：std::move 到底搬走了什么](../move-semantics.md)——移动构造如何窃取资源，moved-from 对象为什么不能依赖
+- [C++ RAII：让析构函数替你收拾房间](../raii.md)——Rule of Zero 的成员为什么能自动清理
+- [C++ 异常安全：栈展开时谁来收拾残局](../exception-safety.md)——copy-and-swap 与三档异常安全保证
+- [C++ 智能指针：unique_ptr、shared_ptr、weak_ptr 的所有权账本](../smart-pointers.md)——用类型表达所有权

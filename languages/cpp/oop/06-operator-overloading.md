@@ -1,4 +1,4 @@
-# C++ 面向对象（三）：运算符重载，让自定义类型说人话
+# C++ 面向对象（六）：运算符重载，让自定义类型说人话
 
 > 本文基于 C++23，编译器 Apple Clang 21.0.0（macOS arm64）。运算符重载从 C++98 就有；`explicit` 转换运算符从 C++11 开始；三路比较 `<=>` 和默认比较从 C++20 开始。
 
@@ -352,9 +352,9 @@ flowchart TD
 
 **相关文章**
 
-- [（一）封装与接口](01-encapsulation.md)
-- [（二）继承的边界](02-inheritance.md)
-- [C++ 拷贝控制：Rule of 0/3/5](../copy-control.md)
+- [（二）封装与接口](02-encapsulation.md)
+- [（三）继承的边界](03-inheritance.md)
+- [C++ 拷贝控制：Rule of 0/3/5](05-copy-control.md)
 - [C++ 移动语义：std::move 到底搬走了什么](../move-semantics.md)
 - [C++ 智能指针：所有权账本](../smart-pointers.md)
 - [C++ Lambda 表达式：闭包捕获的不只是变量](../lambda-expressions.md)

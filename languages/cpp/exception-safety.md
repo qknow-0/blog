@@ -475,4 +475,4 @@ throw/catch: 1293.11 ns/op
 
 - [C++ RAII：让析构函数替你收拾房间](raii.md)——栈展开能自动清理，前提是资源由对象管理
 - [C++ 移动语义：std::move 到底搬走了什么](move-semantics.md)——移动构造为什么应该标 `noexcept`
-- [C++ 拷贝控制：Rule of 0/3/5 与被省掉的拷贝](copy-control.md)——copy-and-swap 和特殊成员函数的关系
+- [C++ 拷贝控制：Rule of 0/3/5 与被省掉的拷贝](oop/05-copy-control.md)——copy-and-swap 和特殊成员函数的关系

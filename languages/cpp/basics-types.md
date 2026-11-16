@@ -330,5 +330,5 @@ flowchart TD
 
 - [C++ 基础语法：条件、循环与函数](basics-control-flow.md)
 - [C++ 基础语法：指针与引用](basics-pointers-references.md)
-- [C++ 基础语法：类与对象](basics-classes.md)
+- [C++ 基础语法：类与对象](oop/01-basics-classes.md)
 - [C++ 基础语法：vector、string、map 与标准库入门](basics-stl.md)

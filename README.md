@@ -44,18 +44,21 @@
     - [C++ 基础语法：变量、类型与初始化，先把数据放进正确的盒子](languages/cpp/basics-types.md) — 2026-10-27
     - [C++ 基础语法：条件、循环与函数，把执行路径写清楚](languages/cpp/basics-control-flow.md) — 2026-10-27
     - [C++ 基础语法：指针与引用，地址、别名和空指针](languages/cpp/basics-pointers-references.md) — 2026-10-27
-    - [C++ 基础语法：类与对象，把状态和行为装进同一个盒子](languages/cpp/basics-classes.md) — 2026-10-27
     - [C++ 基础语法：vector、string、map 与标准库入门](languages/cpp/basics-stl.md) — 2026-10-27
+    - [C++ 面向对象系列](languages/cpp/oop/index.md) — 2026-11-16（6 篇）
+      - [（一）类与对象：把状态和行为装进同一个盒子](languages/cpp/oop/01-basics-classes.md) — 2026-10-27
+      - [（二）封装与接口：把“能做什么”和“怎么做”分开](languages/cpp/oop/02-encapsulation.md) — 2026-11-16
+      - [（三）继承的边界：is-a 不是万能钥匙](languages/cpp/oop/03-inheritance.md) — 2026-11-16
+      - [（四）虚函数：一张 vtable 背后的点菜流程](languages/cpp/oop/04-virtual-functions.md) — 2026-10-27
+      - [（五）拷贝控制：Rule of 0/3/5 与被省掉的拷贝](languages/cpp/oop/05-copy-control.md) — 2026-11-16
+      - [（六）运算符重载：让自定义类型说人话](languages/cpp/oop/06-operator-overloading.md) — 2026-11-16
     - [C++ RAII：让析构函数替你收拾房间](languages/cpp/raii.md) — 2026-10-27
     - [C++ 移动语义：std::move 到底搬走了什么](languages/cpp/move-semantics.md) — 2026-10-27
-    - [C++ 拷贝控制：Rule of 0/3/5 与被省掉的拷贝](languages/cpp/copy-control.md) — 2026-11-16
     - [C++ 智能指针：unique_ptr、shared_ptr、weak_ptr 的所有权账本](languages/cpp/smart-pointers.md) — 2026-10-27
     - [C++ 异常安全：栈展开时谁来收拾残局](languages/cpp/exception-safety.md) — 2026-11-16
     - [C++ 编译与链接：菜单、厨房和分店](languages/cpp/compile-and-link.md) — 2026-10-27
     - [C++ 模板与 Concepts：给模具贴上规格说明](languages/cpp/templates-concepts.md) — 2026-10-27
     - [C++ Lambda 表达式：闭包捕获的不只是变量](languages/cpp/lambda-expressions.md) — 2026-11-16
-    - [C++ 虚函数：一张 vtable 背后的点菜流程](languages/cpp/virtual-functions.md) — 2026-10-27
-    - [C++ 面向对象系列](languages/cpp/oop/index.md) — 2026-11-16（3 篇）
     - [C++ STL 迭代器失效：书架扩容时，书签为什么会作废](languages/cpp/stl-iterators.md) — 2026-10-27
     - [C++ 并发：共享白板、原子操作与内存序](languages/cpp/concurrency.md) — 2026-10-27
     - [C++ Unix Domain Socket：把本机 IPC 做成一条文件路径](languages/cpp/unix-domain-socket.md) — 2026-11-02

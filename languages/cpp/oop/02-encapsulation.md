@@ -1,4 +1,4 @@
-# C++ 面向对象（一）：封装与接口，把“能做什么”和“怎么做”分开
+# C++ 面向对象（二）：封装与接口，把“能做什么”和“怎么做”分开
 
 > 本文基于 C++23，编译器 Apple Clang 21.0.0（macOS arm64）。pimpl 和 NVI 在 C++98 就能写；`std::unique_ptr` 从 C++11 开始；`std::make_unique` 从 C++14 开始。
 
@@ -68,7 +68,7 @@ struct Exporter {
 
 - **接口类尽量没有数据成员。** 没有状态，就没有不变量要维护，也没有切片和布局问题。
 - **接口尽量小。** 一个类实现五个不相关的方法，不如拆成三个接口。调用方只依赖它用到的那一个。
-- **虚析构不能忘。** 只要可能通过基类指针 `delete`，析构函数就必须是 `virtual`，否则是未定义行为（详见[虚函数](../virtual-functions.md)）。
+- **虚析构不能忘。** 只要可能通过基类指针 `delete`，析构函数就必须是 `virtual`，否则是未定义行为（详见[虚函数](04-virtual-functions.md)）。
 - **`const` 是接口的一部分。** `save(...) const` 告诉调用方“这次操作不改变对象的可见状态”，比在文档里写一句“不会修改”可靠。
 
 接口的返回值也在表达所有权：
@@ -353,9 +353,9 @@ pimpl 和 NVI 是两个具体工具：
 
 **相关文章**
 
-- [C++ 基础语法：类与对象](../basics-classes.md)
-- [C++ 虚函数：一张 vtable 背后的点菜流程](../virtual-functions.md)
+- [C++ 基础语法：类与对象](01-basics-classes.md)
+- [C++ 虚函数：一张 vtable 背后的点菜流程](04-virtual-functions.md)
 - [C++ RAII：让析构函数替你收拾房间](../raii.md)
 - [C++ 智能指针：所有权账本](../smart-pointers.md)
-- [（二）继承的边界](02-inheritance.md)
-- [（三）运算符重载](03-operator-overloading.md)
+- [（三）继承的边界](03-inheritance.md)
+- [（六）运算符重载](06-operator-overloading.md)

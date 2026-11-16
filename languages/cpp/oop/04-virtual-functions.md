@@ -1,4 +1,4 @@
-# C++ 虚函数：一张 vtable 背后的点菜流程
+# C++ 面向对象（四）：虚函数，一张 vtable 背后的点菜流程
 
 > 本文基于 C++23，编译器 Apple Clang 21.0.0（macOS arm64）。虚函数从 C++98 就有；`override` 和 `final` 从 C++11 开始；`std::variant` 从 C++17 开始。vtable 是主流编译器的实现方式，不是 C++ 标准强制规定的对象布局。
 
@@ -376,7 +376,7 @@ flowchart TD
 
 **相关文章**
 
-- [C++ 面向对象系列：封装、继承与运算符重载](oop/index.md)
-- [C++ RAII：让析构函数替你收拾房间](raii.md)
-- [C++ 模板与 Concepts：给模具贴上规格说明](templates-concepts.md)
-- [C++ 智能指针：所有权账本](smart-pointers.md)
+- [C++ 面向对象系列](index.md)
+- [C++ RAII：让析构函数替你收拾房间](../raii.md)
+- [C++ 模板与 Concepts：给模具贴上规格说明](../templates-concepts.md)
+- [C++ 智能指针：所有权账本](../smart-pointers.md)

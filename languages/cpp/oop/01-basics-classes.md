@@ -1,4 +1,4 @@
-# C++ 基础语法：类与对象，把状态和行为装进同一个盒子
+# C++ 面向对象（一）：类与对象，把状态和行为装进同一个盒子
 
 > 本文基于 C++23，编译器 Apple Clang 21.0.0（macOS arm64）。`explicit` 从 C++98 就有；类内默认成员初始化、委托构造从 C++11 开始；`inline static` 变量从 C++17 开始。
 
@@ -234,11 +234,11 @@ private:
 }
 ```
 
-这里只是维护计数；真正管理内存、文件、锁的析构函数要遵循 [RAII](raii.md)。几条基础规则：
+这里只是维护计数；真正管理内存、文件、锁的析构函数要遵循 [RAII](../raii.md)。几条基础规则：
 
 - 析构函数不能重载，不能有参数；
 - 析构函数通常不要抛异常；
-- 如果类会被继承并通过基类指针删除，基类析构函数必须是 `virtual`（见[虚函数](virtual-functions.md)）；
+- 如果类会被继承并通过基类指针删除，基类析构函数必须是 `virtual`（见[虚函数](04-virtual-functions.md)）；
 - 析构函数里不要调用虚函数，也不要假设派生类部分还活着。
 
 ## const 成员函数
@@ -280,7 +280,7 @@ C++17 之前，`static` 成员变量通常要在类外定义：
 int BankAccount::count_ = 0;
 ```
 
-C++17 的 `inline static` 允许在类内定义，并且整个程序只有一个实体（ODR 规则见[编译与链接](compile-and-link.md)）。
+C++17 的 `inline static` 允许在类内定义，并且整个程序只有一个实体（ODR 规则见[编译与链接](../compile-and-link.md)）。
 
 ## 拷贝与移动：默认行为不一定对
 
@@ -299,7 +299,7 @@ BankAccount(const BankAccount&) = delete;
 BankAccount& operator=(const BankAccount&) = delete;
 ```
 
-因为账户有身份，复制一个账户在业务上没有意义。如果你的类需要拷贝，优先使用 Rule of Zero：让成员自己管理资源（`std::string`、`std::vector`、`std::unique_ptr`），不要手写析构函数和拷贝函数。详细规则见[RAII](raii.md)和[移动语义](move-semantics.md)。
+因为账户有身份，复制一个账户在业务上没有意义。如果你的类需要拷贝，优先使用 Rule of Zero：让成员自己管理资源（`std::string`、`std::vector`、`std::unique_ptr`），不要手写析构函数和拷贝函数。详细规则见[RAII](../raii.md)和[移动语义](../move-semantics.md)。
 
 ## 类的结构
 
@@ -351,9 +351,9 @@ classDiagram
 
 **相关文章**
 
-- [C++ 基础语法：变量、类型与初始化](basics-types.md)
-- [C++ 基础语法：指针与引用](basics-pointers-references.md)
-- [C++ 面向对象系列：封装、继承与运算符重载](oop/index.md)
-- [C++ RAII：让析构函数替你收拾房间](raii.md)
-- [C++ 移动语义：std::move 到底搬走了什么](move-semantics.md)
-- [C++ 虚函数：一张 vtable 背后的点菜流程](virtual-functions.md)
+- [C++ 基础语法：变量、类型与初始化](../basics-types.md)
+- [C++ 基础语法：指针与引用](../basics-pointers-references.md)
+- [C++ 面向对象系列](index.md)
+- [C++ RAII：让析构函数替你收拾房间](../raii.md)
+- [C++ 移动语义：std::move 到底搬走了什么](../move-semantics.md)
+- [C++ 虚函数：一张 vtable 背后的点菜流程](04-virtual-functions.md)
