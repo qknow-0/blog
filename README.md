@@ -11,7 +11,8 @@
   - [AI 编程工具链](tech/ai-tooling/index.md) — 29 篇
     - [T3 Code：给 Claude Code 和 Codex 装一个随时在线的驾驶舱](tech/ai-tooling/t3code-guide.md) — 2026-11-16
     - [jcode：Rust 写的终端 AI 编程助手](tech/ai-tooling/jcode-guide.md) — 2026-07-20
-  - [Claude Code](tech/claude-code/index.md) — 4 篇
+  - [Claude Code](tech/claude-code/index.md) — 5 篇
+    - [七道闸门：我的 AI 辅助开发工作流](tech/claude-code/skill-driven-workflow.md) — 2026-11-19
     - [Claude Code 最佳实践：从 vibe coding 到 agentic engineering](tech/claude-code/claude-code-best-practice.md) — 2026-06-26
 - [开发工具](tech/dev-tools/index.md) — 29 篇
     - [Kafka 系列](tech/kafka/index.md) — 2026-07-21（10 篇）
