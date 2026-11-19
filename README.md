@@ -32,6 +32,10 @@
   - [QMT 量化终端](tech/qmt/index.md) — 2 篇
     - [xtquant_big_convert：把大 QMT 变成可远程调用的 RPC 服务](tech/qmt/xtquant-big-convert.md) — 2026-10-21
     - [EasyTHS：把同花顺交易客户端变成 REST API 与 MCP 服务](tech/qmt/easyths.md) — 2026-10-21
+  - [图形编程](tech/graphics/index.md) — 3 篇
+    - [Cocoa + Metal：在 macOS 上画一个三角形，从窗口到像素](tech/graphics/cocoa-metal.md) — 2026-11-19
+    - [Win32 + Direct3D 11：在 Windows 上画一个三角形，从消息循环到交换链](tech/graphics/win32-d3d11.md) — 2026-11-19
+    - [XCB + Vulkan：在 Linux 上画一个三角形，把 GPU 的每一步都写出来](tech/graphics/xcb-vulkan.md) — 2026-11-19
   - [HTTP 协议系列](tech/http/index.md) — 9 篇
     - [RESTful API 设计](tech/http/restful-api-guide.md) — 2026-06-22
     - [GraphQL](tech/http/graphql-guide.md) — 2026-06-22
