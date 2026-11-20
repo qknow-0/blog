@@ -58,6 +58,7 @@ tar -czf "/tmp/${ARCHIVE_NAME}" \
   --exclude='source-read/The-Quant-Trading-Vault' \
   --exclude='source-read/free-stockdb' \
   --exclude='source-read/cindy' \
+  --exclude='source-read/medusa' \
   --exclude='code/mini-gpt/mini-gpt-cn.pt' \
   --exclude='code/mini-gpt/.venv' \
   --exclude='__pycache__' \
@@ -72,7 +73,7 @@ ARCHIVE_SIZE_MB=$((ARCHIVE_SIZE / 1024 / 1024))
 if [ "$ARCHIVE_SIZE_MB" -gt 20 ]; then
   echo "❌ 错误：压缩包大小 ${ARCHIVE_SIZE_MB}MB（超过 20MB），可能打包了不需要的文件"
   echo "   已取消上传。请检查 .gitignore 和 backup.sh 的 --exclude 列表是否同步"
-  echo "   当前排除：source-read/（22个）, .codebase-memory, .obsidian/themes, code/mini-gpt/*.pt, __pycache__, .env 等"
+  echo "   当前排除：source-read/（23个）, .codebase-memory, .obsidian/themes, code/mini-gpt/*.pt, __pycache__, .env 等"
   exit 1
 fi
 

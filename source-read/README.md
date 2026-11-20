@@ -133,3 +133,4 @@ echo "source-read/MyProject" >> ../.gitignore
 | The-Quant-Trading-Vault | the_quant_trading_vault_notes/ | ✅ | ✅ |
 | free-stockdb | free_stockdb_notes/ | ✅ | ✅ |
 | cindy | cindy_notes/ | ✅ | ✅ |
+| medusa | medusa_notes/ | ✅ | ✅ |

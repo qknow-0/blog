@@ -6,6 +6,19 @@
 
 ## 文章列表
 
+### Medusa
+
+- [（一）一个电商平台怎么拆成 34 个模块](medusa_notes/01-architecture.md) — 2026-11-20
+- [（二）一个类怎么长出整套 CRUD](medusa_notes/02-module-system.md) — 2026-11-20
+- [（三）从 model.define 到 PostgreSQL 表](medusa_notes/03-data-layer.md) — 2026-11-20
+- [（四）一条查询如何跨十个模块](medusa_notes/04-query-graph.md) — 2026-11-20
+- [（五）没有外键，模块之间怎么建立关系](medusa_notes/05-module-links.md) — 2026-11-20
+- [（六）构造函数只跑一次，执行一万次](medusa_notes/06-workflow-dsl.md) — 2026-11-20
+- [（七）补偿事务与可恢复的执行状态机](medusa_notes/07-workflow-engine.md) — 2026-11-20
+- [（八）文件即路由，查询配置即安全边界](medusa_notes/08-http-layer.md) — 2026-11-20
+- [（九）订单为什么不能直接改](medusa_notes/09-order-domain.md) — 2026-11-20
+- [（十）事件、订阅与夜班工人](medusa_notes/10-events-and-jobs.md) — 2026-11-20
+
 ### Cindy
 
 - [（一）一个 Agent 客户端如何把自己拆成连接层](cindy_notes/01-architecture.md) — 2026-11-02
