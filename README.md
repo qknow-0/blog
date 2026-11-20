@@ -147,6 +147,7 @@
     - [C# / .NET 项目结构：.csproj 是墙，.sln 是园区地图](architecture/project-structure/csharp-dotnet.md) — 2026-11-20
     - [C++ 项目结构：include 是借阅区，CMake target 才是边界](architecture/project-structure/cpp.md) — 2026-11-20
     - [项目结构反模式：八种“看起来整齐”的坏结构](architecture/project-structure/anti-patterns.md) — 2026-11-20
+  - [项目文档清单：从 README 到 ADR，什么必须写、什么该让机器写](architecture/project-docs.md) — 2026-11-20
   - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（15/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
     - [Observer 模式：channel 就是最好的观察者](architecture/design-patterns/observer.md) — 2026-07-29
