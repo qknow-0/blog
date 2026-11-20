@@ -158,6 +158,7 @@ import "example.com/shop/internal/..."
 | Rust | crate 边界、`pub` / `pub(crate)` |
 | Java | Maven/Gradle 多模块、JPMS（可选） |
 | C#/.NET | `.csproj` ProjectReference、`internal` |
+| C++ | `include/` + CMake target 的 `PUBLIC` / `PRIVATE` |
 
 **边界的第一标准：绕过它会报错。** 不报错的边界，只是注释。
 
@@ -201,6 +202,7 @@ shared/
 | Rust | `pub mod utils`、`common` crate |
 | Java | `common` module、`*Utils` 类 |
 | C#/.NET | `Common` / `Shared` project |
+| C++ | `include/common.hpp`、`utils.hpp` |
 
 ## 4. 过早拆模块和 monorepo
 
@@ -274,6 +276,7 @@ shared/
 | Rust | `Cargo.toml` + `src/main.rs` / `src/lib.rs` |
 | Java | `pom.xml` / `build.gradle` + `src/main/java` |
 | C#/.NET | `.csproj` + `src/` / `tests/` |
+| C++ | `CMakeLists.txt` + `include/` / `src/` |
 
 **框架已经规定的，优先跟框架。** Django 的 app、Spring Boot 的包扫描、Next.js 的 `app/`、Nest 的 module，都是运行时依赖的约定。
 
@@ -307,6 +310,7 @@ shared/
 | Rust | `cargo package --list`；`target/` 忽略 |
 | Java | `mvn package` 后检查 jar；`target/` 忽略 |
 | .NET | `dotnet publish` 后检查输出；`bin/obj` 忽略 |
+| C++ | `cmake --install` 后检查安装树；`build/` 忽略 |
 
 **测试要面对发布产物，而不是工作区。** 这是 src layout、wheel 安装、`npm pack` 检查的共同目的。
 
@@ -469,6 +473,7 @@ shared/
 - [Rust 分册](rust.md)
 - [Java 分册](java.md)
 - [C# / .NET 分册](csharp-dotnet.md)
+- [C++ 分册](cpp.md)
 - [Go 官方：Organizing a Go module](https://go.dev/doc/modules/layout)
 - [Python Packaging：src layout vs flat layout](https://packaging.python.org/en/latest/discussions/src-layout-vs-flat-layout/)
 - [Node.js：Packages and exports](https://nodejs.org/api/packages.html)

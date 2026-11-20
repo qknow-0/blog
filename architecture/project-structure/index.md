@@ -1,7 +1,7 @@
 # 各语言项目结构最佳实践：结构是发布单元的投影
 
 > 系列入口。这里不提供“万能目录模板”，只提供一套判断「这个目录该不该存在」的标准。
-> 系列共 8 篇，已完成。各语言分册在各自篇章标注版本；真实仓库结构快照截至 2026-11-20。
+> 系列共 9 篇，已完成。各语言分册在各自篇章标注版本；真实仓库结构快照截至 2026-11-20。
 
 ## 目录
 
@@ -237,6 +237,7 @@ mindmap
       Rust：Cargo 约定与 workspace
       Java：Maven/Gradle 与按 feature 分包
       C#/.NET：project 与 solution
+      C++：include 与 CMake target
 ```
 
 全部分册：
@@ -247,6 +248,7 @@ mindmap
 - [Rust 项目结构：Cargo 把约定写进了工具链](rust.md)
 - [Java 项目结构：Maven 给你地基，包结构才决定房间怎么分](java.md)
 - [C# / .NET 项目结构：.csproj 是墙，.sln 是园区地图](csharp-dotnet.md)
+- [C++ 项目结构：include 是借阅区，CMake target 才是边界](cpp.md)
 - [项目结构反模式：八种“看起来整齐”的坏结构](anti-patterns.md)
 
 语言分册沿用同一套模板：**一句话态度 → 小项目 → 中大型 → 争议点 → 真实仓库 → 反模式**。
