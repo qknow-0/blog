@@ -5,4 +5,5 @@
 - [System Design 架构地图](system-design/index.md) — 2026-08-14（11 篇）
 - [设计模式：Rust 视角](design-patterns/index.md) — 2026-07-21（15/23）
 - [企业应用架构](app-architecture/index.md) — 2026-09-24（19 篇，已完成）
+- [各语言项目结构最佳实践](project-structure/index.md) — 2026-11-20（8 篇，已完成）
 - [基金溢价数据设计](fund-premium-data.md) — 2026-05-24

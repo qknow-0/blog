@@ -134,6 +134,14 @@
     - [仓储：不只是 DAO 换个名字](architecture/app-architecture/12-repository.md) — 2026-09-24
     - [工作单元与延迟加载：N+1 是怎么来的](architecture/app-architecture/13-unit-of-work.md) — 2026-09-24
     - [反方：什么时候这些全是过度设计](architecture/app-architecture/19-when-overkill.md) — 2026-09-24
+  - [各语言项目结构最佳实践](architecture/project-structure/index.md) — 2026-11-20（8 篇，已完成）
+    - [Go 项目结构：没有官方标准，只有编译器替你守住的边界](architecture/project-structure/go.md) — 2026-11-20
+    - [Python 项目结构：flat 还是 src，先搞清楚你在装修谁的家](architecture/project-structure/python.md) — 2026-11-20
+    - [TypeScript / Node 项目结构：src 是源码，exports 才是门](architecture/project-structure/typescript.md) — 2026-11-20
+    - [Rust 项目结构：Cargo 把约定写进了工具链](architecture/project-structure/rust.md) — 2026-11-20
+    - [Java 项目结构：Maven 给你地基，包结构才决定房间怎么分](architecture/project-structure/java.md) — 2026-11-20
+    - [C# / .NET 项目结构：.csproj 是墙，.sln 是园区地图](architecture/project-structure/csharp-dotnet.md) — 2026-11-20
+    - [项目结构反模式：八种“看起来整齐”的坏结构](architecture/project-structure/anti-patterns.md) — 2026-11-20
   - [设计模式：Rust 视角](architecture/design-patterns/index.md) — 2026-07-21（15/23）
     - [Builder 模式：Rust 里最自然的构造方式](architecture/design-patterns/builder.md) — 2026-06-16
     - [Observer 模式：channel 就是最好的观察者](architecture/design-patterns/observer.md) — 2026-07-29
@@ -144,6 +152,7 @@
   - [基金溢价数据设计](architecture/fund-premium-data.md) — 2026-05-24
 - [阅读笔记](reading/index.md) — 书、文章、视频的读后记录
 - [源码阅读](source-read/index.md) — 开源项目的源码分析
+  - [Medusa 源码阅读系列](source-read/medusa_notes/01-architecture.md) — 2026-11-20（10 篇），开源电商后端的模块化架构
   - [Cindy 源码阅读系列](source-read/cindy_notes/) — 2026-11-02（10 篇）
   - [free-stockdb 源码阅读系列](source-read/free_stockdb_notes/) — 2026-10-22（10 篇）
   - [AI Job Search 源码阅读系列](source-read/ai_job_search_notes/) — 2026-10-19（11 篇）
