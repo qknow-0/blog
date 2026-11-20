@@ -25,6 +25,10 @@
     - [Orbien：Rust 写的自托管内网穿透，5MB 的 frp 替代品](tech/dev-tools/tunneling/04-orbien.md) — 2026-08-23
   - [容器化系列](tech/containerization/index.md) — 5 篇
   - [Robot Framework](tech/robotframework/index.md) — 1 篇
+  - [Web UI 测试](tech/web-testing/index.md) — 1 篇，Playwright / Cypress / Selenium 等工具选型
+    - [Web UI 测试工具怎么选：Playwright、Cypress、Selenium 与它们的同伴](tech/web-testing/web-ui-testing-tools.md) — 2026-11-20
+  - [Code Review](tech/code-review/index.md) — 1 篇，AI 初筛、静态分析与人工终审
+    - [Code Review 工具怎么选：AI 初筛、静态分析与人工终审](tech/code-review/code-review-tools.md) — 2026-11-20
   - [逆向工具链](tech/reversing/index.md) — 6 篇
   - [AI Agent 系列](tech/ai-agent/index.md) — 13 篇
   - [NewsNow](tech/newsnow/index.md) — 1 篇

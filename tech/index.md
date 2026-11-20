@@ -9,6 +9,8 @@
 - [开发工具](dev-tools/index.md) — 29 篇，开发环境与基础设施
 - [容器化系列](containerization/index.md) — 5 篇，Docker → Compose → K8s → Helm
 - [Robot Framework](robotframework/index.md) — 1 篇，源码阅读
+- [Web UI 测试](web-testing/index.md) — 1 篇，Playwright / Cypress / Selenium 等工具选型
+- [Code Review](code-review/index.md) — 1 篇，AI 初筛、静态分析与人工终审
 - [逆向工具链](reversing/index.md) — 6 篇，闭源应用行为分析工具
 - [AI Agent 系列](ai-agent/index.md) — 13 篇，从零构建 LLM Agent + LLM 训练原理
 - [HTTP 协议系列](http/index.md) — 9 篇，从请求响应到 HTTPS，再到 API 设计三选一
